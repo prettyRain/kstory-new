@@ -1,0 +1,29 @@
+
+/*2017-6-19详情页改版的时候重新修改了底部*/
+.footer_tab li a {
+  line-height: 77px;
+  height: 77px;
+  padding-left: 186px;
+}
+.footer_tab li {
+  height: 77px;
+  background: #fff;
+  border: none;
+  margin-bottom: 10px;
+}
+.footer_tab .list1 a {
+ margin-right: 100px;
+}
+.footer_tab .list4 a {
+  margin-left: 136px;
+  padding-left: 162px;
+  background-position: right center!important;
+}
+.footer_tab .list3 a {
+  margin-left: 85px;
+
+  background-position: right center!important;
+}
+.footer_tab .list2 a {
+  margin-right: 10px;
+}

@@ -1,0 +1,58 @@
+/* Your app custom files in this file */
+/* Tab bar icons */
+
+i.tabbar-demo-icon-1 {
+  width: .44rem;
+  height: .74rem;
+  background-image: url(/images/v1/img/home1.png);
+}
+.active i.tabbar-demo-icon-1 {
+ background-image: url(/images/v1/img/home.png);
+ }
+i.tabbar-demo-icon-2 {
+  width: .44rem;
+  height: .74rem;
+  background-image: url(/images/v1/img/menu1.png);
+  }
+.active i.tabbar-demo-icon-2 {
+ 	background-image: url(/images/v1/img/menu.png);
+ }
+i.tabbar-demo-icon-3 {
+  width: .66rem;
+  height: .74rem;
+  background-image: url(/images/v1/img/gw1.png);
+  }
+.active i.tabbar-demo-icon-3 {
+  background-image: url(/images/v1/img/gw.png);}
+i.tabbar-demo-icon-4 {
+  width: .44rem;
+  height: .74rem;
+  background-image: url(/images/v1/img/my1.png);
+  }
+.active i.tabbar-demo-icon-4 {
+ background-image: url(/images/v1/img/my.png);
+ }
+
+
+i.menu-1 {
+  width: 1rem;
+  height: 30px;
+  background-image: url(/images/v1/img/101.jpg);
+}
+i.menu-2 {
+  width: 1rem;
+  height: 30px;
+  background-image: url(/images/v1/img/102.jpg);
+}
+i.menu-3 {
+   width: 1rem;
+  height: 30px;
+  background-image: url(/images/v1/img/103.jpg);
+}
+i.menu-4 {
+  width: 1rem;
+  height: 30px;
+  background-image: url(/images/v1/img/104.jpg);
+}
+
+

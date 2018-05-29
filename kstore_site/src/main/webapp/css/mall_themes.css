@@ -1,0 +1,303 @@
+.show-box{
+     margin-bottom: 0px!important;
+ }
+.big_poly_hui{
+    width: 1200px;
+    height: 88px;
+    margin: 0 auto;
+    line-height: 88px;
+    position: relative;
+}
+.big_poly_hui img{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top:36%;
+}
+.big_poly_hui h3{
+    display: inline-block;
+    font-size: 24px;
+    color:#000000 ;
+    margin-left: 37px;
+    line-height: 88px;
+}
+.poly_first{
+    width: 1196px;
+    margin: 0 auto;
+    height: 470px;
+    border: 2px solid #f4f4f4;
+}
+.poly_first .first_left,.poly_first .first_ul ,.poly_first .first_right{
+    float: left;
+}
+.poly_first .first_left {
+    height: 470px;
+    width: 288px;
+    border-right: 2px solid #f4f4f4;
+}
+.poly_first .first_left h2{
+    font-size: 36px;
+    color: #f9892a;
+    font-weight: normal;
+    margin: 42px 0px 12px 40px;
+}
+.poly_first .first_left h3{
+    font-size: 24px;
+    color: #878686;
+    font-weight: normal;
+    margin-left: 40px;
+    margin-bottom: 36px;
+}
+.poly_first .first_left .swiper-container {
+    width: 100%;
+    height: 68%;
+}
+.poly_first .first_left .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.poly_first .first_left .swiper-slide img{
+    width: 288px;
+    height: 288px;
+}
+.poly_first .first_left .swiper-slide a{
+    width: 288px;
+    height: 288px;
+    display: block;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    left: 40px!important;
+    width: 100%;
+    top:0px;
+    height: 10px;
+}
+.swiper-pagination{
+    text-align: left!important;
+}
+.swiper-pagination-bullet-active{
+    background: #f9892a!important;
+}
+.swiper-pagination-bullet {
+    width: 22px!important;
+    height: 4px!important;
+    display: inline-block;
+     border-radius:inherit!important;
+    background: #000;
+    opacity: .2;
+}
+.poly_first .first_ul{
+    width: 602px;
+    height: 470px;
+}
+.poly_first .first_ul li{
+    float: left;
+    width: 299px;
+    height: 234px;
+    border-right: 2px solid  #f4f4f4 ;
+    border-bottom: 2px solid #f4f4f4;
+}
+.poly_first .first_ul li a{
+    width: 299px;
+    height: 234px;
+    display: block;
+}
+.poly_first .first_ul li a div{
+    width: 138px;
+    height: 234px;
+}
+.poly_first .first_ul li a div h3{
+    font-size: 28px;
+    color: #3b3b3b;
+    margin: 44px 0px 12px 16px;
+    font-weight: normal;
+}
+.poly_first .first_ul li a div p{
+    font-size: 18px;
+    margin-left: 16px;
+}
+.poly_p1{
+    color: #8cbafa;
+}
+.poly_p2{
+    color: #c8365a;
+}
+.poly_p3{
+    color: #fccb3c;
+}
+.poly_p4{
+    color: #4ce648;
+}
+.poly_first .first_ul li a img{
+    width: 160px;
+    height: 160px;
+    margin-top: 73px;
+    display: block;
+}
+.poly_first .first_ul li a div, .poly_first .first_ul li a img{
+    float: left;
+}
+.poly_first .first_right{
+    width: 304px;
+    height: 470px;
+}
+.poly_first .first_right .title_img{
+    width: 304px;
+    height: 44px;
+}
+.poly_first .first_right ul {
+    overflow: hidden;
+    margin-top: 19px;
+}
+.poly_first .first_right ul li{
+    width: 252px;
+    height: 76px;
+    margin: 0px 23px 27px 26px;
+}
+.poly_first .first_right ul li .right_one,.poly_first .first_right ul li .right_two{
+    float: left;
+}
+.poly_first .first_right ul li .right_one {
+    width: 81px;
+    height: 76px;
+    margin-right: 6px;
+    position: relative;
+}
+.poly_first .first_right ul li .right_one .poly_soy{
+    width: 76px;
+    height: 76px;
+    margin-left: 5px;
+
+}
+.poly_first .first_right ul li .right_one .absolute_img{
+    position: absolute;
+    left: 0px;
+    top:9px;
+    width: 18px;
+    height:18px;
+}
+.poly_first .first_right ul li .right_two{
+    height: 76px;
+    width: 160px;
+}
+.poly_first .first_right ul li .right_two a{
+    font-size: 14px;
+    color: #555555;
+    display: block;
+    height: 38px;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.poly_first .first_right ul li .right_two span:first-of-type{
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+.poly_first .first_right ul li .right_two a:hover{
+    color: #37ab40;
+}
+.poly_first .first_right ul li .right_two  span:last-of-type{
+    font-size: 18px;
+    color: #ff0000;
+    margin-top: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+.poly_list{
+    width: 1200px;
+    margin: 46px auto;
+    margin-bottom: 76px;
+}
+.poly_list table{
+    border: 2px solid #f4f4f4;
+}
+.poly_list table tr td{
+    width: 298px;
+    height: 320px;
+    border: 2px solid #f4f4f4;
+}
+.poly_list table tr td .poly_list_images{
+    width: 166px;
+    height: 166px;
+    margin:  26px 66px 26px 66px;
+}
+.poly_list table tr td .poly_list_a{
+    height: 40px;
+    width: 250px;
+    display: block;
+    margin-left: 23px;
+    margin-right: 22px;
+    font-size: 14px;
+    color: #555555;
+}
+.poly_list table tr td .poly_list_div{
+    height: 60px;
+    width: 100%;
+}
+.poly_list table tr td .poly_list_div div{
+    width: 44px;
+    height: 18px;
+    float: left;
+    background: url(../images/poly_list-bg.png) no-repeat;
+    margin-top: 16px;
+    margin-left: 23px;
+    color: #ffffff;
+    font-size: 12px;
+    padding-left: 4px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.poly_list table tr td .poly_list_div div p{
+    display: inline-block;
+}
+.poly_list table tr td .poly_list_div div i{
+    font-style: normal;
+}
+.poly_list table tr td .poly_list_div span:first-of-type {
+    font-size: 14px;
+    color: #ff0000;
+    margin-top: 18px;
+    display: inline-block;
+    font-weight: bold;
+}
+.poly_list table tr td .poly_list_div span:last-of-type {
+    font-size: 18px;
+    color: #ff0000;
+    margin-top: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+.poly_list table tr td .poly_list_div .poly_list_shop{
+    width: 36px;
+    height: 36px;
+    float: right;
+    margin: 8px 23px 0px 0px;
+}
+.poly_list table tr td .poly_list_div .poly_list_shop img{
+    width: 36px;
+    height: 36px;
+}
+.poly_list table tr td .poly_list_a:hover{
+    color: #37ab40;
+}
+.poly_list table tr td:hover {
+    box-shadow: 0 0px 19px 0 rgba(0,0,0,0.16);
+}

@@ -1,0 +1,319 @@
+.binding_page{
+    width: 600px;
+    margin: 75px auto;
+    margin-bottom: 0;
+}
+.binding_page ul{
+    overflow: hidden;
+}
+.binding_page ul li{
+    list-style: none;
+    width: 300px;
+    height: 47px;
+    border-bottom: 3px solid #f7f7f7;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 0.53px;
+    cursor: pointer;
+}
+.binding_page ul li img{
+    display: inline-block;
+    width: 24px;
+    height: 18px;
+    margin-right: 12px;
+}
+.binding_page ul li p{
+    display: inline-block;
+}
+.binding_page ul .binding_page_active {
+    color: #199301;
+    border-bottom: 3px solid #199301;
+}
+
+.binding_page ul li:last-of-type img{
+    width: 20px;
+    height: 15px;
+}
+
+.box .con1{
+    display: none;
+}
+
+.inp {
+    border: 1px solid #EEEEEE;
+    width: 423px;
+    height: 45px;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    float: right;
+    text-indent: 23px;
+    outline:none;
+}
+.border{
+    border: 1px solid #000000!important;
+    width: 423px;
+    height: 45px;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    float: right;
+    text-indent: 23px;
+}
+.btn {
+
+    width: 425px;
+    height: 50px;
+    font-size: 15px;
+    color: #FFFFFF;
+    letter-spacing: 0.54px;
+    cursor: pointer;
+    background: #199301;
+    border-radius: 4px;
+    border: none;
+    margin-left: 88px;
+}
+#embed-captcha {
+    width: 300px;
+    margin: 0 auto;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+#notice {
+    color: red;
+}
+.popup{
+    width: 513px;
+    margin-left: 44px;
+    margin-top: 40px;
+}
+.popup .share_p{
+    overflow: hidden;
+   /* margin-bottom: 30px;*/
+    height:77px;
+    line-height: 47px;
+    position: relative;
+}
+.popup .share_p .cw_error,.popup .share_p .cw_error1{
+
+    position: absolute;
+    top: 53px;
+    font-size: 12px;
+    color: red;
+    left: 88px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 20px;
+    background: url(../images/ero.png) left center no-repeat;
+
+}
+.share_p .cw_errorone, .share_p .cw_errortwo,.share_p .cw_errorthree{
+
+    position: absolute;
+    top: 53px;
+    font-size: 12px;
+    color: red;
+    left: 88px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 20px;
+    background: url(../images/ero.png) left center no-repeat;
+
+}
+.popup .get_information{
+    width: 513px;
+    height: 58px;
+    margin-bottom: 30px;
+}
+.popup .get_information img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 17px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+.popup .get_information div{
+    background: #F7F7F7;
+    width: 425px;
+    height: 58px;
+    float: right;
+    line-height: 58px;
+}
+.popup .get_information div p{
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding: 0px 10px 0px 23px;
+}
+
+.popup .forget_password{
+    font-size: 14px;color: #000000;letter-spacing: 0.5px;display: block;    text-align: center;
+    margin-left: 86px;
+    margin-top: 20px;
+}
+.popup .share_p label{
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    width: 73px;
+    display: inline-block;
+    text-align: right;
+}
+/* 以下遮罩层为demo.用户可自行设计实现 */
+#mask {
+    display: none;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+/* 可自行设计实现captcha的位置大小 */
+.popup-mobile {
+    position: relative;
+}
+#popup-captcha-mobile {
+    position: fixed;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.twocon1{
+    width: 513px;
+    margin-left: 44px;
+    margin-top: 40px;
+}
+ .share_p{
+    overflow: hidden;
+  /*  margin-bottom: 30px;*/
+    height: 77px;
+    line-height: 47px;
+     position: relative;
+}
+ .get_information{
+    width: 513px;
+    height: 58px;
+    margin-bottom: 30px;
+}
+ .get_information img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 17px;
+    margin-top: 5px;
+     border-radius: 50%;
+}
+.get_information div{
+    background: #F7F7F7;
+    width: 425px;
+    height: 58px;
+    float: right;
+    line-height: 58px;
+}
+ .get_information div p{
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.5px;
+     text-align: left;
+     padding: 0px 10px 0px 23px;
+}
+.hide{
+    display: none;
+}
+ .share_p label{
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.5px;
+    width: 73px;
+    display: inline-block;
+    text-align: right;
+}
+.agreement_confirm label{
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.5px;
+}
+.agreement_confirm label #protocol{
+    font-size: 14px;
+    color: #0072bc;
+    letter-spacing: 0.5px;
+}
+.reg_form_item{
+    margin-left: 87px;
+    margin-bottom: 28px;
+}
+.active_btn{
+    position: absolute;    right: 4px;
+    top: 5px;background: #3478F6;font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.43px;
+    width: 113px;
+    height: 37px;
+    border: none;
+}
+/* 弹窗 */
+.mask {width:100%; height:100%; background:#000; opacity:0.5; filter:alpha(opacity=50); position:fixed; top:0; left:0; z-index:9998; display:none;}
+.dialog {position:fixed; background:#fff; z-index:9999; width:440px; min-height:230px; padding:5px; display:none;}
+.dia_tit {height:30px; line-height:30px; padding:0 20px; font-family:microsoft YaHei; font-size:14px; color:#fff;}
+.dia_close {width:15px; height:15px; background:url(../images/dia_close.png) no-repeat; margin-top:7px;}
+.dia_intro em {display:inline-block; font-family:microsoft YaHei; font-size:18px; color:#575757; -webkit-transform:rotate(-10deg); -moz-transform:rotate(-10deg);}
+.go_shopping, .go_pay {display:inline-block; zoom:1; *display:inline; width:100px; height:28px; text-align:center; line-height:27px; font-family:microsoft YaHei; font-size:14px; color:#fff!important; margin:0 5px;}
+.go_shopping {background:url(/kssite/images/grey_btn.gif) no-repeat;}
+.go_pay {background:url(kssite/images/org_btn.gif) no-repeat;}
+.agreement_dia {width:910px; height:490px; border:5px solid rgba(238,238,238,.5); padding:0;}
+.agreement_dia .dia_tit {background:#eee; text-align:center; font-size:14px; font-weight:700; color:#666;}
+.agreement_dia .dia_close {position:absolute; top:8px; right:20px; margin-top:0; background:url(../images/agree_close.gif) no-repeat;}
+.agreement_wp {height:360px; overflow-y:scroll; padding:0 20px;}
+.agreement_wp h4 {font-weight:700; line-height:180%;}
+.agreement_wp p {line-height:180%;}
+.agree_btn {display:inline-block; zoom:1; *display:inline; width:200px; height:30px; line-height:29px; background:url(../images/agree_btn.gif) no-repeat; font-family:microsoft YaHei; font-size:16px; color:#fff!important;}
+.bluee{color:#005aa0;}
+#login_name{ width: 18px;height: 18px;background: url(../images/user.png) no-repeat; position: absolute; top: 10px; left: 10px;}
+#login_code{ width: 18px;height: 22px;background: url(../images/code.png) no-repeat; position: absolute; top: 8px; left: 10px;}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #333;
+}
+.n_rg{ position: absolute; width: 74px; height: 38px; line-height: 38px; top:0px; left: 10px; color: #666; font-size: 14px;}
+.n_row .n_text {
+    width: 100%;
+    height: 36px;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    line-height: 36px;
+    text-indent: 74px;
+    *width:250px;
+    *text-indent:0;
+}
+.n_row .form_tips {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 25px;
+    background: url(../images/tips_icon.png) no-repeat left top;
+    color: #969696;
+}
+.login_tip a, .user_box a {
+    color: #005AA0;
+}
+.n_error {
+    border-color: #f2445d !important;
+}

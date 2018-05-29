@@ -1,0 +1,107 @@
+.outermost{
+    background:#8dd2d9;
+}
+.outermost .otm{
+    position: relative;
+    width: 1200px;
+    height: 79px;
+    margin: 0 auto;
+}
+.outermost .otm .advertising_btn{
+    position: absolute;
+    right: 0;
+    top:5px;
+    cursor: pointer;
+}
+#menucontent3 div .nav_a{
+    font-weight: bold;color: #333333;    padding-left: 6px;
+}
+.login_newa,.reg_newa{
+    color: #8e8e8e;
+    margin-right: 14px;
+}
+.login_newa span,.reg_newa span{
+    color: #333333;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+.login_newa:hover,.reg_newa:hover{
+    color: #37ab40!important;
+}
+#menucontent4{
+    width: 237px!important;
+    top:41px!important;
+    height: 151px!important;
+}
+#menucontent4 .outer_shell{
+    width: 237px;
+    height: 151px;
+    overflow: hidden;
+}
+
+#menucontent4 .outer_shell div span{
+    font-size: 12px;
+    color: #999999;
+    margin-top: 5px;
+    display: block;
+}
+#menucontent4 .outer_shell div:first-of-type{
+    float: left;
+    width: 85px;
+    height: 151px;
+    margin-left: 10px;
+}
+#menucontent4 .outer_shell div:first-of-type img,#menucontent4 .outer_shell div:last-of-type img{
+    margin-top: 20px;
+}
+#menucontent4 .outer_shell div:last-of-type{
+    float: left;
+    width: 85px;
+    height: 151px;
+}
+.new_shoppingcart{
+    width: 176px;
+    height: 41px;
+    background: #526d56;
+   float: left;
+    margin-top: 53px;
+}
+.new_shoppingcart .new_sp1{
+    width: 63px;
+    border-right: 1px solid #829685;
+    float: left;
+    height: 41px;
+    position: relative;
+}
+.new_shoppingcart .new_sp2{
+    width: 112px;
+    height: 41px;
+    float: left;
+}
+.new_shoppingcart .new_sp1  img {
+    cursor: pointer;
+    position: absolute;
+    left: 16px;
+    top: 11px;
+}
+.new_shoppingcart .new_sp2 p{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 25px;
+    margin-top: 11px;
+    height: 20px;
+    line-height: 20px;
+}
+.new_shoppingcart .new_sp2 span{
+
+    color: #ffd906;
+    font-size: 18px;
+}
+/*
+
+
+.login_newa span:hover,.reg_newa span:hover{
+    color: #37ab40;
+}*/

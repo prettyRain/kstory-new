@@ -1,0 +1,1054 @@
+1092 ERROR [2016-09-12 14:54:24]  Ä£ï¿½ï¿½ï¿½ï¿½ï¿½É´ï¿½ï¿½ï¿½
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> topmap.systembase  [in template "newheader15_ftl.ftl" at line 6, column 28]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+The failing instruction
+ (FTL stack trace):
+----------
+==> ${topmap.systembase.bsetAddress}  [in template "newheader15_ftl.ftl" at line 6, column 26]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.ningpai.index.util.IndexStaticizeUtil.analysisTemplate(IndexStaticizeUtil.java:64)
+	at com.ningpai.index.service.TopAndBottomService.staticizeTopFifteen(TopAndBottomService.java:1372)
+	at com.ningpai.index.service.TopAndBottomService.checkChangeTempFifteen(TopAndBottomService.java:963)
+	at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:293)
+	at com.junit.test.index.service.TopAndBottomServiceTest.testgetBottom201(TopAndBottomServiceTest.java:485)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.unitils.UnitilsJUnit3.runTest(UnitilsJUnit3.java:111)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at org.unitils.UnitilsJUnit3.runBare(UnitilsJUnit3.java:76)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+1096 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1096 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index15_ftl.ftl"
+1127 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1127 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader14_ftl.ftl"
+1136 ERROR [2016-09-12 14:54:24]  Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> topmap.systembase  [in template "newheader14_ftl.ftl" at line 6, column 28]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+The failing instruction
+ (FTL stack trace):
+----------
+==> ${topmap.systembase.bsetAddress}  [in template "newheader14_ftl.ftl" at line 6, column 26]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.ningpai.index.util.IndexStaticizeUtil.analysisTemplate(IndexStaticizeUtil.java:64)
+	at com.ningpai.index.service.TopAndBottomService.staticizeTopFourteen(TopAndBottomService.java:1351)
+	at com.ningpai.index.service.TopAndBottomService.checkChangeTempFourteen(TopAndBottomService.java:924)
+	at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:290)
+	at com.junit.test.index.service.TopAndBottomServiceTest.testgetBottom191(TopAndBottomServiceTest.java:463)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.unitils.UnitilsJUnit3.runTest(UnitilsJUnit3.java:111)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at org.unitils.UnitilsJUnit3.runBare(UnitilsJUnit3.java:76)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+1137 ERROR [2016-09-12 14:54:24]  Ä£ï¿½ï¿½ï¿½ï¿½ï¿½É´ï¿½ï¿½ï¿½
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> topmap.systembase  [in template "newheader14_ftl.ftl" at line 6, column 28]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+The failing instruction
+ (FTL stack trace):
+----------
+==> ${topmap.systembase.bsetAddress}  [in template "newheader14_ftl.ftl" at line 6, column 26]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.ningpai.index.util.IndexStaticizeUtil.analysisTemplate(IndexStaticizeUtil.java:64)
+	at com.ningpai.index.service.TopAndBottomService.staticizeTopFourteen(TopAndBottomService.java:1351)
+	at com.ningpai.index.service.TopAndBottomService.checkChangeTempFourteen(TopAndBottomService.java:924)
+	at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:290)
+	at com.junit.test.index.service.TopAndBottomServiceTest.testgetBottom191(TopAndBottomServiceTest.java:463)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.unitils.UnitilsJUnit3.runTest(UnitilsJUnit3.java:111)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at org.unitils.UnitilsJUnit3.runBare(UnitilsJUnit3.java:76)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+1140 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1141 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index14_ftl.ftl"
+1179 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1179 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader14_ftl.ftl"
+1190 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1190 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index14_ftl.ftl"
+1226 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1226 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader15_ftl.ftl"
+1238 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1242 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index15_ftl.ftl"
+1304 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader3_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1305 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader3_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader3_ftl.ftl"
+1319 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index3_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1320 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index3_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index3_ftl.ftl"
+1367 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader4_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1368 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader4_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader4_ftl.ftl"
+1378 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index4_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1379 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index4_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index4_ftl.ftl"
+1421 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader5_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1422 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader5_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader5_ftl.ftl"
+1430 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index5_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1430 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index5_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index5_ftl.ftl"
+1486 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader6_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1487 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader6_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader6_ftl.ftl"
+1496 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index6_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1496 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index6_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index6_ftl.ftl"
+1539 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader7_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1540 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader7_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader7_ftl.ftl"
+1549 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index7_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1549 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index7_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index7_ftl.ftl"
+1593 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader8_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1593 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader8_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader8_ftl.ftl"
+1602 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader8_newftl.ftl"["zh_CN",utf-8,parsed] ]
+1602 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader8_newftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader8_newftl.ftl"
+1611 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index8_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1612 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index8_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index8_ftl.ftl"
+1653 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader9_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1654 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader9_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader9_ftl.ftl"
+1663 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index9_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1663 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index9_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index9_ftl.ftl"
+1711 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader10_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1712 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader10_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader10_ftl.ftl"
+1723 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index10_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1723 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index10_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index10_ftl.ftl"
+1761 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader11_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1761 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader11_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader11_ftl.ftl"
+1773 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index11_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1774 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index11_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index11_ftl.ftl"
+1811 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader12_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1812 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader12_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader12_ftl.ftl"
+1828 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index12_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1828 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index12_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index12_ftl.ftl"
+1875 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["newheader13_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1876 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "newheader13_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader13_ftl.ftl"
+1887 DEBUG [2016-09-12 14:54:24]  Could not find template in cache, creating new one; id=["index13_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1888 DEBUG [2016-09-12 14:54:24]  Compiling FreeMarker template "index13_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index13_ftl.ftl"
+1970 WARN  [2016-09-12 14:54:24]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$2a22a53. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+3217 INFO  [2016-09-12 14:54:26]  load es index name fail use default index name 'qm-test-item'
+3682 WARN  [2016-09-12 14:54:26]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$2a22a53. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+4120 INFO  [2016-09-12 14:54:27]  ï¿½Ëµï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½20160912193244
+4298 WARN  [2016-09-12 14:54:27]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$2a22a53. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+4328 WARN  [2016-09-12 14:54:27]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$2a22a53. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+0    WARN  [2016-09-13 20:38:26]  No custom configuration file unitils.properties found.
+1    INFO  [2016-09-13 20:38:26]  No local configuration file unitils-local.properties found.
+29   DEBUG [2016-09-13 20:38:26]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+30   DEBUG [2016-09-13 20:38:26]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+39   DEBUG [2016-09-13 20:38:26]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+41   DEBUG [2016-09-13 20:38:26]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+44   DEBUG [2016-09-13 20:38:26]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+49   DEBUG [2016-09-13 20:38:26]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+51   DEBUG [2016-09-13 20:38:26]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+94   DEBUG [2016-09-13 20:38:26]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+737  DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader3_ftl.ftl"["zh_CN",utf-8,parsed] ]
+739  DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader3_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader3_ftl.ftl"
+860  DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index3_ftl.ftl"["zh_CN",utf-8,parsed] ]
+861  DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index3_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index3_ftl.ftl"
+934  DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader4_ftl.ftl"["zh_CN",utf-8,parsed] ]
+934  DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader4_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader4_ftl.ftl"
+944  DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index4_ftl.ftl"["zh_CN",utf-8,parsed] ]
+945  DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index4_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index4_ftl.ftl"
+990  DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader5_ftl.ftl"["zh_CN",utf-8,parsed] ]
+990  DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader5_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader5_ftl.ftl"
+1003 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index5_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1004 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index5_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index5_ftl.ftl"
+1063 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader6_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1063 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader6_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader6_ftl.ftl"
+1072 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index6_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1073 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index6_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index6_ftl.ftl"
+1136 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader7_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1137 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader7_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader7_ftl.ftl"
+1146 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index7_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1146 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index7_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index7_ftl.ftl"
+1241 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader8_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1242 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader8_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader8_ftl.ftl"
+1250 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader8_newftl.ftl"["zh_CN",utf-8,parsed] ]
+1250 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader8_newftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader8_newftl.ftl"
+1258 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index8_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1259 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index8_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index8_ftl.ftl"
+1300 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader9_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1301 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader9_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader9_ftl.ftl"
+1310 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index9_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1310 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index9_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index9_ftl.ftl"
+1358 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader10_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1359 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader10_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader10_ftl.ftl"
+1368 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index10_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1368 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index10_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index10_ftl.ftl"
+1413 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader11_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1414 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader11_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader11_ftl.ftl"
+1422 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index11_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1422 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index11_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index11_ftl.ftl"
+1467 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader12_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1468 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader12_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader12_ftl.ftl"
+1477 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index12_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1477 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index12_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index12_ftl.ftl"
+1520 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader13_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1521 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader13_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader13_ftl.ftl"
+1537 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index13_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1537 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index13_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index13_ftl.ftl"
+1597 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1598 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader15_ftl.ftl"
+1607 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1607 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index15_ftl.ftl"
+1632 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["newheader14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1632 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "newheader14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader14_ftl.ftl"
+1642 ERROR [2016-09-13 20:38:27]  Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> topmap.systembase  [in template "newheader14_ftl.ftl" at line 6, column 28]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+The failing instruction
+ (FTL stack trace):
+----------
+==> ${topmap.systembase.bsetAddress}  [in template "newheader14_ftl.ftl" at line 6, column 26]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.ningpai.index.util.IndexStaticizeUtil.analysisTemplate(IndexStaticizeUtil.java:64)
+	at com.ningpai.index.service.TopAndBottomService.staticizeTopFourteen(TopAndBottomService.java:1351)
+	at com.ningpai.index.service.TopAndBottomService.checkChangeTempFourteen(TopAndBottomService.java:924)
+	at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:290)
+	at com.junit.test.index.service.TopAndBottomServiceTest.testgetBottom191(TopAndBottomServiceTest.java:463)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.unitils.UnitilsJUnit3.runTest(UnitilsJUnit3.java:111)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at org.unitils.UnitilsJUnit3.runBare(UnitilsJUnit3.java:76)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+1646 ERROR [2016-09-13 20:38:27]  Ä£ï¿½ï¿½ï¿½ï¿½ï¿½É´ï¿½ï¿½ï¿½
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> topmap.systembase  [in template "newheader14_ftl.ftl" at line 6, column 28]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+The failing instruction
+ (FTL stack trace):
+----------
+==> ${topmap.systembase.bsetAddress}  [in template "newheader14_ftl.ftl" at line 6, column 26]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.ningpai.index.util.IndexStaticizeUtil.analysisTemplate(IndexStaticizeUtil.java:64)
+	at com.ningpai.index.service.TopAndBottomService.staticizeTopFourteen(TopAndBottomService.java:1351)
+	at com.ningpai.index.service.TopAndBottomService.checkChangeTempFourteen(TopAndBottomService.java:924)
+	at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:290)
+	at com.junit.test.index.service.TopAndBottomServiceTest.testgetBottom191(TopAndBottomServiceTest.java:463)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.unitils.UnitilsJUnit3.runTest(UnitilsJUnit3.java:111)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at org.unitils.UnitilsJUnit3.runBare(UnitilsJUnit3.java:76)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+1648 DEBUG [2016-09-13 20:38:27]  Could not find template in cache, creating new one; id=["index14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1649 DEBUG [2016-09-13 20:38:27]  Compiling FreeMarker template "index14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index14_ftl.ftl"
+1689 DEBUG [2016-09-13 20:38:28]  Could not find template in cache, creating new one; id=["newheader14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1689 DEBUG [2016-09-13 20:38:28]  Compiling FreeMarker template "newheader14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader14_ftl.ftl"
+1700 DEBUG [2016-09-13 20:38:28]  Could not find template in cache, creating new one; id=["index14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1700 DEBUG [2016-09-13 20:38:28]  Compiling FreeMarker template "index14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index14_ftl.ftl"
+1755 DEBUG [2016-09-13 20:38:28]  Could not find template in cache, creating new one; id=["newheader_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1756 DEBUG [2016-09-13 20:38:28]  Compiling FreeMarker template "newheader_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader_ftl.ftl"
+1766 DEBUG [2016-09-13 20:38:28]  Could not find template in cache, creating new one; id=["index2_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1767 DEBUG [2016-09-13 20:38:28]  Compiling FreeMarker template "index2_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\kv2\\kstore_v2\\kstore_site\\target\\test-classes\\view\\index\\index2_ftl.ftl"
+1865 WARN  [2016-09-13 20:38:28]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$5bf136c6. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+3286 INFO  [2016-09-13 20:38:29]  load es index name fail use default index name 'qm-test-item'
+3993 WARN  [2016-09-13 20:38:30]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$5bf136c6. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+4191 INFO  [2016-09-13 20:38:30]  ï¿½Ëµï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½20160913629237
+4419 WARN  [2016-09-13 20:38:30]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$5bf136c6. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+4453 WARN  [2016-09-13 20:38:30]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$5bf136c6. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+0    WARN  [2017-05-09 20:49:37]  No custom configuration file unitils.properties found.
+1    INFO  [2017-05-09 20:49:37]  No local configuration file unitils-local.properties found.
+40   DEBUG [2017-05-09 20:49:37]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+41   DEBUG [2017-05-09 20:49:37]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+49   DEBUG [2017-05-09 20:49:37]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+50   DEBUG [2017-05-09 20:49:37]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+52   DEBUG [2017-05-09 20:49:37]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+58   DEBUG [2017-05-09 20:49:37]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+60   DEBUG [2017-05-09 20:49:37]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+109  DEBUG [2017-05-09 20:49:37]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+1620 WARN  [2017-05-09 20:49:39]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$3e8047b3. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+2479 INFO  [2017-05-09 20:49:40]  
+
+Observed scenario:
+
+1. customerMapperMock.searchTotalCount(map1) -> 1  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:280)
+2. customerMapperMock.queryAllMyOrders(map1) -> list1  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:292)
+
+
+Detailed scenario:
+
+1. customerMapperMock.searchTotalCount(map1) -> 1
+- map1 -> {"startRowNum"=0, "endRowNum"=15}
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:280)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testQueryAllMyOrders(CustomerServiceInterfaceTest.java:245)
+
+2. customerMapperMock.queryAllMyOrders(map1) -> list1
+- map1 -> {"startRowNum"=0, "endRowNum"=15}
+- list1 -> [java.lang.Object@3f9ba6d6]
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:292)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testQueryAllMyOrders(CustomerServiceInterfaceTest.java:250)
+
+
+3304 INFO  [2017-05-09 20:49:41]  
+
+No invocations observed.
+
+4596 INFO  [2017-05-09 20:49:42]  load es index name fail use default index name 'qm-test-item' 
+5193 INFO  [2017-05-09 20:49:42]  
+
+Observed scenario:
+
+1. customerMapperMock.selectCustomerByCustNameAndType(map1) -> customer1  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:75)
+2. customerMapperMock.updateByPrimaryKeySelective(customer1) -> 0  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:106)
+3. customerAddressMapperMock.selectDefaultAddr(null) -> null  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:111)
+4. shoppingCartServiceMock.loadCoodeShopping(httpServletRequest1) -> 0  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:114)
+
+
+Detailed scenario:
+
+1. customerMapperMock.selectCustomerByCustNameAndType(map1) -> customer1
+- map1 -> {"username"="djk", "uType"="username"}
+- customer1 -> Customer<, loginErrorCount=null, loginLockTime=null, customerAddressList=null, loginKey=null, orderNumber=null, orderMoney=null, startTime=null, endTime=null, pointLevelName=null, pointLevelId=null, levelCount=null, levelRate=null, countOrder=null, sumPrice=null, maxtime=null, customerId=null, customerUsername=null, customerPassword="b93283a81cda5e1f5cb0f15797fd1f89", customerNickname=null, isMobile=null, isEmail=null, isFlag="0", loginIp=null, loginTime=Tue May 09 20:49:42 CST 2017, createTime=null, modifiedTime=null, delFlag=null, delTime=null, customerImg=null, captcha=null, aeadTime=null, thirdId=null, isSeller=null, pwdCaptcha=null, pwdAeadTime=null, isTempCust=null, isShare=null, isSiteManager=null, uniqueCode=null, saltVal=null>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:75)
+- Behavior defined at com.junit.test.site.login.service.LoginServiceTest.testCheckCustomerExists(LoginServiceTest.java:72)
+
+2. customerMapperMock.updateByPrimaryKeySelective(customer1) -> 0
+- customer1 -> Customer<, loginErrorCount=null, loginLockTime=null, customerAddressList=null, loginKey="f1081bd4-825f-4495-9846-b54ef8c0bf08", orderNumber=null, orderMoney=null, startTime=null, endTime=null, pointLevelName=null, pointLevelId=null, levelCount=null, levelRate=null, countOrder=null, sumPrice=null, maxtime=null, customerId=null, customerUsername=null, customerPassword=null, customerNickname=null, isMobile=null, isEmail=null, isFlag="0", loginIp="127.0.0.1", loginTime=Tue May 09 20:49:42 CST 2017, createTime=null, modifiedTime=null, delFlag=null, delTime=null, customerImg=null, captcha=null, aeadTime=Mon May 08 20:49:42 CST 2017, thirdId=null, isSeller=null, pwdCaptcha=null, pwdAeadTime=null, isTempCust=null, isShare=null, isSiteManager=null, uniqueCode=null, saltVal=null>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:106)
+- No behavior defined, returned default value.
+
+3. customerAddressMapperMock.selectDefaultAddr(null) -> null
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:111)
+- No behavior defined, returned default value.
+
+4. shoppingCartServiceMock.loadCoodeShopping(httpServletRequest1) -> 0
+- httpServletRequest1 -> MockHttpServletRequest<, active=true, attributes={}, characterEncoding=null, content=null, contentType=null, parameters={}, protocol="http", scheme="http", serverName="localhost", serverPort=80, remoteAddr="127.0.0.1", remoteHost="localhost", locales=[Locale<>], secure=false, servletContext=MockServletContext<, logger=SLF4JLocationAwareLog<, name="org.springframework.mock.web.MockServletContext">, resourceLoader=DefaultResourceLoader<classLoader=Launcher.AppClassLoader<...>>, resourceBasePath="", contextPath="", majorVersion=2, minorVersion=5, effectiveMajorVersion=2, effectiveMinorVersion=5, contexts={}, initParameters={}, attributes={"javax.servlet.context.tempdir"=File<...>}, servletContextName="MockServletContext", declaredRoles=[]>, remotePort=80, localName="localhost", localAddr="127.0.0.1", localPort=80, authType=null, cookies=null, headers={}, method="", pathInfo=null, contextPath="", queryString=null, remoteUser=null, userRoles=[], userPrincipal=null, requestedSessionId=null, requestURI="", servletPath="", session=MockHttpSession<, id="14", creationTime=1494334182950, maxInactiveInterval=0, lastAccessedTime=1494334182950, servletContext=MockServletContext<, logger=SLF4JLocationAwareLog<...>, resourceLoader=DefaultResourceLoader<...>, resourceBasePath="", contextPath="", majorVersion=2, minorVersion=5, effectiveMajorVersion=2, effectiveMinorVersion=5, contexts={}, initParameters={}, attributes={"javax.servlet.context.tempdir"=File<...>}, servletContextName="MockServletContext", declaredRoles=[]>, attributes={"cust"=Customer<...>}, invalid=false, isNew=true>, requestedSessionIdValid=true, requestedSessionIdFromCookie=true, requestedSessionIdFromURL=false>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:114)
+- No behavior defined, returned default value.
+
+
+5595 INFO  [2017-05-09 20:49:43]  ÍËµ¥³É¹¦£¬ÍËµ¥µ¥ºÅÎª£º20170509115202
+0    WARN  [2018-04-02 15:07:32]  No custom configuration file unitils.properties found.
+2    INFO  [2018-04-02 15:07:32]  No local configuration file unitils-local.properties found.
+44   DEBUG [2018-04-02 15:07:32]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+45   DEBUG [2018-04-02 15:07:32]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+60   DEBUG [2018-04-02 15:07:32]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+63   DEBUG [2018-04-02 15:07:32]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+66   DEBUG [2018-04-02 15:07:32]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+75   DEBUG [2018-04-02 15:07:32]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+79   DEBUG [2018-04-02 15:07:32]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+122  DEBUG [2018-04-02 15:07:32]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+1432 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["newheader3_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1434 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "newheader3_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader3_ftl.ftl"
+1629 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["index3_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1629 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "index3_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index3_ftl.ftl"
+1816 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["newheader4_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1816 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "newheader4_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader4_ftl.ftl"
+1843 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["index4_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1844 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "index4_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index4_ftl.ftl"
+1969 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["newheader5_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1969 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "newheader5_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader5_ftl.ftl"
+1991 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["index5_ftl.ftl"["zh_CN",utf-8,parsed] ]
+1991 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "index5_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index5_ftl.ftl"
+2175 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["newheader6_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2175 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "newheader6_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader6_ftl.ftl"
+2194 DEBUG [2018-04-02 15:07:34]  Could not find template in cache, creating new one; id=["index6_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2195 DEBUG [2018-04-02 15:07:34]  Compiling FreeMarker template "index6_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index6_ftl.ftl"
+2321 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader7_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2322 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader7_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader7_ftl.ftl"
+2349 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index7_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2349 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index7_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index7_ftl.ftl"
+2589 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader8_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2589 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader8_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader8_ftl.ftl"
+2608 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader8_newftl.ftl"["zh_CN",utf-8,parsed] ]
+2608 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader8_newftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader8_newftl.ftl"
+2628 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index8_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2629 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index8_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index8_ftl.ftl"
+2704 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader9_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2705 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader9_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader9_ftl.ftl"
+2727 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index9_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2727 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index9_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index9_ftl.ftl"
+2859 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader10_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2860 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader10_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader10_ftl.ftl"
+2881 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index10_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2881 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index10_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index10_ftl.ftl"
+2975 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader11_ftl.ftl"["zh_CN",utf-8,parsed] ]
+2975 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader11_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader11_ftl.ftl"
+2999 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index11_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3000 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index11_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index11_ftl.ftl"
+3069 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader12_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3070 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader12_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader12_ftl.ftl"
+3089 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index12_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3090 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index12_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index12_ftl.ftl"
+3169 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader13_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3169 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader13_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader13_ftl.ftl"
+3186 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index13_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3187 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index13_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index13_ftl.ftl"
+3252 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["newheader_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3253 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "newheader_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader_ftl.ftl"
+3275 DEBUG [2018-04-02 15:07:35]  Could not find template in cache, creating new one; id=["index2_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3276 DEBUG [2018-04-02 15:07:35]  Compiling FreeMarker template "index2_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index2_ftl.ftl"
+3355 DEBUG [2018-04-02 15:07:36]  Could not find template in cache, creating new one; id=["newheader14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3356 DEBUG [2018-04-02 15:07:36]  Compiling FreeMarker template "newheader14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader14_ftl.ftl"
+3380 DEBUG [2018-04-02 15:07:36]  Could not find template in cache, creating new one; id=["index14_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3381 DEBUG [2018-04-02 15:07:36]  Compiling FreeMarker template "index14_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index14_ftl.ftl"
+3421 INFO  [2018-04-02 15:07:36]  
+
+Observed scenario:
+
+1.  tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+2.  tempTokenServiceMock.selectTokenByType("1") -> null  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1129)
+3.  tempTokenServiceMock.createToken(tempToken1) -> 0  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1147)
+4.  redisAdapterMock.delete("TEMPTOKEN_KEY")  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1149)
+5.  tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+6.  channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1932)
+7.  hotSearchServiceMock.selectHotBySelectiveForSite(19, null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1946)
+8.  indexSiteServiceMock.getClassifyBar(19) -> null  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1950)
+9.  basicSetServiceMock.findBasicSet() -> basicSet1  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1953)
+10. redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+11. iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+12. redisAdapterMock.put("SEO_KEY", serializable1) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+13. channelBarServiceMock.selectAllChannelBarByParam(null, 19, null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getNav(TopAndBottomService.java:2037)
+14. customerServiceInterfaceMock.selectNotice(null) -> map1  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1958)
+15. couponServiceMock.myCouponNoCount(null) -> 0  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1960)
+16. informationServiceMock.selectByInfoType(1) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1964)
+17. tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+18. basicSetServiceMock.findBasicSet() -> basicSet1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1887)
+19. indexSiteServiceMock.getStoreys(19) -> null  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1890)
+20. informationServiceMock.selectByInfoType(1) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1893)
+21. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 157, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1897)
+22. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 159, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1899)
+23. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1901)
+24. channelGoodsServiceMock.selectchannelStoreyGoodsByParamForSite("19", null, null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1903)
+25. indexSiteServiceMock.getTagListForTempId(19) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1905)
+26. channelTrademarkServiceMock.selectTrademarkByTempId(19) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1907)
+27. iOnLineServiceItemBizMock.selectItemsByType(0) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1913)
+28. iOnLineServiceBizMock.selectSetting() -> onLineService1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1915)
+29. redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+30. iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+31. redisAdapterMock.put("SEO_KEY", serializable2) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+32. basicSetServiceMock.findBasicSet() -> basicSet1  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+33. redisAdapterMock.get("HELPCATELIST_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+34. helpCateServiceMock.findAll() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+35. redisAdapterMock.put("HELPCATELIST_KEY", []) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+36. helpCenterServiceMock.selectAllIsFoot() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+37. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+
+
+Detailed scenario:
+
+1. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=19, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+2. tempTokenServiceMock.selectTokenByType("1") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1129)
+- No behavior defined, returned default value.
+
+3. tempTokenServiceMock.createToken(tempToken1) -> 0
+- tempToken1 -> TempToken<, tokenId=null, token="5286459ad80c496bb8bcf6ba3ac49c68", createDate=null, updateDate=null, temp1="1", temp2=null, temp3=null, temp4=null, temp5=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1147)
+- No behavior defined, returned default value.
+
+4. redisAdapterMock.delete("TEMPTOKEN_KEY")
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1149)
+
+5. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=19, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+6. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1932)
+- No behavior defined, returned default value.
+
+7. hotSearchServiceMock.selectHotBySelectiveForSite(19, null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1946)
+- No behavior defined, returned default value.
+
+8. indexSiteServiceMock.getClassifyBar(19) -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1950)
+- No behavior defined, returned default value.
+
+9. basicSetServiceMock.findBasicSet() -> basicSet1
+- basicSet1 -> BasicSet<, bsetId=null, bsetName=null, bsetDesc=null, bsetAddress="a", bsetPhone=null, bsetAdmin=null, bsetEmail=null, bsetLogo="a", bsetThirdLogo=null, bsetHotline=null, bsetCopyright=null, bsetThirdAddress=null, bsetDomain=null, siteLoginImg=null, siteRegImg=null, siteRegSuccImg=null, thirdLoginImg=null, thirdRegImg=null, loginPatcha=null, bsetUseragreement=null, thirdUserment=null, bsetUseragreementuser=null, thirdCopyright=null, mobileLogoImg=null, showStock=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1953)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:558)
+
+10. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+11. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+12. redisAdapterMock.put("SEO_KEY", serializable1) -> false
+- serializable1 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+13. channelBarServiceMock.selectAllChannelBarByParam(null, 19, null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getNav(TopAndBottomService.java:2037)
+- No behavior defined, returned default value.
+
+14. customerServiceInterfaceMock.selectNotice(null) -> map1
+- map1 -> {"reduceNum"=1, "pendingNum"=1, "noReadNum"=1}
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1958)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:559)
+
+15. couponServiceMock.myCouponNoCount(null) -> 0
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1960)
+- No behavior defined, returned default value.
+
+16. informationServiceMock.selectByInfoType(1) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1964)
+- No behavior defined, returned default value.
+
+17. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=19, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+18. basicSetServiceMock.findBasicSet() -> basicSet1
+- basicSet1 -> BasicSet<, bsetId=null, bsetName=null, bsetDesc=null, bsetAddress="a", bsetPhone=null, bsetAdmin=null, bsetEmail=null, bsetLogo="a", bsetThirdLogo=null, bsetHotline=null, bsetCopyright=null, bsetThirdAddress=null, bsetDomain=null, siteLoginImg=null, siteRegImg=null, siteRegSuccImg=null, thirdLoginImg=null, thirdRegImg=null, loginPatcha=null, bsetUseragreement=null, thirdUserment=null, bsetUseragreementuser=null, thirdCopyright=null, mobileLogoImg=null, showStock=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1887)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:558)
+
+19. indexSiteServiceMock.getStoreys(19) -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1890)
+- No behavior defined, returned default value.
+
+20. informationServiceMock.selectByInfoType(1) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1893)
+- No behavior defined, returned default value.
+
+21. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 157, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1897)
+- No behavior defined, returned default value.
+
+22. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 159, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1899)
+- No behavior defined, returned default value.
+
+23. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1901)
+- No behavior defined, returned default value.
+
+24. channelGoodsServiceMock.selectchannelStoreyGoodsByParamForSite("19", null, null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1903)
+- No behavior defined, returned default value.
+
+25. indexSiteServiceMock.getTagListForTempId(19) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1905)
+- No behavior defined, returned default value.
+
+26. channelTrademarkServiceMock.selectTrademarkByTempId(19) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1907)
+- No behavior defined, returned default value.
+
+27. iOnLineServiceItemBizMock.selectItemsByType(0) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1913)
+- No behavior defined, returned default value.
+
+28. iOnLineServiceBizMock.selectSetting() -> onLineService1
+- onLineService1 -> OnLineService<onLineServiceId=0, onlineIndex="a", title="a", type=null, thirdStoreId=0, effectiveTerminal=null, expFleid1=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, itemList=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1915)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:561)
+
+29. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+30. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+31. redisAdapterMock.put("SEO_KEY", serializable2) -> false
+- serializable2 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+32. basicSetServiceMock.findBasicSet() -> basicSet1
+- basicSet1 -> BasicSet<, bsetId=null, bsetName=null, bsetDesc=null, bsetAddress="a", bsetPhone=null, bsetAdmin=null, bsetEmail=null, bsetLogo="a", bsetThirdLogo=null, bsetHotline=null, bsetCopyright=null, bsetThirdAddress=null, bsetDomain=null, siteLoginImg=null, siteRegImg=null, siteRegSuccImg=null, thirdLoginImg=null, thirdRegImg=null, loginPatcha=null, bsetUseragreement=null, thirdUserment=null, bsetUseragreementuser=null, thirdCopyright=null, mobileLogoImg=null, showStock=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:558)
+
+33. redisAdapterMock.get("HELPCATELIST_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+- No behavior defined, returned default value.
+
+34. helpCateServiceMock.findAll() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+- No behavior defined, returned default value.
+
+35. redisAdapterMock.put("HELPCATELIST_KEY", []) -> false
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+- No behavior defined, returned default value.
+
+36. helpCenterServiceMock.selectAllIsFoot() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+- No behavior defined, returned default value.
+
+37. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+- No behavior defined, returned default value.
+
+
+3456 INFO  [2018-04-02 15:07:36]  
+
+Observed scenario:
+
+1.  tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+2.  tempTokenServiceMock.selectTokenByType("1") -> tempToken1  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1158)
+3.  redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+4.  iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+5.  redisAdapterMock.put("SEO_KEY", serializable1) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+6.  basicSetServiceMock.findBasicSet() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+7.  redisAdapterMock.get("HELPCATELIST_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+8.  helpCateServiceMock.findAll() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+9.  redisAdapterMock.put("HELPCATELIST_KEY", []) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+10. helpCenterServiceMock.selectAllIsFoot() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+11. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+
+
+Detailed scenario:
+
+1. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=19, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+2. tempTokenServiceMock.selectTokenByType("1") -> tempToken1
+- tempToken1 -> TempToken<, tokenId=null, token="1", createDate=null, updateDate=null, temp1=null, temp2=null, temp3=null, temp4=null, temp5=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1158)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createGetTopAndBottomTokenOk(TopAndBottomServiceTest.java:574)
+
+3. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+4. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+5. redisAdapterMock.put("SEO_KEY", serializable1) -> false
+- serializable1 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+6. basicSetServiceMock.findBasicSet() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+- No behavior defined, returned default value.
+
+7. redisAdapterMock.get("HELPCATELIST_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+- No behavior defined, returned default value.
+
+8. helpCateServiceMock.findAll() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+- No behavior defined, returned default value.
+
+9. redisAdapterMock.put("HELPCATELIST_KEY", []) -> false
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+- No behavior defined, returned default value.
+
+10. helpCenterServiceMock.selectAllIsFoot() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+- No behavior defined, returned default value.
+
+11. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 19, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+- No behavior defined, returned default value.
+
+
+3492 DEBUG [2018-04-02 15:07:36]  Could not find template in cache, creating new one; id=["newheader15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3492 DEBUG [2018-04-02 15:07:36]  Compiling FreeMarker template "newheader15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\newheader15_ftl.ftl"
+3511 DEBUG [2018-04-02 15:07:36]  Could not find template in cache, creating new one; id=["index15_ftl.ftl"["zh_CN",utf-8,parsed] ]
+3513 DEBUG [2018-04-02 15:07:36]  Compiling FreeMarker template "index15_ftl.ftl"["zh_CN",utf-8,parsed]  from "D:\\smartCit\\qianmi_v2\\kstore_site\\target\\test-classes\\view\\index\\index15_ftl.ftl"
+3534 INFO  [2018-04-02 15:07:36]  
+
+Observed scenario:
+
+1.  tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+2.  tempTokenServiceMock.selectTokenByType("1") -> null  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1129)
+3.  tempTokenServiceMock.createToken(tempToken1) -> 0  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1147)
+4.  redisAdapterMock.delete("TEMPTOKEN_KEY")  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1149)
+5.  tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+6.  channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1932)
+7.  hotSearchServiceMock.selectHotBySelectiveForSite(20, null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1946)
+8.  indexSiteServiceMock.getClassifyBar(20) -> null  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1950)
+9.  basicSetServiceMock.findBasicSet() -> basicSet1  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1953)
+10. redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+11. iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+12. redisAdapterMock.put("SEO_KEY", serializable1) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+13. channelBarServiceMock.selectAllChannelBarByParam(null, 20, null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getNav(TopAndBottomService.java:2037)
+14. customerServiceInterfaceMock.selectNotice(null) -> map1  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1958)
+15. couponServiceMock.myCouponNoCount(null) -> 0  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1960)
+16. informationServiceMock.selectByInfoType(1) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1964)
+17. tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+18. basicSetServiceMock.findBasicSet() -> basicSet1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1887)
+19. indexSiteServiceMock.getStoreys(20) -> null  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1890)
+20. informationServiceMock.selectByInfoType(1) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1893)
+21. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 157, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1897)
+22. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 159, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1899)
+23. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1901)
+24. channelGoodsServiceMock.selectchannelStoreyGoodsByParamForSite("20", null, null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1903)
+25. indexSiteServiceMock.getTagListForTempId(20) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1905)
+26. channelTrademarkServiceMock.selectTrademarkByTempId(20) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1907)
+27. iOnLineServiceItemBizMock.selectItemsByType(0) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1913)
+28. iOnLineServiceBizMock.selectSetting() -> onLineService1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1915)
+29. redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+30. iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+31. redisAdapterMock.put("SEO_KEY", serializable2) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+32. basicSetServiceMock.findBasicSet() -> basicSet1  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+33. redisAdapterMock.get("HELPCATELIST_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+34. helpCateServiceMock.findAll() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+35. redisAdapterMock.put("HELPCATELIST_KEY", []) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+36. helpCenterServiceMock.selectAllIsFoot() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+37. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+
+
+Detailed scenario:
+
+1. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=20, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+2. tempTokenServiceMock.selectTokenByType("1") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1129)
+- No behavior defined, returned default value.
+
+3. tempTokenServiceMock.createToken(tempToken1) -> 0
+- tempToken1 -> TempToken<, tokenId=null, token="5286459ad80c496bb8bcf6ba3ac49c68", createDate=null, updateDate=null, temp1="1", temp2=null, temp3=null, temp4=null, temp5=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1147)
+- No behavior defined, returned default value.
+
+4. redisAdapterMock.delete("TEMPTOKEN_KEY")
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1149)
+
+5. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=20, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+6. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1932)
+- No behavior defined, returned default value.
+
+7. hotSearchServiceMock.selectHotBySelectiveForSite(20, null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1946)
+- No behavior defined, returned default value.
+
+8. indexSiteServiceMock.getClassifyBar(20) -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1950)
+- No behavior defined, returned default value.
+
+9. basicSetServiceMock.findBasicSet() -> basicSet1
+- basicSet1 -> BasicSet<, bsetId=null, bsetName=null, bsetDesc=null, bsetAddress="a", bsetPhone=null, bsetAdmin=null, bsetEmail=null, bsetLogo="a", bsetThirdLogo=null, bsetHotline=null, bsetCopyright=null, bsetThirdAddress=null, bsetDomain=null, siteLoginImg=null, siteRegImg=null, siteRegSuccImg=null, thirdLoginImg=null, thirdRegImg=null, loginPatcha=null, bsetUseragreement=null, thirdUserment=null, bsetUseragreementuser=null, thirdCopyright=null, mobileLogoImg=null, showStock=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1953)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:558)
+
+10. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+11. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+12. redisAdapterMock.put("SEO_KEY", serializable1) -> false
+- serializable1 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+13. channelBarServiceMock.selectAllChannelBarByParam(null, 20, null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getNav(TopAndBottomService.java:2037)
+- No behavior defined, returned default value.
+
+14. customerServiceInterfaceMock.selectNotice(null) -> map1
+- map1 -> {"reduceNum"=1, "pendingNum"=1, "noReadNum"=1}
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1958)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:559)
+
+15. couponServiceMock.myCouponNoCount(null) -> 0
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1960)
+- No behavior defined, returned default value.
+
+16. informationServiceMock.selectByInfoType(1) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getTop(TopAndBottomService.java:1964)
+- No behavior defined, returned default value.
+
+17. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=20, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+18. basicSetServiceMock.findBasicSet() -> basicSet1
+- basicSet1 -> BasicSet<, bsetId=null, bsetName=null, bsetDesc=null, bsetAddress="a", bsetPhone=null, bsetAdmin=null, bsetEmail=null, bsetLogo="a", bsetThirdLogo=null, bsetHotline=null, bsetCopyright=null, bsetThirdAddress=null, bsetDomain=null, siteLoginImg=null, siteRegImg=null, siteRegSuccImg=null, thirdLoginImg=null, thirdRegImg=null, loginPatcha=null, bsetUseragreement=null, thirdUserment=null, bsetUseragreementuser=null, thirdCopyright=null, mobileLogoImg=null, showStock=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1887)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:558)
+
+19. indexSiteServiceMock.getStoreys(20) -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1890)
+- No behavior defined, returned default value.
+
+20. informationServiceMock.selectByInfoType(1) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1893)
+- No behavior defined, returned default value.
+
+21. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 157, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1897)
+- No behavior defined, returned default value.
+
+22. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 159, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1899)
+- No behavior defined, returned default value.
+
+23. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1901)
+- No behavior defined, returned default value.
+
+24. channelGoodsServiceMock.selectchannelStoreyGoodsByParamForSite("20", null, null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1903)
+- No behavior defined, returned default value.
+
+25. indexSiteServiceMock.getTagListForTempId(20) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1905)
+- No behavior defined, returned default value.
+
+26. channelTrademarkServiceMock.selectTrademarkByTempId(20) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1907)
+- No behavior defined, returned default value.
+
+27. iOnLineServiceItemBizMock.selectItemsByType(0) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1913)
+- No behavior defined, returned default value.
+
+28. iOnLineServiceBizMock.selectSetting() -> onLineService1
+- onLineService1 -> OnLineService<onLineServiceId=0, onlineIndex="a", title="a", type=null, thirdStoreId=0, effectiveTerminal=null, expFleid1=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, itemList=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexInfo(TopAndBottomService.java:1915)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:561)
+
+29. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+30. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+31. redisAdapterMock.put("SEO_KEY", serializable2) -> false
+- serializable2 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+32. basicSetServiceMock.findBasicSet() -> basicSet1
+- basicSet1 -> BasicSet<, bsetId=null, bsetName=null, bsetDesc=null, bsetAddress="a", bsetPhone=null, bsetAdmin=null, bsetEmail=null, bsetLogo="a", bsetThirdLogo=null, bsetHotline=null, bsetCopyright=null, bsetThirdAddress=null, bsetDomain=null, siteLoginImg=null, siteRegImg=null, siteRegSuccImg=null, thirdLoginImg=null, thirdRegImg=null, loginPatcha=null, bsetUseragreement=null, thirdUserment=null, bsetUseragreementuser=null, thirdCopyright=null, mobileLogoImg=null, showStock=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createHtml(TopAndBottomServiceTest.java:558)
+
+33. redisAdapterMock.get("HELPCATELIST_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+- No behavior defined, returned default value.
+
+34. helpCateServiceMock.findAll() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+- No behavior defined, returned default value.
+
+35. redisAdapterMock.put("HELPCATELIST_KEY", []) -> false
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+- No behavior defined, returned default value.
+
+36. helpCenterServiceMock.selectAllIsFoot() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+- No behavior defined, returned default value.
+
+37. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+- No behavior defined, returned default value.
+
+

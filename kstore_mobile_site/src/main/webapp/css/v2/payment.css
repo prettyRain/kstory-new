@@ -1,0 +1,490 @@
+/*
+ * 作者：shf
+ * 时间：2017-07-10
+ * 描述：H5改版2.0样式支付页面
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{ font-family:微软雅黑,Microsoft yahei;font-size:12px;  box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+
+
+.vheader {
+    height: 60px!important;
+    color: #fff;
+    background: url(../../images/v3/bg@2x_01.gif) no-repeat left center;
+    background-size: 100% 100%;
+    border-bottom: none!important;
+}
+.vheader img {
+    width: 10px!important;
+    height: 16px!important;
+    margin-left: 10px!important;
+}
+.navbar, .toolbar{
+    height: 60px;
+}
+.navbar:after{
+    height:0;
+}
+
+body,.page{
+    background: #f7f7f7;
+}
+.content-block{
+    padding:0;
+    margin:0;
+}
+.navbar-fixed .page-content, .navbar-through .page-content {
+    padding-top: 60px;
+}
+
+.paytitle{
+    height:2.18rem;
+    width:7.5rem;
+    background:#fff url(../../images/v3/bg@2x_02.png) no-repeat left center;
+    background-size:7.5rem 2.18rem;
+    color: #fff;
+}
+.paytitle .payinfo{
+    font-size: .48rem;
+    padding: .18rem 0 .18rem 0;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: .5px;
+    /*line-height: 29px;*/
+}
+.paytitle  .paydetail{
+    font-size: .23rem;
+    letter-spacing: .6px;
+    width: 100%;
+    text-align: center;
+}
+/*.payprice{*/
+    /*margin-top: 200px;*/
+    /*height:.88rem;*/
+    /*width:100%;*/
+    /*background: #fff;*/
+    /*font-size: 14px;*/
+/*}*/
+/*.payprice p{*/
+    /*float: left;*/
+    /*height:.88rem;*/
+    /*line-height:.88rem;*/
+    /*padding-left: 15px;*/
+    /*color: #000;*/
+/*}*/
+/*.payprice span{*/
+    /*float: right;*/
+    /*height:.88rem;*/
+    /*padding-right: 15px;*/
+    /*color: #FB6B13;*/
+    /*font-weight: bold;*/
+    /*font-size: 12px;*/
+/*}*/
+/*.payprice>span>span{*/
+    /*font-size: 15px;*/
+    /*float: none;*/
+    /*padding: 0;*/
+    /*line-height: .88rem;*/
+/*}*/
+/*.payprice>span{*/
+    /*margin-right: 15px;*/
+/*}*/
+
+.paymethod{
+    position: relative;
+}
+.paymethod .payprice{
+    position: absolute;
+    top: 7px;
+    left:125px;
+    opacity: 0.7;
+    font-size: 12px;
+    color: #7F7F7F;
+    letter-spacing: .5px;
+}
+.paymethod .method{
+    /*background: red;*/
+    padding:5px 0 15px 15px;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: .62px;
+    font-weight: bold;
+}
+.paymethod .choose.weixin{
+    background:#fff url(../../images/v2/weixin@2x.png) no-repeat 25px center;
+    -webkit-background-size:32px 29px;
+    background-size:32px 29px;
+    margin-bottom: 10px;
+}
+.paymethod .choose.zhifb{
+    background:#fff url(../../images/v2/zhifubao@2x.png) no-repeat 25px center;
+    -webkit-background-size:30px;
+    background-size:30px;
+    margin-bottom: 10px;
+}
+.choose{
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    font-size: 14px;
+    color: #000;
+    padding-left: 70px;
+    margin: 0 10px;
+    border-radius: 6px;
+}
+.choose>p{
+    font-size: 15px;
+    color: #000;
+    letter-spacing: .5px;
+    font-weight: bold;
+}
+i.select-box{
+    position: absolute;
+    right: 15px;
+    top: 33px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #bbb;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+}
+i.select-box.selected {
+    border-color: #199301;
+    background: url(../../images/commonbg.png) -5px -52px no-repeat #199301;
+    -webkit-background-size: 200px;
+    background-size: 200px;
+}
+/*礼品卡*/
+.choose.lpCard{
+    background:#fff url(../../images/v3/icon_gift@2x.png) no-repeat 25px center;
+    -webkit-background-size:32px 21px;
+    background-size:32px 21px;
+    height: 60px;
+    line-height: 60px;
+    padding-top: 20px;
+}
+.choose.lpCard.unable{
+    background:#fff url(../../images/v3/icon_gift_none@2x.png) no-repeat 25px center;
+    -webkit-background-size:32px 21px;
+    background-size:32px 21px;
+    background-color: #EEEEEE;
+
+}
+.choose.lpCard i {
+    position: absolute;
+    right: 15px;
+    top: 29px;
+    background: url(../../images/icon_v1.0/btn_more_right@2x.png) right center no-repeat;
+    -webkit-background-size: 22px;
+    background-size: 22px;
+    border: none;
+    width: auto;
+    height: 22px;
+    border-radius: unset;
+    line-height: 22px;
+    padding-right: 22px;
+    font-size: 15px;
+    color: #7F7F7F;
+    letter-spacing: .5px;
+    font-style: normal;
+    text-align: center;
+
+}
+.choose.lpCard>p{
+    font-size: 15px;
+    color: #000;
+    letter-spacing: .5px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+.choose.lpCard>div{
+    font-size: 12px;
+    color: #6C6C6C;
+    letter-spacing: .5px;
+    line-height: 17px;
+    margin-top: 2px;
+}
+.choose.lpCard>div .cancel{
+    color: #6C6C6C;
+}
+.choose.lpCard .sta2,.choose.lpCard .after{
+    color: #007AFF;
+    font-weight: bold;
+}
+.choose.lpCard .sta1,.choose.lpCard .sta3{
+    color: #6C6C6C;
+}
+.choose.lpCard.unable{
+    /*opacity: 0.8;*/
+}
+.choose.lpCard.unable p,.choose.lpCard .before{
+    color: #7F7F7F;
+}
+
+.choose.lpCard .sta2,.choose.lpCard .sta3,.choose.lpCard .after{
+    display: none;
+}
+
+
+/*礼品卡旧代码*/
+/*.giftcard{*/
+    /*margin-top: 20px;*/
+    /*color: #000;*/
+    /*font-size: 14px;*/
+    /*margin-bottom: 150px;*/
+/*}*/
+
+/*.giftcard .gchoose{*/
+    /*height: 44px;*/
+    /*line-height: 44px;*/
+    /*background: #fff;*/
+    /*padding-left: 15px;*/
+/*}*/
+/*.giftcard .gchoose p{*/
+    /*float: left;*/
+/*}*/
+/*.choose-box {*/
+    /*display: block;*/
+    /*float: right;*/
+    /*width: 46px;*/
+    /*height: 28px;*/
+    /*background: url(../../images/checkbox_btn.png) left bottom no-repeat;*/
+    /*background-size: auto 56px;*/
+    /*margin-top: 8px;*/
+    /*margin-right: 15px;*/
+    /*border-radius:32%;*/
+    /*overflow: hidden;*/
+
+/*}*/
+/*.choose-box.selected {*/
+    /*background: url(../../images/checkbox_btn.png) left top no-repeat;*/
+    /*background-size: auto 56px;*/
+/*}*/
+
+/*.giftcard .info{*/
+    /*line-height: 20px;*/
+    /*padding: 0 15px 10px 15px;*/
+    /*background: #fff;*/
+    /*margin-bottom: 1px;*/
+    /*font-size:13px;*/
+/*}*/
+/*.giftcard .info span{*/
+    /*color: #ff3b2f;*/
+/*}*/
+/*#lpk_psd{*/
+    /*height: 44px;*/
+    /*line-height: 24px;*/
+    /*width:100%;*/
+    /*background: #fff;*/
+    /*border:none;*/
+    /*padding: 10px 0 10px 15px;*/
+    /*margin:0;*/
+/*}*/
+
+/*礼品卡输入密码面板*/
+.login-screen, .popup{
+    top: inherit;
+    bottom: 0;
+    height: 5.28rem;
+    border-radius: 6px 6px 0 0;
+}
+.payPanel{
+    position: relative;
+    width:100%;
+    height:5.28rem;
+}
+.payPanel .close-popup{
+    position: absolute;
+    top:.8rem;
+    left:.14rem;
+    width: 22px;
+    height: 22px;
+    color: transparent;
+    background: url(/images/icon_v1.0/back_ios@2x.png) no-repeat center;
+    background-size: 22px 22px;
+}
+.payPanel .price{
+    height:.76rem;
+    padding-top:.6rem;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    font-weight:bold;
+}
+.payPanel .price .integer{
+    font-size: 32px;
+}
+.payPanel .price .decimals{
+    font-size: 24px;
+}
+.payPanel .prompt{
+    font-size: 12px;
+    color: #7F7F7F;
+    letter-spacing: .4px;
+    text-align: center;
+    margin: .08rem 0 .3rem 0;
+    padding: 0 .5rem;
+}
+.payPanel .prompt.error{
+    color: #EB4E3D;
+}
+.payPanel .lpkPsd{
+    background: #F7F7F7;
+    border-radius: 6px;
+    width:6.38rem;
+    height:1.1rem;
+    margin: 0 auto;
+    display: block;
+    border:none;
+    padding-left: 15px;
+    color: #000;
+    font-size: .28rem;
+}
+.payPanel .lpkPsd::-webkit-input-placeholder{
+    font-size: .28rem;
+    color: #7F7F7F;
+    letter-spacing: .5px;
+}
+.payPanel .affirm{
+    position: fixed;
+    bottom: .4rem;
+    width: 5.9rem;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background: #CDCDCD;
+    border-radius: 8px;
+    margin: 0 .8rem;
+    font-weight: bold;
+}
+.payPanel .affirm.affirmBtn{
+    background: #199301;
+}
+
+
+
+
+
+
+
+
+
+/*提示框*/
+.tip-box {
+    position: fixed;
+    top:1%;
+    width: 100%;
+    z-index: 9999;
+    text-align: center
+}
+.tip-box .tip-body {
+    align-items: center;
+    display: inline-block;
+    margin: 0 auto;
+    padding: .2rem .3rem .2rem .3rem;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    background-image: linear-gradient(-228deg, #FFAC4C 0%, #FE7425 100%);
+    box-shadow: 0 2px 7px 0 rgba(254,116,37,0.46);
+    border-radius: 15px;
+}
+.tip-box .tip-body:after {
+    content: '';
+    display: block;
+    clear: both
+}
+.tip-box .tip-body h3 {
+    line-height: 0.1rem;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.86px;
+}
+
+/*#lpk_psd::-webkit-input-placeholder {*/
+    /*font-size: 14px;*/
+/*}*/
+.gotopay{
+    position: fixed;
+    bottom: .49rem;
+    width:5.9rem;
+    text-align: center;
+    height:50px;
+    line-height:50px;;
+    font-size: 16px;
+    color: #fff;
+    background: #199301;
+    border-radius: 8px;
+    margin: 0 .8rem;
+    font-weight: bold;
+}
+.gotopay.load{
+    /*background: #199301 url(../../images/v3/doing.gif) no-repeat center center;*/
+    /*background-size: 49px 49px;*/
+    /*color: transparent;*/
+}
+.gotopay span{
+    font-size: 16px;
+}
+
+
+
+/*其他的代码*/
+.hide{
+    display: none;
+}
+.nbalance,.ngiftcard,.msg{
+    color: red;
+}
+.nbalance a,.ngiftcard a{
+    margin-left: 20px;
+}
+.pay-btn.disabled {
+    background: #DEDEDE;
+    box-shadow: none;
+}
+.ui-popup-backdrop, .ui-popup, .ui-popup-modal, .ui-popup-show, .ui-popup-focus{
+    z-index: 99999!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ningpaihsite.goods.dao.GoodsCateMapper">
+	<resultMap id="BaseResultMap" type="com.ningpai.goods.bean.GoodsCate">
+		<id column="cat_id" property="catId" jdbcType="BIGINT" />
+		<result column="cat_name" property="catName" jdbcType="VARCHAR" />
+		<result column="cat_parent_id" property="catParentId" jdbcType="BIGINT" />
+		<result column="type_id" property="typeId" jdbcType="BIGINT" />
+		<result column="cat_sort" property="catSort" jdbcType="INTEGER" />
+		<result column="cat_grade" property="catGrade" jdbcType="INTEGER" />
+		<result column="cat_seo_title" property="catSeoTitle" jdbcType="VARCHAR" />
+		<result column="cat_seo_keyword" property="catSeoKeyword"
+			jdbcType="VARCHAR" />
+		<result column="cat_seo_desc" property="catSeoDesc" jdbcType="VARCHAR" />
+		<result column="cat_delflag" property="catDelflag" jdbcType="CHAR" />
+	</resultMap>
+	<resultMap id="VoResultMap" type="com.ningpai.site.goods.vo.GoodsCateVo">
+		<id column="cat_id" property="catId" jdbcType="BIGINT" />
+		<result column="cat_name" property="catName" jdbcType="VARCHAR" />
+		<result column="type_id" property="typeId" jdbcType="BIGINT" />
+		<result column="cat_parent_id" property="catParentId" jdbcType="BIGINT" />
+		<result column="cat_sort" property="catSort" jdbcType="INTEGER" />
+		<result column="cat_grade" property="catGrade" jdbcType="INTEGER" />
+		<result column="cat_seo_title" property="catSeoTitle" jdbcType="VARCHAR" />
+		<result column="cat_seo_keyword" property="catSeoKeyword"
+			jdbcType="VARCHAR" />
+		<result column="cat_seo_desc" property="catSeoDesc" jdbcType="VARCHAR" />
+		<result column="cat_delflag" property="catDelflag" jdbcType="CHAR" />
+		<!--  <association property="parentCat" column="cat_parent_id" select="com.ningpaihsite.goods.dao.GoodsCateMapper.selectByPrimaryKey"></association>-->
+	</resultMap>
+	<resultMap id="HasParentCateResultMap" type="com.ningpai.site.goods.vo.GoodsCateVo">
+		<association property="parentCat" column="cat_parent_id" select="com.ningpaihsite.goods.dao.GoodsCateMapper.selectByPrimaryKey"></association>
+	</resultMap>
+	<!-- 面包屑辅助Bean -->
+	<resultMap id="GoodsBreadCrubResultMap" type="com.ningpai.site.goods.vo.GoodsBreadCrumbVo">
+		<id column="cat_id" property="catId" jdbcType="BIGINT" />
+		<result column="cat_name" property="catName" jdbcType="VARCHAR" />
+		<association property="parentCat" column="cat_parent_id" select="queryBreadCrubByCatId"></association>
+	</resultMap>
+
+	<!-- 面包屑跳转辅助Bean -->
+	<resultMap type="com.ningpai.site.goods.util.NavUtil" id="navUtilResultMap">
+	    <result column="first" property="firstCatId" jdbcType="VARCHAR" />
+	    <result column="third" property="thirdCatId" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		cat_id, cat_name, cat_parent_id, type_id, cat_sort, cat_grade, cat_seo_title,
+		cat_seo_keyword,
+		cat_seo_desc, cat_is_show, cat_delflag, cat_create_name, cat_create_time,
+		cat_modified_name,
+		cat_modified_time, cat_del_name, cat_del_time
+	</sql>
+	<sql id="delFlag">
+		cat_delflag='0'
+	</sql>
+	<sql id="Goods_Bread_Crub_Column_List">
+		cat_id,cat_name,cat_parent_id
+	</sql>
+    <select id="findCid" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/> FROM  np_goods_category WHERE cat_parent_id IN (SELECT cat_id FROM np_goods_category WHERE cat_parent_id=#{catId,jdbcType=BIGINT} AND cat_delflag='0') AND cat_delflag='0' ORDER BY cat_sort LIMIT 0,1
+    </select>
+    <select id="findCatGrade" resultType="java.lang.Integer" parameterType="java.lang.Long">
+      select cat_grade from np_goods_category where cat_id=#{catId,jdbcType=BIGINT}
+    </select>
+	<!-- 根据主键查询 -->
+	<select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List"/> from np_goods_category where cat_id=#{catId}
+	</select>
+	<!-- 查询所有的商品分类 -->
+	<select id="queryAllCate" resultMap="VoResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from np_goods_category where
+		<include refid="delFlag" />
+		order by cat_sort
+	</select>
+	<!-- 查询最高级父分类 -->
+	<select id="queryTopParent" resultMap="VoResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from np_goods_category where cat_id='0'
+	</select>
+	<!-- 根据分类ID查询分类名称 -->
+	<select id="queryCatByCatId" parameterType="java.lang.Long"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from np_goods_category where cat_id=#{catId}
+	</select>
+	<!-- 根据分类ID查询分类VO实体 -->
+	<select id="queryCateVoByCatId" resultMap="VoResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from np_goods_category where cat_id=#{catID}
+	</select>
+	<!-- 根据分类ID查询下一级的分类ID -->
+	<select id="querySonCateByCatId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List" /> from np_goods_category where cat_parent_id=#{catId} and cat_delflag='0'
+	</select>
+	<!-- 根据分类id查询当前分类和上一级父分类 -->
+	<select id="queryCateAndParCateByCatId" parameterType="java.lang.Long" resultMap="HasParentCateResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from np_goods_category where cat_id=#{catID}
+	</select>
+	<!-- 查询面包屑辅助Bean -->
+	<select id="queryBreadCrubByCatId" parameterType="java.lang.Long" resultMap="GoodsBreadCrubResultMap">
+		select
+		<include refid="Goods_Bread_Crub_Column_List" />
+		from np_goods_category where cat_id=#{catId} and cat_delflag='0'
+	</select>
+    <!-- 查询面包屑辅助Bean -->
+    <select id="queryBreadCrubByCatName"  parameterType="java.util.Map" resultMap="GoodsBreadCrubResultMap">
+        select
+        <include refid="Goods_Bread_Crub_Column_List" />
+        from np_goods_category where cat_delflag='0'
+        <if test="catName != null and catName !=''" >
+            and cat_name like CONCAT(CONCAT('%',#{catName,jdbcType=VARCHAR}),'%')
+        </if>
+        limit 0,1
+    </select>
+	<!-- 第一级分类查询第一个第三季子分类 -->
+	<select id="queryFirstCatIdByFirstCatId" parameterType="java.lang.Long" resultType="java.lang.Long">
+		select cat_id from np_goods_category where cat_parent_id=(select cat_id from np_goods_category where cat_parent_id=#{catId} and cat_delflag='0'  order by cat_create_time asc limit 0,1) and cat_delflag='0' order by cat_create_time asc limit 0,1
+	</select>
+
+	<!-- 查询第二季分类的父分类 -->
+	<select id="queryParentIdBySecondCatId" parameterType="java.lang.Long" resultType="java.lang.Long">
+		select cat_parent_id from np_goods_category where cat_id=#{catId} and cat_delflag='0'
+	</select>
+
+	<!-- 查询二级分类的第一个子分类 -->
+	<select id="queryFirstSonCatIdBySecondCatId" parameterType="java.lang.Long" resultType="java.lang.Long">
+	    select cat_id from np_goods_category where cat_parent_id=#{catId} and cat_delflag='0' order by cat_create_time asc limit 0,1
+	</select>
+
+	<!-- 根据货品父类型查询对应的频道 -->
+	<select id="queryChannelByCatId" parameterType="java.lang.Long" resultType="com.ningpai.channel.bean.Channel">
+	    SELECT c.channel_name channelName, c.keyword keyword, c.channel_id channelId, c.channel_url channelUrl, c.goods_cat_id goodsCatId, c.temp_id tempId, c.info_type_id infoTypeId,
+	    c.info_name infoName,c.des des,c.usedStart usedStart,c.delflag delflag,c.create_user_id createUserId,c.create_date createDate,c.update_user_id updateUserId,c.update_date updateDate,
+	    c.temp1 temp1,c.temp2 temp2,c.temp3 temp3,c.temp4 temp4,c.temp5 temp5
+	    FROM np_classify_bar b
+	    LEFT JOIN np_channel c ON c.channel_id = b.channel_id
+	    WHERE b.goods_cat_id = #{catParentId} AND b.parent_id = 0 AND c.usedStart = '1' AND c.delflag = '0' AND b.delflag = '0'
+
+	</select>
+
+
+</mapper>

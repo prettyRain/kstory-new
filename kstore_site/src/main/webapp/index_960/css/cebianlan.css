@@ -1,0 +1,72 @@
+.iphone_download .a{
+    display:block; margin-top: 10px;
+}
+.iphone_download{
+    position: relative;
+}
+.iphone_download .a img{
+    margin-right:1px;
+    width:20px;
+    margin-top: 14px;
+}
+.iphone_download_sidebar{
+    right:  40px; position: absolute; bottom: -110px; width: 270px;height: 160px; border: 1px solid #ccc; border-radius:5px 0 0 5px;display:none;
+    z-index: 999;
+    background: #fafafa;
+
+}
+.iphone_download_sidebar div:first-of-type{
+    float:left; margin: 20px 0 0 17px;
+}
+.iphone_download_sidebar div:last-of-type{
+    float:left; margin: 20px 0 0 20px;
+}
+.iphone_download_sidebar div img{
+    display:block;width: 100px;height: 100px;margin-top: 3px;
+}
+.iphone_download_sidebar .img {display:block;float:left; margin:28px 0 0 17px;}
+.iphone_download_sidebar div p{
+    margin-top: 7px;
+}
+.login.shopcarright_img img{
+    width:24px;
+    height: 16px;
+    margin-right: 1px!important;
+    margin-top: 19px;
+}
+.showMy960>a>img{
+    width:39px;
+}
+.homeicon{
+    width:26px;
+}
+.new_service{
+    margin: 0!important;height: 50px;border-bottom: 1px solid #ffffff;
+}
+.new_service a img{
+    margin-top: 14px;
+}
+.new_service  .new_service_sidebar{
+    height: 76px;
+    width: 234px;
+    right: 40px;
+    position: absolute;
+    bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    display: none;
+    z-index: 999;
+    background: #fafafa;
+}
+.new_service  .new_service_sidebar h3{
+    font-size: 26px;
+    color: #333333;
+    margin-top: 14px;
+    text-align: center;
+}
+.new_service  .new_service_sidebar p{
+    font-size: 12px;
+    color: #666666;
+    margin-top: 5px;
+    text-align: center;
+}

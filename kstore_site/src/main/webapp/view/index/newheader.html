@@ -1,0 +1,1450 @@
+<style>
+.divhide{
+	 display: none;
+}
+/*搜索提示-liangck-20151127*/
+.section-header .content .search{
+    z-index: 999;
+}
+
+.ex_search ul {
+    border-bottom: 1px solid #ddd;
+}
+
+.ex_search li {
+    position: relative;
+}
+
+.ex_search li a {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    color: #666;
+}
+
+.ex_search li:hover {
+    background: #f2f2f2;
+}
+
+.ex_search li a span {
+    color: #ccc;
+    float: right;
+}
+
+.ex_search li .del_history {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #369;
+    display: none;
+}
+
+.ex_search p {
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+}
+
+.cur {background: #f2f2f2;}
+</style>
+	<div class="container">
+    	<div class="header clearfix">
+    		<div class="logo fl">
+    			<a href="http://www.ge960.com"><img src="http://testboss.ge960.com:80/upload/20180103/1514969992816.jpg" alt="" style="width:165px;height:70px;" /></a>
+    			<a class="ml30" href="/http://www.ge960.com/item/7221.html">
+    				<img src="http://testboss.ge960.com:80/upload/20170907/1504786330214.jpg" alt="" 
+    				width="150px" height="80px"/></a>
+    		</div><!--/logo-->
+			<div class="search_wp fl mt15 pr">
+            	<div class="search_box clearfix">
+            		<form id="topSearchForm" action = "/goods/searchproduct2.html" method = "get">
+                            <input class="search_text fl c999" type="text" name="title" autocomplete="off" value=""/>
+                	<input class="search_btn fl" type="button" onclick="checkSearch()" value="" />
+            		</form>
+                </div><!--/search_box-->
+                <div class="hot_word mt10">
+                	热门搜索：
+                </div><!--/hot_word-->
+                <div class="ex_search pa">
+                    <ul id="searchList">
+                    </ul>
+                    <p class="tr"><a class="close_ex" href="javascript:;">关闭</a></p>
+                </div><!--/ex_search-->
+            </div><!--/search_wp-->
+            <div class="shopping_cart fr mt20">
+            	<dl class="pr" id="loadcart">
+            		<dt class="pr" id="mminicart">
+            			<span class="sc_num"><em>0</em></span>
+                    	<a href="/myshoppingcart.html" target="_blank">我的购物车</a>
+            		</dt>
+            		<dd>
+            			<div class="cart_empty">
+            				<!--            				<p>您的购物车是空的<br />如您已添加过商品，可<a href="/login.html">登录</a>后查看</p>
+            				-->
+            				<p>您的购物车是空的<br />如您已添加过商品，可<a href="/login.html">登录</a>后查看</p>
+            			</div><!--/cart_empty-->
+            			<div class="cart_cont none">
+            				<div class="cart_tit clearfix mt5">
+            				</div><!--/cart_tit-->
+            				<ul class="cart_list mt10">
+            				</ul><!--/cart_list-->
+            				<div class="settle_accounts tr mt10">
+            					<span class="mr10">共1件商品</span>
+            					共计
+            					<em><b>¥</b>2878.00</em>
+            				</div><!--/settle_accounts-->
+            				<div class="tr mt10 mb10"><a class="settle_btn" href="/myshoppingcart.html" target="_blank">去购物车结算</a></div>
+            			</div><!--/cart_cont-->
+            		</dd>
+            	</dl>
+            </div><!--/shopping_cart-->
+    	</div><!--/header-->
+</div>
+<div style="width:100%;height:38px;" id="navbg" class="">
+<div class="container">
+    	<div class="nav clearfix">
+    		<input type="hidden" id="tempcbshowflag" value="1">
+    		<div class="pro_sort fl pr">
+    			<h2><a href="javascript:;">全部商品分类</a><b></b></h2>
+    			<div class="sort_cont pa none">
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521511304288.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5773-5773.html" target="_blank">绿 色 蔬 菜</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521511409573.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5787-5787.html" target="_blank">时 令 水 果</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521511436975.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5799-5799.html" target="_blank">肉 禽 蛋 品</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514245827.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5869-5869.html" target="_blank">水 产 熟 食</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514377346.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5871-5871.html" target="_blank">粮 油 调 味</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514425393.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5873-5873.html" target="_blank">速 食 冷 冻</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514463276.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5875-5875.html" target="_blank">速 食 糕 点</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514481889.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5877-5877.html" target="_blank">零 食 果 茶</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514511729.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5879-5879.html" target="_blank">中 外 名 酒</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514547535.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5881-5881.html" target="_blank">药 酒 保 健</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514590855.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5883-5883.html" target="_blank">饮 品 果 汁</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    				<dl>
+    					<dt>
+    						<img class="vm" alt="" src="http://testboss.ge960.com:80/upload/20180320/1521514660279.jpg" width="20px" height="20px"/>
+    							<!--判断是否自定义分类导航-->
+                                    <a href="/list/5885-5885.html" target="_blank">功 能 饮 料</a>
+    					</dt>
+    					<dd>
+    					</dd>
+    					<dd class="sort_line"></dd>
+    				</dl>
+    					<!--分类导航不足时，显示图片-->
+    			</div><!--/sort_cont-->
+    			<div class="sort_open pa">
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">叶菜类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5777-5773.html">白菜</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5855-5773.html">菠菜</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5857-5773.html">油麦菜</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5859-5773.html">韭菜</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">根茎类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5861-5773.html">笋</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5863-5773.html">蒜苗</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5865-5773.html">彩椒</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5867-5773.html">萝卜</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5889-5773.html">玉米</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5893-5773.html">土豆</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5897-5773.html">山药</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">茄果瓜类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5923-5773.html">西红柿</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5925-5773.html">黄瓜</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5927-5773.html">青椒</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5783-5773.html">菌菇类</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5929-5773.html">猴头菇</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5931-5773.html">茶树菇</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5933-5773.html">杏鲍菇</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5935-5773.html">金针菇</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5937-5773.html">白玉菇</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5785-5773.html">葱蒜类</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5939-5773.html">葱</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6339-5773.html">干货</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6341-5773.html">黄花菜</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6343-5773.html">木耳</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6353-5773.html">粉丝</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">浆果类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5941-5787.html">奇异果</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5943-5787.html">草莓</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5945-5787.html">香蕉</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">柑橘类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5947-5787.html">橙子</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5949-5787.html">丑柑</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5951-5787.html">柠檬</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">核果类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5953-5787.html">苹果</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5955-5787.html">梨</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5795-5787.html">瓜类</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5957-5787.html">西瓜</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5959-5787.html">木瓜</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5961-5787.html">香瓜</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5797-5787.html">其他</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5963-5787.html">百香果</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5965-5787.html">芒果</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5967-5787.html">芭乐</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5969-5787.html">菠萝</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">牛肉</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5813-5799.html">牛排</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5815-5799.html">牛里脊</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5817-5799.html">牛腩</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5819-5799.html">牛上脑</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5821-5799.html">牛眼肉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5823-5799.html">肥牛</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5825-5799.html">牛肉馅</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5827-5799.html">牛柳</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6355-5799.html">牛肉切块</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">羊肉</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5829-5799.html">羊肉卷</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5831-5799.html">羊排</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5833-5799.html">羊前棒</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5835-5799.html">羊蝎子</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5837-5799.html">羊尾尖</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5839-5799.html">羊肉切片</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5841-5799.html">羊前腿</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5843-5799.html">羊后腿肉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5845-5799.html">羊元宝肉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5847-5799.html">羊棒骨</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5849-5799.html">羊肉馅</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5851-5799.html">羊肉切块</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">猪肉</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5971-5799.html">五花肉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5973-5799.html">肋排</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5975-5799.html">前尖肉</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5807-5799.html">鸡肉</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5977-5799.html">鸡爪</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5979-5799.html">鸡翅</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5981-5799.html">整鸡</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5809-5799.html">鸭肉</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5985-5799.html">鸭掌</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5987-5799.html">半片鸭</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5989-5799.html">鸭翅中</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5811-5799.html">禽蛋</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5991-5799.html">鸡蛋</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5993-5799.html">咸鸭蛋</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5995-5799.html">乌鸡蛋</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">海鲜水产</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5997-5869.html">鱼</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/5999-5869.html">虾</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6001-5869.html">蟹贝</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6357-5869.html">软足类</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5895-5869.html">肉制品</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6013-5869.html">天福号</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6015-5869.html">肠类</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6017-5869.html">北京烤鸭</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6359-5869.html">蒸肉</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">米</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6019-5871.html">大米</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6021-5871.html">香米</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6023-5871.html">糙米</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">面</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6025-5871.html">富强粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6027-5871.html">小麦粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6029-5871.html">面包粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6361-5871.html">全麦粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6363-5871.html">玉米粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6365-5871.html">雪花粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6367-5871.html">莜面</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6369-5871.html">黄米面</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6371-5871.html">糯米粉</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6373-5871.html">淀粉</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">杂粮</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6031-5871.html">小米</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6033-5871.html">红豆</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6035-5871.html">黑米</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6395-5871.html">藜麦</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5905-5871.html">食用油</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6321-5871.html">葵花籽油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6037-5871.html">花生油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6039-5871.html">橄榄油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6041-5871.html">调和油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6397-5871.html">亚麻籽油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6399-5871.html">大豆油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6401-5871.html">黄油</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5907-5871.html">调味品</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6043-5871.html">酱油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6045-5871.html">醋</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6403-5871.html">盐</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6047-5871.html">料酒</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6049-5871.html">香油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6051-5871.html">黄酱</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6053-5871.html">甜面酱</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6055-5871.html">芝麻酱</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6405-5871.html">调味酱</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6337-5871.html">鸡精味精</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6407-5871.html">蚝油</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6409-5871.html">火锅料</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6411-5871.html">糖</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">方便食品</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6297-5873.html">方便面</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6299-5873.html">方便粉丝</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6301-5873.html">方便汤</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6375-5873.html">其它速食</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">膨化</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6303-5873.html">薯片</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6305-5873.html">锅巴</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6307-5873.html">爆米花</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5913-5873.html">冷冻食品</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6309-5873.html">面点</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6311-5873.html">肉类</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6313-5873.html">丸类</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">腌渍</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6057-5875.html">韭菜花</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6059-5875.html">酱菜</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6061-5875.html">腐乳</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">罐头</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6067-5875.html">果蔬罐头</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6069-5875.html">肉罐头</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6071-5875.html">水产罐头</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6377-5875.html">其它罐头</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5919-5875.html">烘焙</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6121-5875.html">蛋糕</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6123-5875.html">面包</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6125-5875.html">饼干</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/5921-5875.html">可可</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6127-5875.html">可可粉</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6129-5875.html">巧克力豆</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6131-5875.html">白巧克力</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">薯类</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6133-5877.html">紫薯干</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6133-5877.html">紫薯干</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6137-5877.html">魔芋</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">糖果</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6139-5877.html">口香糖</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6141-5877.html">硬糖</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6143-5877.html">梨膏糖</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">肉干</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6323-5877.html">肉干肉脯</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6091-5877.html">坚果蜜饯</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6151-5877.html">坚果</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6153-5877.html">蜜饯</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6155-5877.html">果干</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6379-5877.html">炒货</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6093-5877.html">茶</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6157-5877.html">绿茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6159-5877.html">白茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6161-5877.html">红茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6163-5877.html">黑茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6165-5877.html">黄茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6167-5877.html">花草茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6169-5877.html">乌龙茶</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6171-5877.html">茶具</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6381-5877.html">素食</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6383-5877.html">豆制品</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">白酒</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6173-5879.html">五粮液</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6175-5879.html">茅台</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6177-5879.html">牛栏山</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6179-5879.html">剑南春</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6315-5879.html">洋河</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6385-5879.html">汾酒</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6387-5879.html">河套王</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6389-5879.html">米酒</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">啤酒</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6181-5879.html">黄啤</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6183-5879.html">果味酒</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">红酒</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6081-5879.html">红葡萄酒</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6083-5879.html">白葡萄酒</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6079-5879.html">洋酒</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6185-5879.html">威士忌</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6187-5879.html">白兰地</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6189-5879.html">朗姆酒</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6191-5879.html">伏特加</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6345-5879.html">果酒</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6347-5879.html">蓝莓酒</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">黄酒</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6193-5881.html">古越龙山</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6195-5881.html">会稽山</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6197-5881.html">女儿红</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">预调酒</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6199-5881.html">锐澳</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6201-5881.html">魅夜</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6101-5881.html">清酒</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6207-5881.html">日本盛</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6209-5881.html">梅子酒</a>
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6103-5881.html">保健酒</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6317-5881.html">劲酒</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6213-5881.html">竹叶青</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6215-5881.html">宁夏红</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">碳酸饮料</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6217-5883.html">雪碧</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6219-5883.html">北冰洋</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6221-5883.html">可乐</a>
+
+                                    </dd>
+                                </dl>
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">饮用水</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6233-5883.html">百岁山</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6235-5883.html">依云</a>
+
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6237-5883.html">昆仑山</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6109-5883.html">果蔬汁</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6251-5883.html">橙汁</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6253-5883.html">葡萄汁</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6255-5883.html">苹果汁</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6413-5883.html">蓝莓汁</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6415-5883.html">汁棘汁</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6417-5883.html">梨汁</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <div class="ct_item clearfix">
+        				<div class="sub_category clearfix fl">
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                    	<!--判断是否自定义分类导航-->
+                                            <a href="javascript:void(0)" style="cursor:default;">蛋白饮料</a>
+
+                                    <dt/>
+                                    <dd>
+	                            		<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6257-5885.html">椰子汁</a>
+
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                            <div class="category_box fl">
+                            	<dl>
+                                    <dt>
+                                   		 <!--判断是否自定义分类导航-->
+                                    		<a href="/list/6113-5885.html">功能饮料</a>
+                                    </dt>
+                                    <dd>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6259-5885.html">健力宝</a>
+                                       	<!--判断是否自定义分类导航-->
+                                    		<a href="/list/6261-5885.html">乐虎</a>
+                                    </dd>
+                                </dl>
+                            </div><!--/category_box-->
+                        </div><!--/sub_category-->
+                        <div class="sub_brands fl">
+                            <dl>
+                                <dt>推荐品牌</dt>
+                                <dd>
+                                </dd>
+                            </dl>
+                        </div><!--/sub_brands-->
+                    </div><!--/ct_item-->
+                    <a class="close_category pa" href="javascript:;"></a>
+    			</div><!--/sort_open-->
+    		</div><!--/pro_sort-->
+
+    		<ul class="sort_list clearfix">
+			    			<li  class=""><a   onclick="clickNav('http://www.ge960.com/channel/247.html?navId=309','1')"  href="javascript:void(0);">960大聚惠</a></li>
+			    			<li  class=""><a   onclick="clickNav('http://www.ge960.com/marketingrushlist-1.html','2')"  href="javascript:void(0);">狩猎时刻</a></li>
+			    			<li  class=""><a   onclick="clickNav('http://www.ge960.com/channel/247.html?navId=313','3')"  href="javascript:void(0);">展 览 馆</a></li>
+    		</ul><!--/sort_list-->
+    	</div><!--/nav-->
+    </div>
+    </div><!--/container-->
+
+	<script type="text/javascript">
+	   function clickNav(url,sort){
+			$.ajax({ url:"/navsort.htm?navsort="+sort, async:false ,success: function(date){
+				}
+			});
+			//window.location.href="/"+url;
+           if(url.indexOf("ttp://")!=-1){
+               window.open(url);
+           }else{
+               window.open("/"+url);
+           }
+		}
+        //------------------搜索提示-liangck-20151127
+        $(".search_text").bind('input propertychange', function () {
+            $.getJSON("/completionWords.htm?t="+new Date().getTime(), {keyWords: $.trim($(this).val())}, function (data) {
+                if (data.length > 0) {
+                    $(".ex_search ul").html("");
+                    data.forEach(function(c){
+                        $(".ex_search ul").append('<li class="search-item"><a href="javascript:;" class="completion-words">'+c.substring(0,46)+'</a><a class="del_history" href="javascript:;"style="display: none;">删除</a></li>');
+                    });
+                    $(".ex_search").show();
+                }else {
+                    $(".ex_search").hide();
+                }
+            });
+        })
+        ;
+        $(".ex_search").on("click","ul li",function(){
+            window.location.href="/goods/searchproduct2.html?title="+$(this).find(".completion-words").html();
+        });
+        $(".close_ex").click(function () {
+            $(".ex_search").hide();
+            $(".search_text").blur();
+        });
+        var _n = $(".search-item").length - 1;
+        $("body").keydown(function(event){
+            if(event.keyCode == 38) {
+                if($(".search-item.cur").length > 0) {
+                    var _index = $(".search-item.cur").index();
+                    $(".search-item:eq("+ (_index - 1) +")").addClass("cur").siblings(".cur").removeClass("cur");
+                    $(".search_text").val($(".search-item.cur").find(".completion-words").html());
+                } else {
+                    $(".search-item:eq("+ (_n) +")").addClass("cur");
+                    $(".search_text").val($(".search-item.cur").find(".completion-words").html());
+                };
+            };
+            if(event.keyCode == 40) {
+                if($(".search-item.cur").length > 0 && $(".search-item.cur").index() !== _n) {
+                    var _index = $(".search-item.cur").index();
+                    $(".search-item:eq("+ (_index + 1) +")").addClass("cur").siblings(".cur").removeClass("cur");
+                    $(".search_text").val($(".search-item.cur").find(".completion-words").html());
+                } else if ($(".search-item.cur").index() == _n) {
+                    $(".search-item:eq(0)").addClass("cur").siblings(".cur").removeClass("cur");
+                    $(".search_text").val($(".search-item.cur").find(".completion-words").html());
+                } else {
+                    $(".search-item:eq(0)").addClass("cur");
+                    $(".search_text").val($(".search-item.cur").find(".completion-words").html());
+                };
+            };
+        });
+		</script>
+
+

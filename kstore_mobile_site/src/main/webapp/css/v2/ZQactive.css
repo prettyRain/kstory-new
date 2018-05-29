@@ -1,0 +1,105 @@
+/*
+ * 作者：shf
+ * 时间：2017-08-31
+ * 描述：中秋活动
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{ font-family:微软雅黑,Microsoft yahei;font-size:12px;  box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+
+/*.banner{*/
+    /*background:#340220;*/
+/*}*/
+/*.banner.ban{*/
+    /*position: relative;*/
+/*}*/
+/*.banner.ban a{*/
+    /*position: absolute;*/
+    /*bottom:1.14rem;*/
+    /*right:1.05rem;*/
+/*}*/
+/*.banner.ban a img{*/
+    /*width:1.86rem;*/
+    /*height:.35rem;*/
+/*}*/
+/*.banner img,.floor2 img,.floor3 img,.floor4 img,.floor5 img,.floor6 img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*.detail{*/
+    /*background:#5a0b0b;*/
+    /*padding:0 .12rem .4rem .12rem;*/
+/*}*/
+/*.detail>div{*/
+    /*float: left;*/
+    /*border-top: .17rem solid #5a0b0b;*/
+    /*border-right: .12rem solid #5a0b0b;*/
+/*}*/
+/*.detail>div img{*/
+    /*width:2.34rem;*/
+    /*height: 3.4rem;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*.detail>div:nth-of-type(3n){*/
+    /*border-right: 0;*/
+/*}*/
+/*.floor2,.floor3{*/
+    /*background:#02122a;*/
+/*}*/
+/*.floor5,.floor6{*/
+    /*background:#461500;*/
+/*}*/
+/*.wine{*/
+    /*background:#02122a;*/
+    /*padding:0 .12rem .4rem .12rem;*/
+/*}*/
+/*.wine>div{*/
+    /*float: left;*/
+    /*border-top: .17rem solid #02122a;*/
+    /*border-right: .12rem solid #02122a;*/
+/*}*/
+/*.award{*/
+    /*height:2.8rem;*/
+    /*padding: 0 .09rem;*/
+    /*overflow: hidden;*/
+    /*background:#461500;*/
+
+/*}*/
+/*.award img{*/
+    /*float: left;*/
+    /*width:2.44rem;*/
+    /*height:2.8rem;*/
+    /*vertical-align:middle ;*/
+/*}*/
+/*.interact{*/
+    /*background:#461500;*/
+    /*padding-bottom: 45px;*/
+/*}*/
+/*.interact1 .swiper-slide img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+/*.interact1{*/
+    /*padding:0 20px;*/
+    /*height: 212px;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*.swiper-container {*/
+    /*padding-bottom: 30px;*/
+/*}*/
+/*.swiper-pagination-bullet {*/
+    /*background: #fff;*/
+/*}*/
+/*.swiper-pagination-bullet-active {*/
+    /*background: #fff;*/
+/*}*/
+

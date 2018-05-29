@@ -1,0 +1,419 @@
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#LoutiNav {
+				width: 127px;
+				position: fixed;
+				top: 150px;
+				left: 50px;
+				display: none;
+				background: url(../images/activity/erweima.png) no-repeat;
+				height: 519px;
+				z-index: 99;
+			}
+			#LoutiNav ul li {
+				width: 128px;
+				height: 26px;
+				list-style: none;
+				text-align: center;
+				position: relative;
+				cursor: pointer;
+				margin-top: 3px;
+			}
+			#LoutiNav ul li span {
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#LoutiNav ul li span {
+				display: none;
+			}
+			/*#LoutiNav ul .hover:hover{
+				background:#280800;
+			}*/
+			#LoutiNav ul{
+				height: 142px;
+			}
+			/*楼梯的active效果*/
+			#LoutiNav ul li.active {
+				background:#FFE95D;
+			}
+			/*轮播图点的背景颜色*/
+			/*.swiper-pagination-bullet-active{
+					background: green!important;
+			}*/
+			#header {
+				width: 1920px;
+				height: auto;
+				margin: 0 auto;
+				
+			}
+			#header img{
+				width: 100%; 
+				display: block;
+			}
+			#main {
+				width:1920px;
+				height: auto;
+				margin: 0 auto;
+				background: url(../images/activity/datupian1.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+
+		#main1 {
+				width:1920px;
+				height: auto;
+				margin: 0 auto;
+				background:url(../images/activity/zuoyou.png) no-repeat;
+			}
+			#main1 div{
+				display: block;
+				margin: 0 auto;
+				width: 1200px;
+			}
+			#main .Louti{
+				display: block;
+				margin: 0 auto;
+				width: 1200px;
+			
+			}
+ 			#main .Louti ul li{
+          
+            -moz-transition:transform 0.5s;
+            -o-transition:transform 0.5s;
+            -webkit-transition:transform 0.5s;
+            transition:transform 0.5s;
+        	}
+			#main .Louti ul li:hover{
+				transform:translateY(-10px);
+				 -moz-transform:translateY(-10px);
+	            -o-transform:translateY(-10px);
+	            -webkit-transform:translateY(-10px);
+			}
+			#main .Louti ul li{
+			     width: 31.5%;
+			    height: 557px;
+			    float: left;
+			    margin: 16px 4px 0 14px;
+			    list-style: none;
+			}
+			#main .Louti ul li .sp_xq{
+				width: 98%;
+				height: 94px;
+				margin-top:13px;
+			}
+			#main .Louti ul li .sp_xq .left{
+				width:50%; 
+				height: 75px;
+				float: left;
+				padding-left: 35px;
+				margin-top: 7px;
+			}
+			#main .Louti ul li .sp_xq .left em{
+				color: #fcc833;
+				font-size: 20px;
+				font-style: normal;
+				display: block;
+
+			}
+			#main .Louti ul li .sp_xq .left span{
+				color: #ffffff;
+				font-size: 16px;
+				text-decoration: line-through;
+				margin-top:5px;
+				display: block; 
+
+			}
+			#main .Louti ul li .sp_xq .right{
+				width:40%; 
+				height: 94px;
+				float: right;
+			}
+			#main .Louti ul li .sp_xq .right a{
+				display: block;
+				margin-top: 11px;
+				margin-left: 19px;
+			}
+
+			#main .Louti ul{
+				width: 100%;
+				margin: 0 auto;
+			
+			} 
+ 			@media screen and (max-width: 1680px){
+			  	#header {
+			        width: 1680px;
+			    }
+			    #main{
+			    	width: 1680px;
+			    }
+			    #main1{
+			    	width:1680px;
+			    }
+			
+			} 
+			@media screen and (max-width: 1440px){
+			  	#header {
+			        width: 1440px;
+			    }
+			    #main{
+			    	width: 1440px;
+			    }
+			    #main1{
+			    	width:1440px;
+			    }
+				
+			} 
+			#main .Louti ul li p{
+				letter-spacing: 1px;
+				font-size: 18px;
+				color: #fff;  
+				width: 82%;
+			    display: block;
+			    height: 60px;
+			    margin: 400px 35px 0 34px;
+				line-height: 30px;
+			}
+			/* #main .Louti ul li:hover{
+				border: 1px solid green;
+			} */
+			.center{
+				text-align: center; 
+			}
+			#LoutiNav .img_1{
+				height: 43px;
+				margin-top: 273px;
+				margin-left: 9px;
+			}
+			#LoutiNav ul{
+				margin-top: -3px;
+			}
+			#main1 .div1{
+				background: url(../images/activity/huodongshijian.jpg) no-repeat;
+				display: block;
+				height: 228px;
+			}
+			#main .altitude .div2{
+				background: url(../images/activity/TOP1.jpg)  no-repeat;
+				display: block;
+				height: 617px;
+			}
+			#main .altitude .div3{
+				background: url(../images/activity/newTOP2.jpg)no-repeat;
+				height: 678px; 
+				display: block;
+			}
+/* 
+			#main .altitude .div3 img:hover{
+			background:url(../images/activity/goumai.png) no-repeat;
+		
+			} */
+   
+   
+			#main .altitude .div3 a{
+				margin: 506px 0px 0px 784px;
+				display: inline-block;
+				/*background: #ED8B24;
+				text-align: center;
+				line-height: 47px;
+				width: 129px;
+				height: 47px;
+				border-radius: 8px;
+				color: #fff;*/
+			}
+			#main .altitude .div4{
+				background: url(../images/activity/newTOP4.jpg)no-repeat;
+				 height: 658px; 
+				 display: block;
+			}
+			#main .altitude .div5{
+				background:#5B0B0C; 
+				height: 1168px;
+				 display: block;
+			}
+			#main .altitude .div5 .goods_1{
+				background: url(../images/activity/cha5.png) no-repeat;
+			}
+			#main .altitude .div5 .goods_2{
+				background: url(../images/activity/cha2.png) no-repeat;
+			}
+			#main .altitude .div5 .goods_3{
+				background: url(../images/activity/cha3.png) no-repeat;
+			}
+			#main .altitude .div5 .goods_4{
+				background: url(../images/activity/cha4.png) no-repeat;
+			}
+			#main .altitude .div5 .goods_5{
+				background: url(../images/activity/cha1.png) no-repeat;
+			}
+			#main .altitude .div5 .goods_6{
+				background: url(../images/activity/cha6.png) no-repeat;
+			}
+			#main .altitude .div6{
+				background: url(../images/activity/TOP3.jpg)no-repeat;
+				height: 803px; 
+				display: block;
+			}
+			#main .altitude .div7{
+				background:#0D1430; 
+				height: 2312px; 
+				display: block;
+			}
+			#main .altitude .div8{
+				background: url(../images/activity/TOP7.jpg)no-repeat;
+				 height: 799px; 
+				 display: block;
+			}
+			#main .altitude .div9{
+				background:#0D1430; 
+				height: 1739px; 
+				display: block;
+			}
+			#main .altitude .div10{
+				background: url(../images/activity/TOP9.jpg)no-repeat;
+				height: 1126px;
+				display: block;
+			}
+			#main .altitude .div11{
+				background: url(../images/activity/TOP10.jpg)no-repeat;
+				height: 1128px;
+				display: block;
+			}
+			#main .altitude .div11 a{
+				width: 222px; 
+				height: 243px; 
+				display: inline-block;
+				margin-top: 106px;
+
+			}
+			.p_width{
+				width: 85%!important;
+			}
+			.bg_color1{
+				background: #1e1023;
+			}
+			.bg_color2{
+				background: #270d11;
+			}
+			.bg_color3{
+				background: #2a0b0b;
+			}
+			#main .att1{
+				height:3121px;
+			}
+			#main .att2{
+				height: 3115px;
+			}
+			#main .att3{
+				height: 2537px;
+			}
+			#main .att4{
+				height: 2265px;
+			}
+			/* 第二部分商品 */
+			#main .altitude .div7 .goods1_1{
+				background: url(../images/activity/jiu1.png) no-repeat;
+			}
+			#main .altitude .div7 .goods2_1{
+				background: url(../images/activity/jiu2.png) no-repeat;
+			}
+			#main .altitude .div7 .goods3_1{
+				background: url(../images/activity/jiu3.png) no-repeat;
+			}
+			#main .altitude .div7 .goods4_1{
+				background: url(../images/activity/jiu4.png) no-repeat;
+			}
+			#main .altitude .div7 .goods5_1{
+				background: url(../images/activity/jiu5.png) no-repeat;
+			}
+				#main .altitude .div7 .goods6_1{
+				background: url(../images/activity/rou1.png) no-repeat;
+			}
+				#main .altitude .div7 .goods7_1{
+				background: url(../images/activity/rou2.png) no-repeat;
+			}
+				#main .altitude .div7 .goods8_1{
+				background: url(../images/activity/rou3.png) no-repeat;
+			}
+				#main .altitude .div7 .goods9_1{
+				background: url(../images/activity/rou4.png) no-repeat;
+			}
+				#main .altitude .div7 .goods10_1{
+				background: url(../images/activity/rou5.png) no-repeat;
+			}
+				#main .altitude .div7 .goods11_1{
+				background: url(../images/activity/rou6.png) no-repeat;
+			}
+				#main .altitude .div7 .goods12_1{
+				background: url(../images/activity/rou7.png) no-repeat;
+			}
+
+
+
+		/*第三部分商品 */
+			#main .altitude .div9 .goods-1{
+				background: url(../images/activity/lingshi1.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-2{
+				background: url(../images/activity/lingshi2.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-3{
+				background: url(../images/activity/lingshi3.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-4{
+				background: url(../images/activity/lingshi4.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-5{
+				background: url(../images/activity/lingshi5.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-6{
+				background: url(../images/activity/lingshi6.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-7{
+				background: url(../images/activity/lingshi7.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-8{
+				background: url(../images/activity/lingshi8.png) no-repeat;
+			}
+			#main .altitude .div9 .goods-9{
+				background: url(../images/activity/lingshi9.png) no-repeat;
+			}
+
+
+
+
+		   .div11 .swiper-container {
+		        width: 823px;
+			    height: 404px;
+			    margin: 102px 0 0 200px;
+			    overflow: hidden;
+			}
+
+			.div11 .swiper-container  .swiper-slide {
+		        text-align: center;
+		        display: -webkit-box;
+		        display: -ms-flexbox;
+		        display: -webkit-flex;
+		        display: flex;
+		        -webkit-box-pack: center;
+		        -ms-flex-pack: center;
+		        -webkit-justify-content: center;
+		        justify-content: center;
+		        -webkit-box-align: center;
+		        -ms-flex-align: center;
+		        -webkit-align-items: center;
+		        align-items: center;
+
+		    }
+		    .a_left1{
+				margin-left: 245px;
+		    }
+		    .a_left2{
+				margin-left: 29px;
+		    }
+		    .a_left3{
+				margin-left: 25px;
+		    }

@@ -1,0 +1,239 @@
+/*.order .order-info .pro-item .prodesc span{display: inline}*/
+.price{padding-bottom: 0!important;}
+.pro-num{bottom: 0;padding-bottom: 0!important;}
+
+/*
+ * 作者：shf
+ * 时间：2017-08-31
+ * 描述：H5改版2.0样式  订单详情
+ *
+ */
+@charset "utf-8";
+/*body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}*/
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+/*ul,ol,menu{padding:0}*/
+/*ul,ol{list-style:none}*/
+/*address,cite,dfn,em,var{font-style:normal}*/
+/*a{text-decoration:none}*/
+/*a:hover{}*/
+/*img{border:none}*/
+/*input,textarea{outline:none}*/
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+body, html {
+    background-color: #f7f7f7;
+}
+
+.order.content-order-detail .order-number .list-item{
+    padding: 15px 15px 13px 15px;
+}
+
+.list-item .item-head label, .list-item .item-head span{
+    font-size: 14px;
+    color: #000;
+}
+/*.mt10 {*/
+    /*margin-top: 5px;*/
+/*}*/
+.order.content-order-detail .list-item:first-child{
+    border:none;
+}
+/*商品头信息*/
+.order-info .ordertitle{
+    /*height: 35px;*/
+    line-height: 40px;
+    color: #7f7f7f;
+    font-size: 12px;
+    padding: 0 15px;
+}
+.order-info .ordertitle span{
+    display: inline-block;
+    /*height: 35px;*/
+    line-height: 40px;
+    color: #000;
+}
+.order-info .ordertitle span.orderdetail{
+    float: right;    color: #0072BC;font-weight: bold;
+}
+/*商品底部*/
+.order-info .orderopera{
+    height: 40px;
+    line-height: 40px;
+    color: #7f7f7f;
+    font-size: 12px;
+    padding: 6px 0;
+}
+.order-info .orderopera a{
+    float: right;
+    margin: 0 15px 0 0;
+    padding: 0;
+    color: #7f7f7f;
+    background-color: #fff;
+    font-size: 12px;
+    border: 1px solid #7f7f7f;
+    width: 74px;
+    height: 28px;
+    line-height: 28px;
+}
+
+/*商品详细*/
+.order.content-order-detail .order-pro-item {
+    background: #f7f7f7;
+}
+.list-body-line .order-pro-item {
+    margin-bottom: 10px;
+}
+.list-body-line .order_good_link:last-of-type .order-pro-item{
+    margin-bottom: 0;
+}
+.pro-item .propic {
+    width: 80px;
+    height: 80px;
+    line-height: 0;
+    border:none;
+}
+
+.list-item {
+    padding: 10px 15px 10px 15px;
+}
+
+.pro-item .prodesc .title {
+    line-height: 23px;
+    height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    color: #000;
+    font-size: 1.0rem;
+    padding-bottom: .1rem;
+    margin-top: 5px;
+}
+
+.order .order-info .pro-item .prodesc {
+    min-height: 74px;
+}
+
+.pro-item .prodesc .title {
+    line-height: 18px;
+    height: auto;
+    color: #333;
+    font-size: 14px;
+    padding-bottom: 6px;
+    min-height: 40px;
+}
+
+.pro-item {
+    padding: 0 0 0 95px;
+    height: 80px;
+}
+
+.pro-num {
+    position: static;
+}
+.order .order-info .pro-item .prodesc .pro-num{
+    font-size: 12px;
+    /*height: 16px;*/
+    /*line-height: 16px;*/
+    color: #7f7f7f;
+}
+
+.order .order-info .pro-item .prodesc .price {
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    color: #000;
+}
+.order .order-info .pro-item .prodesc span {
+    display: inline;
+    height: 16px;
+    line-height: 16px;
+}
+
+.order .order-info .pro-item .prodesc .num1{
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+}
+.order.content-order-detail .receive-info h3{
+    font-size: 14px;
+    color: #000;
+    line-height: 28px;
+}
+
+.order.content-order-detail .receive-info h3 .name{
+    margin:0;
+}
+
+.order.content-order-detail .receive-info h3 span:first-of-type{
+    width:66px;letter-spacing: 1px;
+
+}
+.order.content-order-detail .receive-info p{
+    font-size: 13px;
+    color: #999;
+    margin-left: 78px;
+    position: relative;
+    padding-left: 8px;
+}
+
+.order.content-order-detail .receive-info p i{
+    position: absolute;
+    top:9px;
+    left:0;
+    width:3px;
+    height: 3px;
+    background: #999;
+    border-radius: 50%;
+}
+.order .all-info .list-item .price-total {
+    font-size: 14px;
+    color: #000;
+}
+
+.order .all-info .list-item .price-total li .info{
+    display: inline-block;
+    width:13px;
+    height: 13px;
+    background: url("../../images/v2/？@2x.png") no-repeat center center;
+    background-size: 13px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.order .all-info .list-item .price-total li .up{
+    background: url("../../images/v2/down@2x.png") no-repeat center right;
+    background-size: 13px;
+    padding-right: 17px;
+}
+.order .all-info .list-item .price-total li .up1{
+    background: url("../../images/v2/up@2x.png") no-repeat center right;
+    background-size: 13px;
+}
+.order .all-info .list-item .price-total li .up2{
+    background: url("../../images/v2/down@2x.png") no-repeat center right;
+    background-size: 13px;
+}
+
+.order .all-info .list-item .price-total li {
+    height: 20px;
+    margin-top: 8px;
+}
+.order .all-info .list-item .price-total .showmore{
+    height: auto;
+    font-size: 12px;
+    padding: 5px 18px 0 15px;
+    margin-top: 0;
+    color: #7f7f7f;
+    display: none;
+}
+.order .all-info .list-item .price-total li label {
+    letter-spacing: 1px;
+}
+.order .order-info .see-all {
+    margin-top: -2px;}
+.list-item .item-head {
+    font-size: 14px;
+}
+.paid-way.mt10 .list-item .item-head{
+    color: #000;
+}
+.paid-way.mt10 .list-item .item-head label{
+    color: #7f7f7f;
+ }

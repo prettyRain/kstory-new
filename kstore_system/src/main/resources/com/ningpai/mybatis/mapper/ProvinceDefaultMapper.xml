@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ningpai.system.dao.ProvinceDefaultMapper" >
+  <resultMap id="BaseResultMap" type="com.ningpai.system.bean.ProvinceDefault" >
+    <id column="d_id" property="dId" jdbcType="BIGINT" />
+    <result column="district_id" property="districtId" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="de_falg" property="deFalg" jdbcType="CHAR" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    d_id, district_id, create_time, de_falg, modify_time
+  </sql>
+  <select id="selectDefaultId" resultType="java.lang.Long">
+    select 
+   district_id 
+    from np_province_default
+    where de_falg='0'
+    limit 0,1
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from np_province_default
+    where d_id = #{dId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.ningpai.system.bean.ProvinceDefault" >
+    insert into np_province_default (d_id, district_id, create_time, 
+      de_falg, modify_time)
+    values (#{dId,jdbcType=BIGINT}, #{districtId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{deFalg,jdbcType=CHAR}, #{modifyTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ningpai.system.bean.ProvinceDefault" >
+    insert into np_province_default
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="dId != null" >
+        d_id,
+      </if>
+      <if test="districtId != null" >
+        district_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="deFalg != null" >
+        de_falg,
+      </if>
+      <if test="modifyTime != null" >
+        modify_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="dId != null" >
+        #{dId,jdbcType=BIGINT},
+      </if>
+      <if test="districtId != null" >
+        #{districtId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deFalg != null" >
+        #{deFalg,jdbcType=CHAR},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="deleteAllDefault" >
+    update np_province_default
+    set de_falg='2'
+    where de_falg='0'
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ningpai.system.bean.ProvinceDefault" >
+    update np_province_default
+    set district_id = #{districtId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      de_falg = #{deFalg,jdbcType=CHAR},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP}
+    where d_id = #{dId,jdbcType=BIGINT}
+  </update>
+  <!--查询县区是否存在-->
+  <select id="queryIdByDistrictId" parameterType="java.lang.Long" resultType="java.lang.Long">
+      select ifnull(d_id,1) from np_province_default where district_id = #{districtId} and de_falg != '1'
+  </select>
+  <!--查询地址列表的总条数-->
+  <select id="queryCount" resultType="java.lang.Integer">
+       select sum(1) from np_province_default where de_falg != '1'
+  </select>
+  <!--查询地址列表-->
+   <select id="queryAddressList" parameterType="java.util.Map" resultMap="BaseResultMap">
+       select * from np_province_default where de_falg != '1' order by  de_falg asc ,create_time asc limit #{start},#{end}
+   </select>
+
+  <update id="updateAddressDefault" parameterType="java.lang.Long">
+      update np_province_default set de_falg = '0' where de_falg = '2' and  district_id = #{districtId}
+  </update>
+  <update id="deleteAddressNew" parameterType="java.util.List">
+       update np_province_default set de_falg = '1'
+       <where>
+         district_id IN
+         <foreach collection="list" item="item" open="(" close=")" separator=",">
+                #{item}
+         </foreach>
+       </where>
+  </update>
+
+  <update id="saveUpdateAddress" parameterType="java.util.Map">
+        update np_province_default set district_id = #{districtId} , modify_time = now() where d_id = #{did} and de_falg != '1'
+  </update>
+   <select id="queryDistrictIdByCd" parameterType="java.util.Map" resultType="java.lang.Long">
+        select d.district_id from np_sys_district d where d.district_name = #{districtName} and d.del_flag = '0' and d.city_id in(select c.city_id from np_sys_city c where c.city_name = #{cityName} and c.del_flag='0') limit 0,1
+   </select>
+</mapper>

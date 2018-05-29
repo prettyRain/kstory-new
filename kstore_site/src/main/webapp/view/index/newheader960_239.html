@@ -1,0 +1,587 @@
+<!--遮罩层-->
+<style>
+    .new_bgcolor:hover{
+        background-color:rgba(0,181,225,.95);
+    }
+   /* .new_bgcolor a:hover{
+        color: #ffffff!important;
+    }*/
+   /* .header_nv_a:hover p{
+       color:red!important;
+    }*/
+</style>
+<script>
+    $(function () {
+     /*   $(".header_nv_a").hover(function () {
+            $(this).find("p").css({"color":"red"})
+            $(this).find("img").attr("src","路径")
+        },function () {
+            $(this).find("p").css({"color":"#666666"})
+            $(this).find("img").attr("src","原始路径")
+        })*/
+        $(".new_div_header:first").find("img").addClass("HelpNow");
+        $(".header_nv:last").find(".header_nv_a").addClass("HelpNow1");
+    })
+</script>
+<div id="sectionHeader" class="section-header">
+    <div class="tm-content">
+        <h1 id="logo">
+            <a href="/index.html"><img alt="" src="http://testboss.ge960.com:80/upload/20180103/1514969992816.jpg" style="width: 181px;height: 72px;    margin-top: 25px;"></a>
+        </h1>
+        <div class="header_nv">
+         <div style="float: left;height: 65px;padding-top: 59px;">
+                    <a class="header_nv_a" onclick="clickNav('http://www.ge960.com/channel/237.html')"  href="javascript:;"style="padding-right: 0px;">
+                        <div class="new_div_header">
+                            <img src="/index_960/images/m1.png" style="width: 33px;height: 33px;" >
+                            <div class="new_box_div">
+                                <p class="_color1">食品荟萃</p>
+                                <p style="font-size: 14px;">FOOD</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a class="header_nv_a" onclick="clickNav('http://www.ge960.com/channel/239.html')"  href="javascript:;"style="padding-right: 0px;">
+                        <div class="new_div_header">
+                            <img src="/index_960/images/m2.png" style="width: 33px;height: 33px;" >
+                            <div class="new_box_div">
+                                <p class="_color2">饮品总汇</p>
+                                <p style="font-size: 14px;">DRINK</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a class="header_nv_a" onclick="clickNav('http://www.ge960.com/channel/241.html')"  href="javascript:;"style="padding-right: 0px;">
+                        <div class="new_div_header">
+                            <img src="/index_960/images/m3.png" style="width: 33px;height: 33px;" >
+                            <div class="new_box_div">
+                                <p class="_color3">购物中心</p>
+                                <p style="font-size: 14px;">SHOPPING</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+                    <a class="header_nv_a" onclick="clickNav('http://www.ge960.com/channel/243.html')"  href="javascript:;"style="padding-right: 0px;">
+                        <div class="new_div_header">
+                            <img src="/index_960/images/m4.png" style="width: 33px;height: 33px;" >
+                            <div class="new_box_div">
+                                <p class="_color4">原产地</p>
+                                <p style="font-size: 14px;">ORIGIN</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+         </div>
+            <a href="/myshoppingcart.html" style="padding-right: 0px;">
+                <div class="new_shoppingcart">
+                    <div class="new_sp1">
+                          <img src="/index_960/images/new_gouwuche_header.png" alt="">
+                    </div>
+                    <div class="new_sp2">
+                        <p>购物车</p>
+                        <span class="shopcaritemnum" style="background: none;margin-left: 0px!important;">0</span>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <div class="mainnav">
+        <div class="tm-content" style="height: 48px;">
+            <div class="navLinks">
+                <ul>
+                                <li>
+                                    <a class="navLink " data-subjectId="91"  href="http://testsite.ge960.com/subject/91?channelId=239">生命之源</a>
+                                </li>
+                                <li>
+                                    <a class="navLink " data-subjectId="93"  href="http://testsite.ge960.com/subject/93?channelId=239">红酒庄园</a>
+                                </li>
+                                <li>
+                                    <a class="navLink " data-subjectId="95"  href="http://testsite.ge960.com/subject/95?channelId=239">国际名酒廊</a>
+                                </li>
+                </ul>
+            </div>
+            <div class="searchID searchbuttonarea">
+                <img src="/index_960/images/index2_06.png" style="padding-top:3px;" onclick="showSearch()"/>
+                            </div>
+                            <div class="searchdiv" style=" margin-right: 72px;width: 826px;">
+                                <!-- 搜索框 -->
+                <form id="mallSearch-form" action="/goods/searchproduct2.html" method="get" >
+                    <div style="float: right;  padding: 4px 6px 7px 0px;" onclick="hideSearch()">
+                        <img src="/index_960/images/index3_03.png" style="cursor: pointer;">
+                    </div>
+                    <div id="search" style="float: right;">
+                        <input type="text" id="wd" class="search hotsearchInput" autocomplete="off" name="title" placeholder="搜索960商城商品">
+                        <div class="searchcont">
+                            <div class="history_list">
+                                <p><span>历史记录</span><a class="move" href="javascript:;">删除</a></p>
+                                <ul>
+                                    <li><a href="javascript:;"></a></li>
+                                </ul>
+                            </div>
+                            <div class="hot_list">
+                                <dl>
+                                    <dt>热门搜索</dt>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="float: right;padding: 4px 8px 7px 0px;cursor: default;" onclick="checkSearch()">
+                        <img src="/index_960/images/index2_06.png" tppabs="http://ge960.com/pic/index2_06.png">
+                    </div>
+
+                    <div class="clear"></div>
+                </form>
+                                <div class="cast_about1">
+                                    <p>点击回车键进行搜索</p>
+                                </div>
+                                <div class="cast_about">
+                                    <div class="cast_top">
+                                        <img src="/images/icon_jianyisousuo.png">
+                                        <p>热搜建议</p>
+                                    </div>
+                                    <div class="cast_content">
+                                        <ul>
+
+                                        </ul>
+                                    </div>
+                                    <div class="cast_top">
+                                        <img src="/images/icon_jianyipinpai.png">
+                                        <p>品牌建议</p>
+                                    </div>
+                                    <div class="cast_bottom">
+
+                                    </div>
+                                    <div class="cast_bottom1">
+                                        <p><a href="/customer/browserecord.html">最近浏览</a><img src="/images/btn_more1.png"></p>
+
+                                    </div>
+                                </div>
+            </div>
+            <div class="showlist">
+                <i class="btnnav menucat" style="font-style: normal">
+                    <a class="hover" href="javascript:;" style="cursor: default;">
+                        饮品总汇分类
+                    </a>
+                </i>
+
+                <ul class="list dropdown-menu" style="background-color:rgba(0,181,225,.95)">
+                            <li >
+                                <div class="new_gang"></div>
+                                <div class="links">
+                                    <img class="new_iconimg" src="http://testboss.ge960.com:80/upload/20180319/1521447150696.jpg" alt="">
+                                        <a href="javascript:;">中 外 名 酒</a>
+                                    <img class="new_youla" src="/index_960/images/new_youlajiantou.png" alt="">
+                                </div>
+                            </li>
+                            <li >
+                                <div class="new_gang"></div>
+                                <div class="links">
+                                    <img class="new_iconimg" src="http://testboss.ge960.com:80/upload/20180319/1521447227117.jpg" alt="">
+                                        <a href="javascript:;">药 酒 保 健</a>
+                                    <img class="new_youla" src="/index_960/images/new_youlajiantou.png" alt="">
+                                </div>
+                            </li>
+                            <li >
+                                <div class="new_gang"></div>
+                                <div class="links">
+                                    <img class="new_iconimg" src="http://testboss.ge960.com:80/upload/20180319/1521447189027.jpg" alt="">
+                                        <a href="javascript:;">饮 品 果 汁</a>
+                                    <img class="new_youla" src="/index_960/images/new_youlajiantou.png" alt="">
+                                </div>
+                            </li>
+                            <li >
+                                <div class="new_gang"></div>
+                                <div class="links">
+                                    <img class="new_iconimg" src="http://testboss.ge960.com:80/upload/20180319/1521445086595.jpg" alt="">
+                                        <a href="javascript:;">功 能 饮 料</a>
+                                    <img class="new_youla" src="/index_960/images/new_youlajiantou.png" alt="">
+                                </div>
+                            </li>
+                            <li >
+                                <div class="new_gang"></div>
+                                <div class="links">
+                                    <img class="new_iconimg" src="http://testboss.ge960.com:80/upload/20180319/1521447134698.jpg" alt="">
+                                        <a href="javascript:;">茶 冲 咖 啡</a>
+                                    <img class="new_youla" src="/index_960/images/new_youlajiantou.png" alt="">
+                                </div>
+                            </li>
+
+
+                </ul>
+                <div class="menuView hide">
+                <ul>
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">白酒</a></h3>
+                            <p>
+                                            <a href="/list/6173-5879.html">五粮液</a>
+                                            <a href="/list/6175-5879.html">茅台</a>
+                                            <a href="/list/6177-5879.html">牛栏山</a>
+                                            <a href="/list/6179-5879.html">剑南春</a>
+                                            <a href="/list/6179-5879.html">剑南春</a>
+                                            <a href="/list/6173-5879.html">五粮液</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">啤酒</a></h3>
+                            <p>
+                                            <a href="/list/6181-5879.html">黄啤</a>
+                                            <a href="/list/6181-5879.html">黄啤</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">红酒</a></h3>
+                            <p>
+                                            <a href="/list/6081-5879.html">红葡萄酒</a>
+                                            <a href="/list/6083-5879.html">白葡萄酒</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">洋酒</a></h3>
+                            <p>
+                                            <a href="/list/6185-5879.html">威士忌</a>
+                                            <a href="/list/6187-5879.html">白兰地</a>
+                                            <a href="/list/6189-5879.html">朗姆酒</a>
+                                            <a href="/list/6191-5879.html">伏特加</a>
+                            </p>
+                        </li>
+
+
+                </ul>
+                </div>
+
+                <div class="menuView hide">
+                <ul>
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">黄酒</a></h3>
+                            <p>
+                                            <a href="/list/6193-5881.html">古越龙山</a>
+                                            <a href="/list/6195-5881.html">会稽山</a>
+                                            <a href="/list/6197-5881.html">绍兴女儿红</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">预调酒</a></h3>
+                            <p>
+                                            <a href="/list/6199-5881.html">RIO锐澳</a>
+                                            <a href="/list/6201-5881.html">Mixxtail魅夜</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">清酒</a></h3>
+                            <p>
+                                            <a href="/list/6207-5881.html">日本盛</a>
+                                            <a href="/list/6209-5881.html">梅子酒</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">保健酒</a></h3>
+                            <p>
+                                            <a href="/list/6317-5881.html">劲酒</a>
+                                            <a href="/list/6213-5881.html">竹叶青</a>
+                                            <a href="/list/6215-5881.html">宁夏红</a>
+                            </p>
+                        </li>
+
+
+                </ul>
+                </div>
+
+                <div class="menuView hide">
+                <ul>
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">碳酸饮料</a></h3>
+                            <p>
+                                            <a href="/list/6217-5883.html">雪碧</a>
+                                            <a href="/list/6219-5883.html">北冰洋</a>
+                                            <a href="/list/6221-5883.html">可乐</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">饮用水</a></h3>
+                            <p>
+                                            <a href="/list/6233-5883.html">百岁山</a>
+                                            <a href="/list/6235-5883.html">依云</a>
+                                            <a href="/list/6237-5883.html">昆仑山</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">果蔬汁</a></h3>
+                            <p>
+                                            <a href="/list/6251-5883.html">橙汁</a>
+                                            <a href="/list/6253-5883.html">葡萄汁</a>
+                                            <a href="/list/6255-5883.html">苹果汁</a>
+                            </p>
+                        </li>
+
+
+                </ul>
+                </div>
+
+                <div class="menuView hide">
+                <ul>
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">蛋白饮料</a></h3>
+                            <p>
+                                            <a href="/list/6257-5885.html">椰子汁</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">功能饮料</a></h3>
+                            <p>
+                                            <a href="/list/6259-5885.html">健力宝</a>
+                                            <a href="/list/6261-5885.html">乐虎</a>
+                            </p>
+                        </li>
+
+
+                </ul>
+                </div>
+
+                <div class="menuView hide">
+                <ul>
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">冲饮谷物</a></h3>
+                            <p>
+                                            <a href="/list/6263-5887.html">豆浆粉</a>
+                                            <a href="/list/6269-5887.html">麦片</a>
+                                            <a href="/list/6271-5887.html">芝麻糊</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">速溶咖啡</a></h3>
+                            <p>
+                                            <a href="/list/6273-5887.html">黑咖啡</a>
+                                            <a href="/list/6275-5887.html">白咖啡</a>
+                                            <a href="/list/6279-5887.html">三合一</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">咖啡豆/粉</a></h3>
+                            <p>
+                                            <a href="/list/6281-5887.html">蓝山</a>
+                                            <a href="/list/6283-5887.html">猫屎咖啡</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">咖啡伴侣</a></h3>
+                            <p>
+                                            <a href="/list/6285-5887.html">方糖</a>
+                                            <a href="/list/6287-5887.html">奶精</a>
+                                            <a href="/list/6289-5887.html">奶油球</a>
+                            </p>
+                        </li>
+
+
+
+                        <li>
+                                <h3>
+                                    <a href="javascript:void(0)" style="cursor:default;">冲调饮品</a></h3>
+                            <p>
+                                            <a href="/list/6291-5887.html">红茶饮料</a>
+                                            <a href="/list/6293-5887.html">绿茶饮料</a>
+                                            <a href="/list/6293-5887.html">绿茶饮料</a>
+                            </p>
+                        </li>
+
+
+                </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rightpar">
+    <div class="rightbar on0" style="padding:0;z-index:99;background: #9d9ca2; " >
+        <div class="" style="margin-top: 0px;">
+            <div  style="padding:0 0px;margin: 0;border-bottom: 1px solid #ffffff;">
+                <div class="new_bgcolor" style="margin: 0;height: 50px;"><a href="/index.html"><img class="homeicon" style="margin-top: 13px;" src="/index_960/images/new_fixiconzhuye.png"></a></div>
+
+
+                <div style="display: none" class="showMy960" name="showMy960"><a href="/customer/index.html"><img src="/index_960/images/fixicon4.png"></a></div>
+            </div>
+
+            <!--侧边栏二维码-->
+            <div  class="iphone_download new_bgcolor" style="margin: 0;height: 50px;border-bottom: 1px solid #ffffff;">
+                <a href="#"   class="a" style="cursor: default;margin: 0;">
+                    <img src="/images/btn_erweima_iphone.png">
+                </a>
+                <div class="iphone_download_sidebar">
+                    <div>
+                        <img src="/images/erweima2.png">
+                        <p> 960微信公众号</p>
+                    </div>
+                    <img class="img" src="/images/blank.png" >
+                    <div>
+                        <img src="/images/erweima1.png">
+                        <p> 960手机APP</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_service new_bgcolor">
+                <a href="#"   class="a" style="cursor: default;margin: 0;">
+                    <img src="/index_960/images/new_zaixiankefu.png">
+                </a>
+                <div class="new_service_sidebar">
+                    <h3>400-808-8880</h3>
+                    <p>周一至周日（8:00~20:00）</p>
+                </div>
+            </div>
+            <div class="shopcarright new_bgcolor" style="position: relative;margin: 0;height: 50px;" >
+                <a class="login shopcarright_img" style="display:block;" href="/myshoppingcart.html" >
+                    <img style="margin-right:5px;" src="/index_960/images/new_gowuche.png" >
+                </a>
+                <div class="shopcarright_list headMiniShopcart gouwuche" style="height: 236px;right:40px; display: none;position: absolute;top: -206px;z-index: 999;bottom:-130px; background: #fafafa;">
+                    <div class="form cart-goods" style="margin:0;max-height: 202px; overflow-y: scroll;overflow-x: hidden;background: rgb(250, 250, 250);">
+
+                    </div>
+                    <div class="li_btn" style="text-align: left;background: rgb(250, 250, 250);">
+                        <p style="float:left;padding-left:5px;padding-top: 5px;">
+                            <span>共 <i class="li_g mcNumTotal">1</i> 件商品</span>&nbsp;&nbsp;
+                            <span>共计：<font style="font-weight: bold; color: #ff4e01;">¥<b class="li_m mcTotalFee">0.00</b></font></span>&nbsp;&nbsp;
+                        </p>
+                        <a  style="color:#fff;background: #35a400;" href="/myshoppingcart.html" class="login submit_btn1">去购物车</a>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="scroll_top new_bgcolor" style="margin: 20px 0 0 0;height: 50px;"><a href="javascript:;" title="回到顶部" style="color: #ffffff;font-size: 14px;padding-top: 10px;display: block;">顶部<img src="/index_960/images/top_xiangshang.png"></a></div>
+        </div>
+
+    </div>
+
+</div>
+<div class="bgPop"></div>
+<script>
+    window.onload = function () {
+        $(".slidesjs-pagination-item").find("a").html("");
+    };
+    $(function () {
+        $(".menuView").mouseout(function () {
+            $(".new_gang").hide();
+        })
+        $(".dropdown-menu").find("li").hover(function () {
+            $(this).find(".new_gang").show();
+        },function () {
+            $(this).find(".new_gang").hide();
+        })
+        $(".menuView").mouseover(function () {
+            $(".new_gang").show();
+        })
+
+    })
+    $(document).scroll(function(){
+        var distance = $(document).scrollTop();
+       // console.log(distance);
+        if(distance >= 200) {
+            $(".scroll_top").show();
+        } else {
+            $(".scroll_top").hide();
+        }
+
+    })
+    $(function () {
+     /*   var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var top = (h - 1)/2;
+        $(".rightpar").css({"top":top});*/
+        $(".bgPop").css({ "width": $(document).width(), "height": $(document).height() });
+    })
+
+</script>
+
+<script type="text/javascript">
+    function clickNav(url,sort){
+        if(url.indexOf("http://")!=-1){
+            window.open(url);
+        }else{
+            window.open("/"+url);
+        }
+    }
+    //点击热门搜索的时候
+    function changeSearchKey(obj){
+        $(".inputSearch").val($(obj).html());
+        $(".mallSearch-form").submit();
+    }
+    //搜索
+    function checkSearch(){
+       /* var search=$.trim($(".inputSearch").val());
+        if(search==""){
+            $(".inputSearch").val($(".inputSearch").attr("placeholder"));
+        }else if(search.length>100){
+            //限制长度，过长截取
+            $(".inputSearch").val(search.substring(0,100));
+        }*/
+        var hotsearch = $(".hotsearch").val();
+        if(hotsearch != "" && hotsearch != "undefined" && ($(".hotsearchInput").val() == "" || $(".hotsearchInput").val() == "undefined")){
+            $(".hotsearchInput").val(hotsearch);
+        }
+        $("#mallSearch-form").submit();
+    }
+
+</script>

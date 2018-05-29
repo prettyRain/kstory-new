@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ningpai.imagemanage.dao.InfoImageManageMapper" >
+  <resultMap id="BaseResultMap" type="com.ningpai.imagemanage.bean.InfoImageManage" >
+    <id column="image_manage_id" property="imageManageId" jdbcType="BIGINT" />
+    <result column="image_manage_name" property="imageManageName" jdbcType="VARCHAR" />
+    <result column="image_manage_url" property="imageManageUrl" jdbcType="VARCHAR" />
+      <result column="big_img_url" property="bigImgUrl" jdbcType="VARCHAR" />
+      <result column="middle_img_url" property="middleImgUrl" jdbcType="VARCHAR" />
+      <result column="small_img_url" property="smallImgUrl" jdbcType="VARCHAR" />
+    <result column="classify_id" property="classifyId" jdbcType="BIGINT" />
+    <result column="image_online_date" property="imageOnlineDate" jdbcType="TIMESTAMP" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="delflag" property="delflag" jdbcType="CHAR" />
+    <result column="third_id" property="thirdId" jdbcType="CHAR" />
+  </resultMap>
+  <resultMap id="BaseResultMapVo" type="com.ningpai.imagemanage.vo.InfoImageManageVo" >
+    <id column="image_manage_id" property="imageManageId" jdbcType="BIGINT" />
+    <result column="image_manage_name" property="imageManageName" jdbcType="VARCHAR" />
+    <result column="image_manage_url" property="imageManageUrl" jdbcType="VARCHAR" />
+    <result column="classify_id" property="classifyId" jdbcType="BIGINT" />
+    <result column="image_online_date" property="imageOnlineDate" jdbcType="TIMESTAMP" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="delflag" property="delflag" jdbcType="CHAR" />
+    <result column="third_id" property="thirdId" jdbcType="CHAR" />
+    <association column="classify_id" property="imgClassify" 
+			select="com.ningpai.imagemanage.dao.InfoImageClassifyMapper.selectByPrimaryKey"></association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    image_manage_id, image_manage_name, image_manage_url, classify_id, image_online_date, 
+    create_date, update_date, delflag, third_id,big_img_url,middle_img_url,small_img_url
+  </sql>
+  <!-- 查询开始 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from np_information_image_manage
+    where image_manage_id = #{imageManageId,jdbcType=BIGINT}
+  </select>
+  <!-- 根据图片分类查询图片信息总行数 -->
+  <select id="selectImageManageCountByParam" resultType="java.lang.Integer" parameterType="java.util.Map" >
+    select count(image_manage_id) from np_information_image_manage
+    where delflag = '0' 
+    <if test="classifyId != null" >
+		and classify_id = #{classifyId,jdbcType=BIGINT}
+	</if>
+      <if test="startDate != null and startDate!=''" >
+          <![CDATA[ and image_online_date >= #{startDate,jdbcType=TIMESTAMP}]]>
+      </if>
+      <if test="endDate != null and endDate!=''" >
+          <![CDATA[ and image_online_date <= CONCAT(#{endDate,jdbcType=TIMESTAMP},' 23:59:59')]]>
+      </if>
+	<if test="thirdId != null">
+		and third_id = #{thirdId,jdbcType=CHAR}
+	</if>
+  </select>
+  <!-- 根据图片分类查询图片信息 -->
+  <select id="selectImageManageByParam" resultMap="BaseResultMapVo" parameterType="java.util.Map" >
+    select 
+    <include refid="Base_Column_List" />
+    from np_information_image_manage
+    where delflag = '0'
+    <if test="classifyId != null" >
+		and classify_id = #{classifyId,jdbcType=BIGINT}
+	</if>
+	<if test="thirdId != null">
+		and third_id = #{thirdId,jdbcType=CHAR}
+	</if>
+      <if test="startDate != null and startDate!=''" >
+          <![CDATA[ and image_online_date >= #{startDate,jdbcType=TIMESTAMP}]]>
+      </if>
+      <if test="endDate != null and endDate!=''" >
+          <![CDATA[ and image_online_date <= CONCAT(#{endDate,jdbcType=TIMESTAMP},' 23:59:59')]]>
+      </if>
+	order by image_online_date desc
+	LIMIT #{startRowNum,jdbcType=BIGINT} , #{endRowNum,jdbcType=BIGINT}
+  </select>
+  <!-- 查询结束 -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from np_information_image_manage
+    where image_manage_id = #{imageManageId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.ningpai.imagemanage.bean.InfoImageManage" >
+    insert into np_information_image_manage (image_manage_id, image_manage_name, image_manage_url, 
+      classify_id, image_online_date, create_date, 
+      update_date, delflag)
+    values (#{imageManageId,jdbcType=BIGINT}, #{imageManageName,jdbcType=VARCHAR}, #{imageManageUrl,jdbcType=VARCHAR}, 
+      #{classifyId,jdbcType=BIGINT}, #{imageOnlineDate,jdbcType=TIMESTAMP}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{updateDate,jdbcType=TIMESTAMP}, #{delflag,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ningpai.imagemanage.bean.InfoImageManage" >
+    insert into np_information_image_manage
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="imageManageId != null" >
+        image_manage_id,
+      </if>
+      <if test="imageManageName != null" >
+        image_manage_name,
+      </if>
+      <if test="imageManageUrl != null" >
+        image_manage_url,
+      </if>
+      <if test="classifyId != null" >
+        classify_id,
+      </if>
+      <if test="imageOnlineDate != null" >
+        image_online_date,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
+      <if test="delflag != null" >
+        delflag,
+      </if>
+      <if test="thirdId != null">
+      	third_id,
+      </if>
+        <if test="bigImgUrl != null">
+            big_img_url,
+        </if>
+        <if test="middleImgUrl != null">
+            middle_img_url,
+        </if>
+        <if test="smallImgUrl != null">
+            small_img_url,
+        </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="imageManageId != null" >
+        #{imageManageId,jdbcType=BIGINT},
+      </if>
+      <if test="imageManageName != null" >
+        #{imageManageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageManageUrl != null" >
+        #{imageManageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyId != null" >
+        #{classifyId,jdbcType=BIGINT},
+      </if>
+      <if test="imageOnlineDate != null" >
+        #{imageOnlineDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delflag != null" >
+        #{delflag,jdbcType=CHAR},
+      </if>
+      <if test="thirdId != null">
+      	#{thirdId,jdbcType=CHAR},
+      </if>
+        <if test="bigImgUrl != null">
+            #{bigImgUrl,jdbcType=VARCHAR},
+        </if>
+        <if test="middleImgUrl != null">
+            #{middleImgUrl,jdbcType=VARCHAR},
+        </if>
+        <if test="smallImgUrl != null">
+            #{smallImgUrl,jdbcType=VARCHAR},
+        </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ningpai.imagemanage.bean.InfoImageManage" >
+    update np_information_image_manage
+    <set >
+      <if test="imageManageName != null" >
+        image_manage_name = #{imageManageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageManageUrl != null" >
+        image_manage_url = #{imageManageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyId != null" >
+        classify_id = #{classifyId,jdbcType=BIGINT},
+      </if>
+      <if test="imageOnlineDate != null" >
+        image_online_date = #{imageOnlineDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delflag != null" >
+        delflag = #{delflag,jdbcType=CHAR},
+      </if>
+    </set>
+    where image_manage_id = #{imageManageId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ningpai.imagemanage.bean.InfoImageManage" >
+    update np_information_image_manage
+    set image_manage_name = #{imageManageName,jdbcType=VARCHAR},
+      image_manage_url = #{imageManageUrl,jdbcType=VARCHAR},
+      classify_id = #{classifyId,jdbcType=BIGINT},
+      image_online_date = #{imageOnlineDate,jdbcType=TIMESTAMP},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      delflag = #{delflag,jdbcType=CHAR}
+    where image_manage_id = #{imageManageId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateImage" parameterType="java.util.Map">
+  	update np_information_image_manage
+  	set delflag = '1'
+  	where image_manage_id = #{imageManageId,jdbcType=BIGINT} and third_id = #{thirdId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateImages" parameterType="java.util.Map">
+  	update np_information_image_manage
+  	set delflag = '1'
+  	where image_manage_id in 
+  	 <foreach collection="imageId" index="index" item="imageManageId" open="(" separator="," close=")">   
+        #{imageManageId}   
+    </foreach> 
+    and third_id = #{thirdId,jdbcType=BIGINT}
+  </update>
+  <!--goods_images-->
+  <select id="queryGoodsImages" resultType="java.lang.String">
+         select substr(SUBSTRING_INDEX(image_in_name,"/",-1),1,13) from np_goods_image where image_in_name!='' and goods_img_delflag='0'
+  </select>
+   <!--channel_adver-->
+  <select id="queryChannelAdverList" resultType="java.lang.String">
+          select substr(substring_index(adver_path,"/",-1),1,13) from np_channel_adver where adver_path !=""  and delflag='0'
+  </select>
+  <!--share_img-->
+  <select id="queryShareImgList" resultType="java.lang.String">
+          select substr(substring_index(image_name,"/",-1),1,13) from np_share_img where image_name !=""
+  </select>
+  <!--channel_storey-->
+  <select id="queryChannelStoreyList" resultType="java.lang.String">
+           select substr(substring_index(storey_img,"/",-1),1,13)  from np_channel_storey where storey_img !="" and delflag='0'
+  </select>
+  <!--channel_tradeMark-->
+   <select id="queryChannelTradeMarkList" resultType="java.lang.String">
+         select substr(substring_index(logo_src,"/",-1),1,13) from np_channel_trademark where logo_src!='' and delflag='0';
+   </select>
+  <!--channel_storey_goods-->
+  <select id="queryChannelStoreyGoodsList" resultType="java.lang.String">
+          select substr(substring_index(goodsproduct_imgsrc,"/",-1),1,13) from np_channel_storey_goods where goodsproduct_imgsrc !=""  and delflag='0'
+  </select>
+  <!--goods-->
+  <select id="queryGoodsList" resultType="java.lang.String">
+          select substr(substring_index(goods_img,'/',-1),1,13) from np_goods where goods_img !="" and goods_delflag='0'
+  </select>
+  <select id="queryGoodsDetailList" resultType="java.lang.String">
+        select goods_detail_desc from np_goods where goods_detail_desc !='' and goods_delflag='0' order by goods_modified_time desc
+  </select>
+  <select id="queryGoodsSpecsifitionDescList" resultType="java.lang.String">
+       select goods_specsification_desc from np_goods where goods_specsification_desc !='' and goods_delflag='0' order by goods_modified_time desc
+  </select>
+  <select id="queryGoodsWarpDescList" resultType="java.lang.String">
+        select goods_warp_desc from np_goods where goods_warp_desc !='' and goods_delflag='0' order by goods_modified_time desc
+  </select>
+  <select id="queryGoodsBrandDescList" resultType="java.lang.String">
+       select goods_brand_desc from np_goods where goods_brand_desc !='' and goods_delflag='0' order by goods_modified_time desc
+  </select>
+  <select id="queryMobileDetailList" resultType="java.lang.String">
+        select mobile_desc from np_goods where mobile_desc !='' and goods_delflag='0'  order by goods_modified_time desc
+  </select>
+  <!--goods_info-->
+  <select id="queryGoodsInfoList" resultType="java.lang.String">
+         select substr(substring_index(goods_info_img_id,'/',-1),1,13) from np_goods_info where goods_info_img_id !="" and goods_info_delflag='0'
+  </select>
+  <!--marketing_rush-->
+  <select id="queryMarketingRushImgList" resultType="java.lang.String">
+          select substr(substring_index(r.rush_image,'/',-1),1,13) from np_marketing_rush r ,np_marketing m where r.rush_image !="" and r.market_id=m.marketing_id and flag='0'
+  </select>
+  <select id="queryMarketingRushMobileImg" resultType="java.lang.String">
+    select substr(substring_index(r.mobile_rush_image,'/',-1),1,13) from np_marketing_rush r,np_marketing m  where r.mobile_rush_image !="" and r.market_id=m.marketing_id and m.flag='0'
+  </select>
+  <!--移动版分类导航表-->
+  <select id="queryMobCateBarList" resultType="java.lang.String">
+          select substr(substring_index(img_src,'/',-1),1,13) from np_mob_cate_bar where img_src !=""
+  </select>
+
+  <!--basicset-->
+  <select id="querySysBasicsetMobileLogoImg" resultType="java.lang.String">
+        select substr(substring_index(mobile_logo_img,'/',-1),1,13) from np_sys_basicset where mobile_logo_img!=''
+  </select>
+  <select id="querySysBasicsetBestThirdLogoImg" resultType="java.lang.String">
+    select substr(substring_index(best_logo_third,'/',-1),1,13) from np_sys_basicset where best_logo_third!=''
+  </select>
+  <select id="querySysBasicsetBestLogoImg" resultType="java.lang.String">
+      select substr(substring_index(bset_logo,'/',-1),1,13) from np_sys_basicset where bset_logo!=''
+  </select>
+  <select id="querySysBasicsetBestHotLineImg" resultType="java.lang.String">
+      select substr(substring_index(bset_hotline,'/',-1),1,13) from np_sys_basicset where bset_hotline!=''
+  </select>
+  <select id="querySysBasicsetSiteLoginImg" resultType="java.lang.String">
+      select substr(substring_index(site_login_img,'/',-1),1,13) from np_sys_basicset where site_login_img!=''
+  </select>
+  <select id="querySysBasicsetThirdLoginImg" resultType="java.lang.String">
+     select substr(substring_index(third_login_img,'/',-1),1,13) from np_sys_basicset where third_login_img!=''
+  </select>
+  <select id="querySysBasicsetThirdRegisterImg" resultType="java.lang.String">
+          select substr(substring_index(third_register_img,'/',-1),1,13) from np_sys_basicset where third_register_img!=''
+  </select>
+  <select id="querySysBasicsetSiteRegistSuccImg" resultType="java.lang.String">
+        select substr(substring_index(site_regist_succ_img,'/',-1),1,13) from np_sys_basicset where site_regist_succ_img!=''
+  </select>
+   <!--模板表-->
+  <select id="querySysTempList" resultType="java.lang.String">
+        select substr(substring_index(TEMP_IMAGE_URL,'/',-1),1,13) from np_sys_temp WHERE TEMP_IMAGE_URL !=""
+  </select>
+  <!--用户表 用户头像-->
+  <select id="queryCustomerList" resultType="java.lang.String">
+         select substr(substring_index(customer_img,'/',-1),1,13) from np_customer where customer_img!='' and del_flag='0'
+  </select>
+  <select id="queryCustomertoAuditImg" resultType="java.lang.String">
+         select substr(substring_index(to_audit_img,'/',-1),1,13) from np_customer where to_audit_img!='' and del_flag='0'
+  </select>
+  <!--basic 表-->
+  <select id="querySysBasicLoginLogo" resultType="java.lang.String">
+      select substr(substring_index(login_logo,'/',-1),1,13) from np_sys_basic where login_logo !=''
+  </select>
+  <select id="querySysBasicIndexLogo" resultType="java.lang.String">
+       select substr(substring_index(index_logo,'/',-1),1,13) from np_sys_basic where index_logo !=''
+  </select>
+  <!--移动版首页内容-->
+  <select id="queryMobHomePageList" resultType="java.lang.String">
+          select doc  from np_mob_home_page where doc !=""
+  </select>
+
+  <!--图片库-->
+  <select id="queryAllImages" resultType="java.lang.String">
+       select substr(SUBSTRING_INDEX(image_manage_url,'/',-1),1,13) from np_information_image_manage where image_manage_url !=''
+  </select>
+  <!--修改关联状态-->
+  <update id="uploadImagesByQueryMap" parameterType="java.util.Map" >
+        update np_information_image_manage set relate='1'
+        where
+        <if test="queryLists != null ">
+
+        <foreach collection="queryLists" item="queryList"  separator=" or " >
+              image_manage_url like  '%${queryList}%'
+        </foreach>
+        </if>
+  </update>
+  <update id="uploadAll">
+          update np_information_image_manage set relate='0'
+  </update>
+
+  <!--查询未关联的图片的数量-->
+  <select id="queryTotalImagCount" resultType="java.lang.Integer">
+    select count(1) from np_information_image_manage where relate='1'
+    <if test="startDate !=null and startDate !=''">
+            <![CDATA[ and image_online_date >= #{startDate}]]>
+    </if>
+    <if test="endDate !=null and endDate !=''">
+            <![CDATA[ and image_online_date <= #{endDate}]]>
+    </if>
+  </select>
+  <!--ajax分页查询未关联图片-->
+  <select id="ajaxQueryRetaleImag" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from np_information_image_manage where relate='1'
+    <if test="startDate !=null and startDate !=''">
+      <![CDATA[ and image_online_date >= #{startDate}]]>
+    </if>
+    <if test="endDate !=null and endDate !=''">
+      <![CDATA[ and image_online_date <= #{endDate}]]>
+    </if>
+    ORDER BY image_online_date DESC
+    LIMIT #{startNo},#{endNo}
+  </select>
+
+  <!--删除单个未关联图片-->
+  <delete id="deleteRelateInfoImageManager" parameterType="java.lang.String">
+          DELETE  from np_information_image_manage where image_manage_id=#{imageId}
+  </delete>
+
+ <!--标题查询-->
+  <select id="getInformationOnePageUrls" resultType="java.lang.String">
+         select content from np_information_onepage where content!='' and delflag='0'
+  </select>
+  <select id="getInformationOnePageImgs" resultType="java.lang.String">
+         select substr(SUBSTRING_INDEX(img_src,'/',-1),1,13)img from np_information_onepage where img_src!='' and delflag='0'
+  </select>
+  <!--商品认证查询-->
+  <select id="getGoodsAuthUrls" resultType="java.lang.String">
+         select substr(substring_index(url,'/',-1),1,13) from np_goods_auth where url!=''
+  </select>
+  <!--品牌查询-->
+  <select id="getGoodsBrandUrls" resultType="java.lang.String">
+        select substr(SUBSTRING_INDEX(brand_logo,'/',-1),1,13) from np_goods_brand where brand_logo !='' and brand_delflag='0'
+  </select>
+  <!--文章查询-->
+  <select id="getInformationUrls" resultType="java.lang.String">
+       select content from np_information where content !='' and delflag='0'
+  </select>
+  <select id="getInformationImgs" resultType="java.lang.String">
+    select substr(SUBSTRING_INDEX(img_src,'/',-1),1,13)img from np_information where img_src!='' and delflag='0'
+  </select>
+  <!--服务支持查询-->
+  <select id="getServiceSupportUrls" resultType="java.lang.String">
+       select substr(SUBSTRING_INDEX(service_image_url,'/',-1),1,13) from np_service_support where service_image_url!='' and delfalg='0'
+  </select>
+
+  <!--帮助中心分类查询-->
+  <select id="getSysHelpcate" resultType="java.lang.String">
+      select substr(SUBSTRING_INDEX(helpcate_img,'/',-1),1,13) from np_sys_helpcate where helpcate_img!='' and del_flag='0'
+  </select>
+  <!--帮助中心查询-->
+  <select id="getSysHelp" resultType="java.lang.String">
+    select substr(SUBSTRING_INDEX(help_img,'/',-1),1,13) from np_sys_help where help_img!='' and del_flag='0'
+  </select>
+  <select id="getSysHelpContent" resultType="java.lang.String">
+    select help_content from np_sys_help where help_content!='' and del_flag='0'
+  </select>
+  <!--查询友情链接的logo-->
+  <select id="getSysLink"  resultType="java.lang.String">
+    select substr(SUBSTRING_INDEX(link_logo,'/',-1),1,13) logo from np_sys_link where link_logo!='' and del_flag='0'
+  </select>
+
+  <select id="getSysBasicsetCopyRights" resultType="java.lang.String">
+      select bset_copyright from np_sys_basicset where bset_copyright!=''
+  </select>
+  <select id="getSysBasicsetUserAgreeMents" resultType="java.lang.String">
+     select bset_useragreement from np_sys_basicset where bset_useragreement!=''
+  </select>
+  <delete id="deleteRelateInfoImageManagerByLike" parameterType="java.lang.String">
+          delete from np_information_image_manage where image_manage_url like '%${value}%'
+  </delete>
+ <!--退单上传图片-->
+  <select id="getBackOrderImgs" resultType="java.lang.String">
+       select upload_documents from np_back_order where upload_documents!=''
+  </select>
+   <!--报错页面表-->
+  <select id="getSysErrorPage" resultType="java.lang.String">
+       select PAGE_DES from np_sys_error_page where DELETE_STATUS='0'
+  </select>
+  <!--pc端分类导航表-->
+  <select id="querySysClassifyBarList" resultType="java.lang.String">
+       select substr(SUBSTRING_INDEX(temp2,'/',-1),1,13) from np_classify_bar where delflag='0'  and temp2!=''
+  </select>
+</mapper>

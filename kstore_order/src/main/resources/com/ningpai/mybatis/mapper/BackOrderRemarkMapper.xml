@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ningpai.order.dao.BackOrderRemarkMapper">
+
+    <resultMap id="resultBase" type="com.ningpai.order.bean.BackOrderRemark">
+        <id column="back_order_remark_id" property="remarkId" />
+        <result column="back_order_id" property="backOrderId" />
+        <result column="back_order_code" property="backOrderCode" />
+        <result column="remark_content"  property="remarkContent"/>
+        <result column="create_time"     property="creatTime"/>
+        <result column="back_customer"  property="backcustomer"/>
+    </resultMap>
+    <select id="getRemarkTotal" parameterType="java.lang.Long" resultType="java.lang.Integer">
+           select count(1) from np_back_order_remark where back_order_id=#{backOrderId}
+    </select>
+    <select id="getBackOrderRemarks" parameterType="java.util.Map" resultMap="resultBase">
+           select * from np_back_order_remark where back_order_id=#{backOrderId}
+           limit #{begin},#{pageSize}
+    </select>
+
+    <insert id="addBackOrderRemarkAjax" parameterType="com.ningpai.order.bean.BackOrderRemark" >
+        insert into np_back_order_remark
+        <trim prefix="(" suffix=") " suffixOverrides=",">
+            <if test="backOrderId !=null ">
+                back_order_id,
+            </if>
+            <if test="backOrderCode !=null">
+                back_order_code,
+            </if>
+            <if test="remarkContent !=null">
+                remark_content,
+            </if>
+            <if test="creatTime !=null">
+                create_time,
+            </if>
+            <if test="backcustomer !=null">
+                back_customer,
+            </if>
+        </trim>
+        <trim prefix=" values(" suffix=")" suffixOverrides=",">
+            <if test="backOrderId !=null ">
+                #{backOrderId},
+            </if>
+            <if test="backOrderCode !=null">
+                #{backOrderCode},
+            </if>
+            <if test="remarkContent !=null">
+                #{remarkContent},
+            </if>
+            <if test="creatTime !=null">
+                #{creatTime},
+            </if>
+            <if test="backcustomer !=null">
+                #{backcustomer},
+            </if>
+        </trim>
+    </insert>
+</mapper>

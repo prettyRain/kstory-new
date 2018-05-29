@@ -1,0 +1,360 @@
+/*
+ * 作者：shf
+ * 时间：2017-07-10
+ * 描述：H5改版2.0样式支付页面
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{ font-family:微软雅黑,Microsoft yahei;font-size:12px;  box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+
+
+.navbar-fixed .page-content, .navbar-through .page-content{
+    padding-top: 60px;
+}
+.navbar, .toolbar{
+    height: 60px;
+}
+.navbar, .subnavbar, .toolbar{
+    background: #f7f7f7;
+}
+.navbar .vheader{
+    height: 50px;
+    border-bottom:none;
+}
+
+.navbar:after{
+    background:none;
+}
+.page{
+    background:#fff;
+}
+.content-block{
+    padding:0;
+
+    margin:0;
+}
+
+
+
+/*注册样式开始*/
+.bound_phone{
+    position: relative;
+    width: 5.9rem;
+    display: block;
+    margin: .55rem auto 0;
+}
+.bound_phone .li_li{
+    border-bottom:1px solid #DFDFDF;
+    position: relative;
+    width:5.9rem;
+    height: .8rem;
+    margin-bottom: .55rem;
+}
+.bound_phone .li_li.list-2{
+    margin-bottom: 1rem;
+}
+.bound_phone .li_li.focus1{
+    border-bottom:1px solid #000;
+}
+.bound_phone .li_li.error{
+    border-bottom:1.5px solid #FF0000;
+}
+.bound_phone .li_li .clean{
+    display: none;
+    position: absolute;
+    top:.24rem;
+    right:0;
+    width:.32rem;
+    height:.32rem;
+}
+.bound_phone .li_li .clean1{
+    position: absolute;
+    top:.24rem;
+    right:2.5rem;
+}
+.bound_phone .li_li .get-confirmcode{
+    position: absolute;
+    top:.18rem;
+    right:0;
+    font-size: .3rem;
+    color: #25A702;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.bound_phone .li_li .clean img{
+    width:.32rem;
+    height:.32rem;
+}
+.bound_phone .li_li input{
+    width:4.6rem;
+    height: .76rem;
+    border:none;
+    font-weight: 600;
+    font-size: .3rem;
+    padding:0;
+}
+.bound_phone .li_li input::-webkit-input-placeholder{
+    color: #B3B3B3;
+    font-weight: normal;
+    font-size: .3rem;
+}
+.bound_phone .li_li .error{
+    display: none;
+    position: absolute;
+    left:0;
+    bottom: -17px;
+    font-size: 11px;
+    color: #FF0000;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.bound_phone .li_li p img {
+    height: 7px;
+    width: 7px;
+}
+.bound_phone .li_li .correct{
+    color: #199301;
+    font-weight: 600;
+}
+.bound_phone .no label{
+    display: inline-block;
+    opacity: 0.81;
+    font-size: .24rem;
+    color: #000000;
+    letter-spacing: 0.5px;
+    height:.28rem;
+    line-height:.28rem;
+    margin-top: .35rem;
+}
+.bound_phone .no a{
+    font-size: .24rem;
+    color: #199301;
+    letter-spacing: 0.43px;
+}
+.bound_phone .no label span{
+    display: inline-block;
+    width:.28rem;
+    height:.28rem;
+    background: url(../../images/v3/Oval_select@2x.png) no-repeat left center;
+    background-size: .28rem .28rem;
+    margin-right: .1rem;
+    float: left;
+}
+.bound_phone .no label.active span{
+    background: url(../../images/v3/Oval_selected@2x.png) no-repeat left center;
+    background-size: .28rem .28rem;
+}
+
+.bound_phone .forget_paw{
+    text-align: center;
+    margin-top: 1.44rem;
+}
+
+.bound_phone .forget_paw a{
+    font-size: .26rem;
+    color: #7D7D7D;
+    letter-spacing: 0.5px;
+}
+
+.bound_phone .input-next{
+    display: block;
+    width:5.9rem;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    color: #fff;
+    background: #CDCDCD;
+    border-radius: 10px;
+    font-size: .3rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+.bound_phone .input-next.nextGreen{
+    background: #199301;
+}
+
+
+
+
+
+
+
+
+
+/*弹出面板开始*/
+.login-screen, .popup{
+    top: inherit;
+    bottom: 0;
+    height: 5.94rem;
+    border-radius: 6px 6px 0 0;
+}
+.payPanel{
+    position: relative;
+    width:100%;
+    height:5.94rem;
+}
+.payPanel .close-popup{
+    position: absolute;
+    top:.8rem;
+    left:.14rem;
+    width: 22px;
+    height: 22px;
+    color: transparent;
+    background: url(/images/icon_v1.0/back_ios@2x.png) no-repeat center;
+    background-size: 22px 22px;
+}
+.payPanel .price{
+    height:.76rem;
+    line-height: .76rem;
+    padding-top:.6rem;
+    font-size: 28px;
+    color: #000000;
+    letter-spacing: -0.51px;
+    text-align: center;
+    font-weight:bold;
+}
+.payPanel .price .integer{
+    font-size: 32px;
+}
+.payPanel .price .decimals{
+    font-size: 24px;
+}
+.payPanel .prompt{
+    font-size: 12px;
+    color: #7F7F7F;
+    letter-spacing: .4px;
+    text-align: center;
+    margin: .08rem 0 .3rem 0;
+    padding: 0 .5rem;
+}
+.payPanel .prompt.error{
+    color: #EB4E3D;
+}
+.payPanel .prompt.error img{
+    width:7px;
+    height:7px;
+}
+.payPanel .lpkPsd{
+    background: #F7F7F7;
+    border-radius: 6px;
+    display: block;
+    border:none;
+    padding-left: 15px;
+    color: #000;
+    font-size: .28rem;
+    width: 4.38rem;
+    height: 1.1rem;
+}
+.payPanel .lpkPsd::-webkit-input-placeholder{
+    font-size: .28rem;
+    color: #7F7F7F;
+    letter-spacing: .5px;
+}
+.payPanel .xieyi{
+    width: 6.38rem;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.payPanel .xieyi .active span{
+    display: inline-block;
+    width:8px;
+    height:8px;
+    border:1px solid #199301;
+    background: #199301;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.payPanel .xieyi .active span.unselected{
+    background: #fff;
+}
+
+.payPanel .xieyi a{
+    color: #199301;
+}
+.payPanel .affirm{
+    position: fixed;
+    bottom: .5rem;
+    width: 5.9rem;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background: #CDCDCD;
+    border-radius: 8px;
+    margin: 0 .8rem;
+    font-weight: bold;
+}
+.payPanel .affirm span{
+    font-size: 15px;
+    color: #FFFFFF;
+    letter-spacing: .5px;
+}
+.payPanel .affirm.affirmBtn{
+    background: #199301;
+}
+.payPanel .psdWarp{
+    position: relative;
+    width: 6.38rem;
+    margin: 0 auto;
+    background: #F7F7F7;
+    border-radius: 6px;
+    height: 1.1rem;
+}
+.payPanel .show_password {
+    display: block;
+    position: absolute;
+    top: .35rem;
+    right: .4rem;
+    width: .4rem;
+    height: .4rem;
+    background: url(../../images/icon_v1.0/none@2x.png?timestamp=1525327841) no-repeat center center;
+    background-size: .4rem .4rem;
+}
+.payPanel .show_password.selected{
+    background: url(../../images/icon_v1.0/show@2x.png?timestamp=1525327841) no-repeat center center;
+    background-size: .4rem .4rem;
+}
+.payPanel .clean {
+    display: none;
+    position: absolute;
+    top: .35rem;
+    right: 1.4rem;
+    width: .32rem;
+    height: .32rem;
+}
+.payPanel .clean img{
+    width:100%;
+    height:100%;
+}
+
+/*弹出面板结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

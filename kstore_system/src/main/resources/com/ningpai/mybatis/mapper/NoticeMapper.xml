@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ningpai.system.notice.dao.NoticeMapper" >
+  <resultMap id="BaseResultMap" type="com.ningpai.system.notice.bean.Notice" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+      <result column="platform" property="platform" jdbcType="INTEGER" />
+      <result column="crowd" property="crowd" jdbcType="VARCHAR" />
+      <result column="send_type" property="sendType" jdbcType="INTEGER" />
+      <result column="send_time" property="sendTime" jdbcType="TIMESTAMP" />
+      <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+      <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+      <result column="status" property="status" jdbcType="INTEGER" />
+      <result column="push_status" property="pushStatus" jdbcType="INTEGER" />
+      <result column="add_person" property="addPerson" jdbcType="VARCHAR" />
+      <result column="msg_id" property="msgId" jdbcType="VARCHAR" />
+      <result column="temp_num" property="tempNum" jdbcType="INTEGER" />
+  </resultMap>
+
+    <!-- 查询总行数-分页用 -->
+    <select id="selectCountNotice" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(id) from np_notice
+        where status = '0'
+        <if test="crowd  != null and crowd  != '' ">
+            and crowd like CONCAT('%', #{crowd},'%')
+        </if>
+        <if test="crowdMark  != null and crowdMark  != '' ">
+            and crowd not like CONCAT('%', #{crowdMark},'%')
+        </if>
+        <if test="platform > -1">
+            and platform = #{platform,jdbcType=BIGINT}
+        </if>
+        <if test="sendType  > 0 ">
+            and sendType = #{sendType,jdbcType=BIGINT}
+        </if>
+        <if test="content  != null and content  != '' ">
+            and content like  CONCAT('%', #{content},'%')
+        </if>
+        <if test="pushStatus > -1 ">
+            and <![CDATA[ push_status < 2 ]]>
+        </if>
+        <if test="time > 0">
+            and <![CDATA[ send_time <= now() ]]>
+        </if>
+    </select>
+
+    <!-- 分页查询 -->
+    <select id="selectByPageBean" resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select * from np_notice
+        where status = '0'
+        <if test="crowd  != null and crowd  != '' ">
+            and crowd like  CONCAT('%', #{crowd},'%')
+        </if>
+        <if test="crowdMark  != null and crowdMark  != '' ">
+            and crowd not like CONCAT('%', #{crowdMark},'%')
+        </if>
+        <if test="platform > -1">
+            and platform = #{platform,jdbcType=BIGINT}
+        </if>
+        <if test="sendType  > 0 ">
+            and sendType = #{sendType,jdbcType=BIGINT}
+        </if>
+        <if test="content  != null and content  != '' ">
+            and content like  CONCAT('%', #{content},'%')
+        </if>
+        <if test="pushStatus > -1 ">
+            and <![CDATA[ push_status < 2 ]]>
+        </if>
+        <if test="time > 0">
+            and <![CDATA[ send_time <= now() ]]>
+        </if>
+        order by create_time desc,update_time desc
+        limit #{startRowNum},#{endRowNum}
+    </select>
+
+  <insert id="insertNotice" parameterType="com.ningpai.system.notice.bean.Notice" >
+    insert into np_notice (id,title, content, url,platform,crowd,send_type,send_time,create_time,update_time,status,add_person,push_status,msg_id)
+    values (#{id,jdbcType=BIGINT},#{title,jdbcType=VARCHAR},#{content,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR},
+    #{platform,jdbcType=INTEGER},#{crowd,jdbcType=VARCHAR},#{sendType,jdbcType=INTEGER},#{sendTime,jdbcType=TIMESTAMP},
+    #{createTime,jdbcType=TIMESTAMP},#{updateTime,jdbcType=TIMESTAMP},#{status,jdbcType=INTEGER},#{addPerson,jdbcType=VARCHAR},#{pushStatus,jdbcType=INTEGER},
+    #{msgId,jdbcType=VARCHAR})
+  </insert>
+
+    <update id="updateByMsgId" parameterType="java.lang.String" >
+        update np_notice
+        set status = -1,update_time = now()
+        where msg_id = #{msgId,jdbcType=VARCHAR}
+    </update>
+
+    <update id="updateNotice" parameterType="com.ningpai.system.notice.bean.Notice" >
+        update np_notice
+        <set>
+            <if test="status != 0">
+                status = #{status},
+            </if>
+            <if test="pushStatus != 0">
+                push_status = #{pushStatus},
+            </if>
+            <if test="tempNum != 0">
+                temp_num = #{tempNum},
+            </if>
+            update_time = now()
+        </set>
+        where
+        <if test="msgId  != null and msgId  != '' ">
+            msg_id = #{msgId,jdbcType=VARCHAR}
+        </if>
+        <if test="id > 0 ">
+            and id = #{id}
+        </if>
+    </update>
+
+</mapper>

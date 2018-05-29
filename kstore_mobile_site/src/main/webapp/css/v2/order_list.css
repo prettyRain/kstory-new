@@ -1,0 +1,288 @@
+/*ｓｈｆ手动拆单后调整布局*/
+.list-body-line{
+    width:100%;
+}
+.order .list-body-box .box-body {
+    height: auto!important;
+}
+.order .list-body-box .box-body ul li + li {
+    margin-bottom: 10px;
+}
+.order .list-body-box .box-body ul li{
+    margin-right: 10px;
+    margin-left:0!important;
+}
+/*.order-info .list-body-line .list-item,.order-info .list-body-box .list-item{*/
+/*background-color: #fafafa;*/
+/*}*/
+.text-them {
+    color: #0072BC !important;
+    font-weight: bold!important;
+}
+.order.content-order-all .order-bottom .pay-money{
+    color: #fb6b14;
+    font-weight: bold;
+}
+/*.too-btn .btn{*/
+/*color: #333!important;*/
+/*border:1px solid #7b7b7b;*/
+/*}*/
+/*.btn.pay-btn{*/
+/*background-color: #0d9901!important;*/
+/*color: #fff!important;*/
+/*border:1px solid #0d9901;*/
+/*}*/
+.order-number .list-item,.list-body-line .list-item,.list-body-box .list-item{
+    border-bottom: none;
+}
+.no-orders>.list-item>.btn{
+    color: #fff!important;
+    border:none!important;
+}
+/*body, html,.order .no-orders .list-item {*/
+/*background-color: #eee;*/
+/*}*/
+.order i.dingdan{
+    width: 140px;
+    height: 140px;
+    background: url(../../images/v2/icon_zanwudingdan@2x.png) no-repeat center bottom;
+    background-size: contain;
+    margin: 66px auto 21px;
+}
+.order .no-orders .list-item h3 {
+    opacity: 0.58;
+    font-size: 15px;
+    color: #030303;
+    letter-spacing: 1.07px;
+}
+/*
+ * 作者：shf
+ * 时间：2017-08-29
+ * 描述：H5改版2.0样式,
+ *
+ */
+@charset "utf-8";
+/*body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}*/
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+/*ul,ol,menu{padding:0}*/
+/*ul,ol{list-style:none}*/
+/*address,cite,dfn,em,var{font-style:normal}*/
+/*a{text-decoration:none}*/
+/*a:hover{}*/
+/*img{border:none}*/
+/*input,textarea{outline:none}*/
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+/*本次修改内容*/
+#seleted{
+    height: 44px;
+    border-bottom: 1px solid #eee;
+}
+.vheader {
+    height: 50px!important;
+    border-bottom: 1px solid #eee!important;
+}
+.content-block-menu a{
+    color: #7f7f7f;
+}
+.content-block-menu a.active {
+    background:none;
+    color: #199301;
+
+}
+.content-block-menu a.active span{
+    font-weight: bold;
+}
+.list-item .item-head label,.list-item .item-head span {
+    color: #7f7f7f;
+    font-size: 12px;
+    vertical-align: top;
+}
+.list-item .item-head label span {
+    color: #000;
+    font-weight:bold;
+}
+.list-item .item-head span b{
+    font-weight: normal!important;
+    font-size: 0.8rem;
+}
+.list-item .item-head .haspay{
+    color: #000;
+    margin-left: 5px;
+}
+.list-item .item-head .haspay span{
+    color: #999;
+}
+.list-item .item-head .haspay span.price{
+    color: #000;
+    font-weight: bold;
+}
+.list-item .item-head .haspay i{
+    vertical-align: baseline;
+    font-size: 12px;
+    padding:0 5px 0 0;
+    color: #000;
+    font-weight: bold;
+}
+.order.content-order-all .order-item{
+    margin: 10px 0 0;
+    overflow: hidden;
+    /*border-radius: 4px;*/
+    /* box-shadow: 0 1px 1px #999; */
+}
+.order.content-order-all .order-item + .order-item{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-top:none;
+}
+.list-item{
+    border-bottom: none;
+}
+.order-info .list-body-line .list-item, .order-info .list-body-box .list-item {
+    background-color: #f7f7f7;
+    /*margin: 0 5px;*/
+}
+.too-btn .btn{
+    color: #7f7f7f!important;
+}
+.btn.pay-btn{
+    background-color: #fff!important;
+    color: #199301!important;
+    border: .5px solid #199301!important;
+}
+.order .list-body-box .box-body ul li {
+    display: block;
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: none;
+    line-height: normal;
+}
+.pro-item .propic {
+    width: 80px;
+    height: 80px;
+    line-height: normal;
+    border:none;
+}
+.list-item {
+    padding: 10px 15px;
+}
+.pro-item {
+    padding: 0 0 0 95px;
+    height: 80px;
+}
+.pro-item .prodesc .left {
+    width: 100%;
+    min-height: 0;
+    margin-top: 5px;
+}
+.pro-item .prodesc .title {
+    line-height: 18px;
+    height: auto;
+    color: #000;
+    font-size: 14px;
+    padding-bottom: 0;
+    height: 39px;
+    margin-bottom: 3px;
+}
+.pro-item .prodesc .right {
+    width: 100%;
+    text-align: left;
+    float: left;
+    min-height: 0;
+    height:16px;
+    line-height: 16px;
+}
+.pro-item .prodesc .right p,.pro-item .prodesc .right span{
+    display:inline-block!important;
+}
+.order .order-info .pro-item .prodesc {
+    min-height: 74px;
+}
+.order .order-info .pro-item .prodesc .pro-num{
+    position: static;
+    padding-bottom: 0;
+    height:auto;
+    font-size: 12px;
+    color: #7f7f7f;
+}
+.order .order-info .pro-item .prodesc .price{
+    padding-bottom: 0;
+    height:inherit;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.order .order-info .pro-item .prodesc .price>span{
+    font-size: 12px;
+}
+.order .list-body-line2{
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+.order .order-info .list-body-line2:last-of-type{
+    margin-bottom: 0;
+    line-height: 35px;
+}
+.order.content-order-all .order-number .list-item {
+    padding: 0 17px 0 17px;
+}
+.list-item .item-head .curValue{
+    font-size: 12px;
+    height:40px;
+    line-height: 40px;
+}
+.order.content-order-all .list-item .item-head{
+    height: 40px;
+    line-height: 40px;
+}
+.order.content-order-all .order-bottom .too-btn a{
+    font-size: 12px;
+    padding: 0 5px;
+    display: inline-block;
+    border: 0.5px solid #7f7f7f;
+    height: 28px;
+    width: 74px!important;
+    line-height: 27px;
+}
+.order.content-order-all .order-bottom .too-btn a + a{
+    margin-left:12px;
+    padding: 0 5px;
+}
+.content-block-menu a{
+    font-size: 14px;
+    padding:0;
+}
+.order.content-order-all .order-number .list-item {
+    padding: 0 15px 0 15px;
+}
+
+.order.content-order-all .order-bottom .list-item .item-head {
+    display: none;
+}
+.content-block-menu a .tabbar-label{
+    display: block;
+    height: 40px;
+    line-height: 41px;
+}
+.content-block-menu .tab-link.active i{
+    display: block;
+    width:26px;
+    height: 3px;
+    background: url(../../images/icon_v1.0/Rectangle8@2x.png) no-repeat center bottom;
+    background-size: 26px 3px;
+}
+
+.content-block-menu .tab-link i{
+    display: block;
+    width:20px;
+    height: 3px;
+    background: transparent;
+}
+
+
+.order-bottom .list-item{
+    height: 40px!important;
+    line-height: 40px!important;
+    padding:0 15px;
+}
+
+

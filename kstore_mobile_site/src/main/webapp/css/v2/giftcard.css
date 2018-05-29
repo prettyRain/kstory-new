@@ -1,0 +1,409 @@
+/*
+ * 作者：shf
+ * 时间：2017-07-10
+ * 描述：H5改版2.0样式礼品卡页面
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{ font-family:微软雅黑,Microsoft yahei;font-size:12px;  box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+
+body{
+    background: #fff;
+}
+.vheader{
+    height: 50px!important;
+    border-bottom: none!important;
+    color: #fff;
+    background: url(../../images/v3/lpkbg2@2x_01.png) no-repeat left center;
+    background-size: 100% 100%;
+    border-bottom: none!important;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+.vheader img {
+    width: 10px!important;
+    height: 16px!important;
+    margin-left: 10px!important;
+}
+.gifttitle{
+    position: fixed;
+    top:48px;
+    color: #fff;
+    padding-left: .3rem;
+    height: 3.46rem;
+    width: 7.2rem;
+    background: #fff url(../../images/v3/lpkbg2@2x_02.png) no-repeat left center;
+    background-size: 7.5rem 3.46rem;
+    overflow-x: hidden;
+    z-index: 99999;
+}
+.gifttitle .giftdetail{
+    font-size: .24rem;
+    padding: .55rem 0 0 0;
+    letter-spacing: 0.5px;
+}
+.gifttitle .giftinfo{
+    position: relative;
+    font-size: .48rem;
+    margin-bottom: .65rem;
+    margin-top: .1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.gifttitle .explain{
+    position: absolute;
+    right: 0;
+    top: .8rem;
+    width: 91px;
+    text-align: center;
+    /*height:.74rem;*/
+    /*line-height:.74rem;*/
+    height:37px;
+    line-height:38px;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: .8px;
+    background: url(../../images/v3/blank_tips@2x.png) no-repeat left center;
+    background-size: 91px 37px;
+}
+.gifttitle .giftprice{
+    font-size: .6rem;
+    margin-bottom: .3rem;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+}
+.gifttitle ul{
+    width:7.155rem;
+}
+.gifttitle ul li{
+    float: left;
+    width: 50%;
+    font-size: 12px;
+}
+.gifttitle ul li p{
+    width: 64px;
+    height:22px;
+    line-height:22px;
+    text-align: center;
+    background: url(../../images/v3/giftpricebg.png) no-repeat left center;
+    background-size: 64px 22px;
+    /*border-radius: 100px;*/
+}
+.gifttitle ul li span{
+    float: left;
+    /*width: 50%;*/
+    font-size: 15px;
+    margin-top: .08rem;
+    /*line-height: .43rem;*/
+    /*background: red;*/
+    letter-spacing: .9px;
+    width: 64px;
+    height:22px;
+    line-height:22px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.dealtitle{
+    /*height: 37px;*/
+    /*line-height: 37px;*/
+    /*padding-left: .3rem;*/
+    /*background: #f7f7f7;*/
+    /*border-bottom: 1px solid #eee;*/
+    /*border-top: 1px solid #eee;*/
+    /*font-size: 12px;*/
+    /*color: #7F7F7F;*/
+    /*letter-spacing: .5px;*/
+    height: 37px!important;
+    line-height: 37px;
+    padding-left: .3rem;
+    background: #f7f7f7!important;
+    border-bottom: 1px solid #eee!important;
+    border-top: 1px solid #eee;
+    font-size: 12px!important;
+    color: #7F7F7F;
+    letter-spacing: .5px;
+    margin-left: 0!important;
+
+}
+.dealdetail .liinfo{
+   margin-left: .3rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    height:66px;
+    font-size: 14px;
+}
+.dealdetail .liinfo:last-of-type{
+    border-bottom:none;
+}
+.dealdetail .liinfo>div{
+    position: absolute;
+}
+
+.dealdetail .liinfo>.gtitle{
+    top:10px;
+    left:0;
+    color: #000;
+    font-size: 15px;
+    letter-spacing: .5px;
+}
+.dealdetail .liinfo>.gprice{
+    top:10px;
+    right:.3rem;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+.dealdetail .liinfo>.gprice.positive{
+    color: #199301;
+}
+.dealdetail .liinfo>.gtime{
+    bottom:10px;
+    left:0;
+    color: #7f7f7f;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+.dealdetail .liinfo>.gstatus{
+    bottom:10px;
+    right:.3rem;
+    color: #7f7f7f;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+
+
+
+
+
+/*.paytitle .payinfo{*/
+    /*font-size: .48rem;*/
+    /*padding: .65rem 0 .20rem 0;*/
+    /*font-weight: 600;*/
+    /*letter-spacing: 0.6px;*/
+/*}*/
+/*.paytitle  .paydetail{*/
+    /*font-size: .23rem;*/
+    /*letter-spacing: 0.6px;*/
+/*}*/
+/*.payprice{*/
+    /*height:.88rem;*/
+    /*width:100%;*/
+    /*background: #fff;*/
+    /*font-size: 14px;*/
+/*}*/
+/*.payprice p{*/
+    /*float: left;*/
+    /*height:.88rem;*/
+    /*line-height:.88rem;*/
+    /*padding-left: 15px;*/
+    /*color: #333;*/
+/*}*/
+/*.payprice span{*/
+    /*float: right;*/
+    /*height:.88rem;*/
+    /*line-height:.88rem;*/
+    /*padding-right: 15px;*/
+    /*color: #318b00;*/
+/*}*/
+
+
+/*.paymethod .method{*/
+    /*font-size: 14px;*/
+    /*color: #333;*/
+    /*background: #eee;*/
+    /*padding:21px 0 13px 15px;*/
+/*}*/
+/*.paymethod .choose.weixin{*/
+    /*background:#fff url(../../images/v2/weixin@2x.png) no-repeat 15px center;*/
+    /*-webkit-background-size:27px;*/
+    /*background-size:27px;*/
+    /*margin-bottom: 1px;*/
+/*}*/
+/*.paymethod .choose.zhifb{*/
+    /*background:#fff url(../../images/v2/zhifubao@2x.png) no-repeat 15px center;*/
+    /*-webkit-background-size:27px;*/
+    /*background-size:27px;*/
+/*}*/
+/*.paymethod .choose{*/
+    /*position: relative;*/
+    /*height:54px;*/
+    /*line-height:54px;;*/
+    /*font-size: 14px;*/
+    /*color: #333;*/
+    /*padding-left:54px;;*/
+/*}*/
+/*i.select-box{*/
+    /*position: absolute;*/
+    /*right: 15px;*/
+    /*top: 20px;*/
+    /*display: block;*/
+    /*width: 14px;*/
+    /*height: 14px;*/
+    /*border: 1px solid #bbb;*/
+    /*-webkit-border-radius: 10px;*/
+    /*-moz-border-radius: 10px;*/
+    /*border-radius: 10px;*/
+    /*background-color: rgba(255, 255, 255, .5);*/
+/*}*/
+/*i.select-box.selected {*/
+    /*border-color: #199301;*/
+    /*background: url(../../images/commonbg.png) -5px -52px no-repeat #199301;*/
+    /*-webkit-background-size: 200px;*/
+    /*background-size: 200px;*/
+/*}*/
+/*!*礼品卡*!*/
+/*.giftcard{*/
+    /*margin-top: 20px;*/
+    /*color: #333;*/
+    /*font-size: 14px;*/
+/*}*/
+
+/*.giftcard .gchoose{*/
+    /*height: 44px;*/
+    /*line-height: 44px;*/
+    /*background: #fff;*/
+    /*padding-left: 15px;*/
+/*}*/
+/*.giftcard .gchoose p{*/
+    /*float: left;*/
+/*}*/
+/*.choose-box {*/
+    /*display: block;*/
+    /*float: right;*/
+    /*width: 46px;*/
+    /*height: 28px;*/
+    /*background: url(../../images/checkbox_btn.png) left bottom no-repeat;*/
+    /*background-size: auto 56px;*/
+    /*margin-top: 8px;*/
+    /*margin-right: 15px;*/
+/*}*/
+/*.choose-box.selected {*/
+    /*background: url(../../images/checkbox_btn.png) left top no-repeat;*/
+    /*background-size: auto 56px;*/
+/*}*/
+
+/*.giftcard .info{*/
+    /*line-height: 20px;*/
+    /*padding: 0px 15px 10px 15px;*/
+    /*background: #fff;*/
+    /*margin-bottom: 1px;*/
+    /*display: none;*/
+/*}*/
+/*.giftcard .info span{*/
+    /*color: #ff0000;*/
+/*}*/
+/*#lpk_psd{*/
+    /*height: 44px;*/
+    /*line-height: 24px;*/
+    /*width:100%;*/
+    /*background: #fff;*/
+    /*border:none;*/
+    /*padding: 10px 15px;*/
+    /*margin-bottom: 70px;*/
+    /*display: none;*/
+/*}*/
+/*!*提示框*!*/
+/*.tip-box {*/
+    /*position: fixed;*/
+    /*top:1%;*/
+    /*width: 100%;*/
+    /*z-index: 9999;*/
+    /*text-align: center*/
+/*}*/
+/*.tip-box .tip-body {*/
+    /*align-items: center;*/
+    /*display: inline-block;*/
+    /*margin: 0 auto;*/
+    /*padding: .2rem .3rem .2rem .3rem;*/
+    /*-webkit-border-radius: 15px;*/
+    /*-moz-border-radius: 15px;*/
+    /*background-image: linear-gradient(-228deg, #FFAC4C 0%, #FE7425 100%);*/
+    /*box-shadow: 0 2px 7px 0 rgba(254,116,37,0.46);*/
+    /*border-radius: 15px;*/
+/*}*/
+/*.tip-box .tip-body:after {*/
+    /*content: '';*/
+    /*display: block;*/
+    /*clear: both*/
+/*}*/
+/*.tip-box .tip-body h3 {*/
+    /*line-height: 0.1rem;*/
+    /*vertical-align: middle;*/
+    /*font-size: 12px;*/
+    /*color: #FFFFFF;*/
+    /*letter-spacing: 0.86px;*/
+/*}*/
+
+
+/*#lpk_psd::-webkit-input-placeholder {*/
+    /*font-size: 14px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.gotopay{*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*width:100%;*/
+    /*text-align: center;*/
+    /*height:49px;*/
+    /*line-height:49px;;*/
+    /*font-size: 18px;*/
+    /*color: #fff;*/
+    /*background: url(../../images/v2/payjb@2x.png) no-repeat;*/
+/*}*/
+/*.gotopay span{*/
+    /*font-size: 16px;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

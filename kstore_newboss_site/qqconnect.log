@@ -1,0 +1,198 @@
+0    INFO  [2016-06-27 15:40:35]  No local configuration file unitils-local.properties found.
+49   DEBUG [2016-06-27 15:40:35]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+49   DEBUG [2016-06-27 15:40:35]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+65   DEBUG [2016-06-27 15:40:35]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+69   DEBUG [2016-06-27 15:40:35]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+72   DEBUG [2016-06-27 15:40:35]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+103  DEBUG [2016-06-27 15:40:35]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+107  DEBUG [2016-06-27 15:40:35]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+174  DEBUG [2016-06-27 15:40:35]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+6486 INFO  [2016-06-27 15:40:41]  ------------------------------娌￠敊锛屽彂閫佹垚鍔熶簡------------------------------
+13183 INFO  [2016-06-27 15:40:48]  鍒犻櫎鍏虫敞淇℃伅SUCC锛屽垹闄ょ殑鍏虫敞ID涓猴細1
+13188 INFO  [2016-06-27 15:40:48]  鎵归噺鍒犻櫎鍏虫敞淇℃伅SUCC
+13295 INFO  [2016-06-27 15:40:48]  鍒犻櫎鍟嗗搧鍝佺墝SUCC1
+13303 INFO  [2016-06-27 15:40:48]  鎵归噺鍒犻櫎鍟嗗搧鍝佺墝SUCC1
+13318 INFO  [2016-06-27 15:40:48]  淇敼鍟嗗搧鍝佺墝SUCC1
+13324 INFO  [2016-06-27 15:40:48]  鏂板缓鍟嗗搧鍝佺墝SUCC1
+13523 INFO  [2016-06-27 15:40:48]  娣诲姞鍟嗗搧鍒嗙被SUCC1
+13530 INFO  [2016-06-27 15:40:48]  鍒犻櫎鍟嗗搧鍒嗙被SUCC1
+13540 INFO  [2016-06-27 15:40:48]  鎵归噺鍒犻櫎鍟嗗搧鍒嗙被SUCC1
+13551 INFO  [2016-06-27 15:40:48]  鏇存柊鍟嗗搧鍒嗙被SUCC1
+13708 INFO  [2016-06-27 15:40:49]  淇濆瓨鍟嗗搧缁勫悎SUCCSEO鎻忚堪
+13720 INFO  [2016-06-27 15:40:49]  鏇存柊鍟嗗搧缁勫悎SUCC娴嬭瘯
+13835 INFO  [2016-06-27 15:40:49]  淇濆瓨鍟嗗搧鍥剧墖SUCC
+13845 INFO  [2016-06-27 15:40:49]  鏇存柊鍟嗗搧鍥剧墖SUCC娴嬭瘯
+14021 INFO  [2016-06-27 15:40:49]  鏇存柊鍒拌揣閫氱煡鐘舵�丼UCC
+14044 INFO  [2016-06-27 15:40:49]  鏍规嵁璐у搧ID鏇存柊鍒拌揣閫氱煡鐘舵�丼UCC
+14050 INFO  [2016-06-27 15:40:49]  鏂板缓鍒拌揣閫氱煡SUCC
+14055 INFO  [2016-06-27 15:40:49]  鏇存柊鍒拌揣閫氱煡SUCC
+14132 INFO  [2016-06-27 15:40:49]  淇濆瓨璐у搧鍏宠仈瑙勬牸淇℃伅
+14138 INFO  [2016-06-27 15:40:49]  鏇存柊璐у搧鍏宠仈瑙勬牸淇℃伅SUCC
+14246 INFO  [2016-06-27 15:40:49]  鏍规嵁鍟嗗搧ID鏌ヨ璐у搧鍒楄〃
+14252 INFO  [2016-06-27 15:40:49]  鏍规嵁鍟嗗搧ID鏌ヨ璐у搧鍒楄〃
+14257 INFO  [2016-06-27 15:40:49]  鎵归噺涓婃灦娲绘臣浣燬UCC1
+14260 INFO  [2016-06-27 15:40:49]  鎵归噺涓婃灦娲绘臣浣燬UCC1
+14263 INFO  [2016-06-27 15:40:49]  鎵归噺鏄剧ず鍒版墜鏈虹増1
+14434 INFO  [2016-06-27 15:40:49]  鏇存柊绫诲瀷鍙傛暟SUCC1
+14439 INFO  [2016-06-27 15:40:49]  淇濆瓨绫诲瀷鍙傛暟SUCC1
+14442 INFO  [2016-06-27 15:40:49]  鍒犻櫎绫诲瀷鍙傛暟SUCC1
+14467 INFO  [2016-06-27 15:40:49]  鏇存柊绫诲瀷鍙傛暟SUCC1
+14468 INFO  [2016-06-27 15:40:49]  鎵归噺鍒犻櫎绫诲瀷鍙傛暟SUCC1
+14498 INFO  [2016-06-27 15:40:49]  淇濆瓨绫诲瀷鍏宠仈瑙勬牸SUCC1
+14502 INFO  [2016-06-27 15:40:49]  鍒犻櫎绫诲瀷鍏宠仈瑙勬牸SUCC1
+14511 INFO  [2016-06-27 15:40:49]  鏇存柊绫诲瀷鍏宠仈瑙勬牸SUCC1
+14613 INFO  [2016-06-27 15:40:50]  淇濆瓨璐у搧搴撳瓨淇℃伅SUCC
+14718 INFO  [2016-06-27 15:40:50]  淇濆瓨浠撳簱淇℃伅SUCCfb
+14771 INFO  [2016-06-27 15:40:50]  鏇存柊浠撳簱淇℃伅SUCCfb
+14846 INFO  [2016-06-27 15:40:50]  鎵归噺鍒犻櫎浠撳簱淇℃伅SUCCfb
+15044 INFO  [2016-06-27 15:40:50]  elastic search 鐢熸垚绱㈠紩,鏌ヨ鍟嗗搧鏁版嵁...
+15048 INFO  [2016-06-27 15:40:50]  load es index name fail use default index name 'qm-test-item' 
+15049 INFO  [2016-06-27 15:40:50]  elastic search 璋冪敤鎺ュ彛鍒涘缓绱㈠紩...
+15067 INFO  [2016-06-27 15:40:50]  elastic search 鍒涘缓绱㈠紩鎴愬姛...
+15089 INFO  [2016-06-27 15:40:50]  elastic search 鏌ヨ鍗曟潯鏁版嵁,鍒涘缓绱㈠紩鏂囨。...
+15090 INFO  [2016-06-27 15:40:50]  elastic search 璋冪敤鎺ュ彛鍒涘缓鍗曟潯绱㈠紩鏂囨。...
+15090 INFO  [2016-06-27 15:40:50]  elastic search 鍒涘缓鍗曟潯鏂囨。鎴愬姛...
+15099 INFO  [2016-06-27 15:40:50]  elastic sesarch 鏌ヨ鍗曟潯鏁版嵁,淇敼绱㈠紩鏂囨。...
+15100 INFO  [2016-06-27 15:40:50]  elastic search 璋冪敤鎺ュ彛,淇敼鍗曟潯鏂囨。...
+15101 INFO  [2016-06-27 15:40:50]  elastic search 淇敼鍗曟潯鏂囨。鎴愬姛...
+15338 DEBUG [2016-06-27 15:40:50]  0 - 1 : 1 | <NUM>
+15390 INFO  [2016-06-27 15:40:50]  response result:null
+15390 INFO  [2016-06-27 15:40:50]  convert to bean success .. the data list size is:0
+15421 INFO  [2016-06-27 15:40:50]  response result:null
+15422 INFO  [2016-06-27 15:40:50]  convert to bean success .. the data list size is:0
+23886 DEBUG [2016-06-27 15:40:59]  -----------------------------------瑙ｆ瀽瀹屾瘯----------------------------------------
+0    INFO  [2017-03-23 14:06:00]  No local configuration file unitils-local.properties found.
+41   DEBUG [2017-03-23 14:06:00]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+42   DEBUG [2017-03-23 14:06:00]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+50   DEBUG [2017-03-23 14:06:00]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+53   DEBUG [2017-03-23 14:06:00]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+55   DEBUG [2017-03-23 14:06:00]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+61   DEBUG [2017-03-23 14:06:00]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+63   DEBUG [2017-03-23 14:06:00]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+118  DEBUG [2017-03-23 14:06:00]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+2854 INFO  [2017-03-23 14:06:03]  ------------------------------没错，发送成功了------------------------------
+6780 INFO  [2017-03-23 14:06:07]  删除关注信息SUCC，删除的关注ID为：1
+6784 INFO  [2017-03-23 14:06:07]  批量删除关注信息SUCC
+6885 INFO  [2017-03-23 14:06:07]  删除商品品牌SUCC1
+6890 INFO  [2017-03-23 14:06:07]  批量删除商品品牌SUCC1
+6894 INFO  [2017-03-23 14:06:07]  修改商品品牌SUCC1
+6898 INFO  [2017-03-23 14:06:07]  新建商品品牌SUCC1
+6991 INFO  [2017-03-23 14:06:07]  添加商品分类SUCC1
+7003 INFO  [2017-03-23 14:06:07]  删除商品分类SUCC1
+7009 INFO  [2017-03-23 14:06:07]  批量删除商品分类SUCC1
+7017 INFO  [2017-03-23 14:06:07]  更新商品分类SUCC1
+7145 INFO  [2017-03-23 14:06:07]  保存商品组合SUCCSEO描述
+7153 INFO  [2017-03-23 14:06:07]  更新商品组合SUCC测试
+7240 INFO  [2017-03-23 14:06:07]  保存商品图片SUCC
+7249 INFO  [2017-03-23 14:06:07]  更新商品图片SUCC测试
+7361 INFO  [2017-03-23 14:06:08]  新建到货通知SUCC
+7366 INFO  [2017-03-23 14:06:08]  更新到货通知SUCC
+7380 INFO  [2017-03-23 14:06:08]  更新到货通知状态SUCC
+7384 INFO  [2017-03-23 14:06:08]  根据货品ID更新到货通知状态SUCC
+7450 INFO  [2017-03-23 14:06:08]  保存货品关联规格信息
+7453 INFO  [2017-03-23 14:06:08]  更新货品关联规格信息SUCC
+7542 INFO  [2017-03-23 14:06:08]  根据商品ID查询货品列表
+7553 INFO  [2017-03-23 14:06:08]  根据商品ID查询货品列表
+7561 INFO  [2017-03-23 14:06:08]  批量上架活泼你SUCC1
+7565 INFO  [2017-03-23 14:06:08]  批量上架活泼你SUCC1
+7569 INFO  [2017-03-23 14:06:08]  批量显示到手机版1
+7778 INFO  [2017-03-23 14:06:08]  更新类型参数SUCC1
+7782 INFO  [2017-03-23 14:06:08]  保存类型参数SUCC1
+7787 INFO  [2017-03-23 14:06:08]  删除类型参数SUCC1
+7806 INFO  [2017-03-23 14:06:08]  更新类型参数SUCC1
+7807 INFO  [2017-03-23 14:06:08]  批量删除类型参数SUCC1
+7827 INFO  [2017-03-23 14:06:08]  保存类型关联规格SUCC1
+7831 INFO  [2017-03-23 14:06:08]  删除类型关联规格SUCC1
+7836 INFO  [2017-03-23 14:06:08]  更新类型关联规格SUCC1
+7895 INFO  [2017-03-23 14:06:08]  保存货品库存信息SUCC
+7995 INFO  [2017-03-23 14:06:08]  保存仓库信息SUCCfb
+8025 INFO  [2017-03-23 14:06:08]  更新仓库信息SUCCfb
+8080 INFO  [2017-03-23 14:06:08]  批量删除仓库信息SUCCfb
+8209 INFO  [2017-03-23 14:06:08]  elastic search 生成索引,查询商品数据...
+8213 INFO  [2017-03-23 14:06:08]  load es index name fail use default index name 'qm-test-item' 
+8213 INFO  [2017-03-23 14:06:08]  elastic search 调用接口创建索引...
+8213 INFO  [2017-03-23 14:06:08]  elastic search 创建索引成功...
+8219 INFO  [2017-03-23 14:06:08]  elastic search 查询单条数据,创建索引文档...
+8220 INFO  [2017-03-23 14:06:08]  elastic search 调用接口创建单条索引文档...
+8220 INFO  [2017-03-23 14:06:08]  elastic search 创建单条文档成功...
+8227 INFO  [2017-03-23 14:06:08]  elastic sesarch 查询单条数据,修改索引文档...
+8228 INFO  [2017-03-23 14:06:08]  elastic search 调用接口,修改单条文档...
+8228 INFO  [2017-03-23 14:06:08]  elastic search 修改单条文档成功...
+8337 DEBUG [2017-03-23 14:06:09]  0 - 1 : 1 | <NUM>
+8363 INFO  [2017-03-23 14:06:09]  response result:null
+8363 INFO  [2017-03-23 14:06:09]  convert to bean success .. the data list size is:0
+8368 INFO  [2017-03-23 14:06:09]  response result:null
+8368 INFO  [2017-03-23 14:06:09]  convert to bean success .. the data list size is:0
+10848 ERROR [2017-03-23 14:06:11]  getOrderGoodsIds fail...
+16317 INFO  [2017-03-23 14:06:17]  
+
+Observed scenario:
+
+1. channelAdverMapperMock.selectchannelAdverCountByParam(map1) -> 0  .....  at com.ningpai.channel.service.impl.ChannelAdverServiceImpl.selectchannelAdverByParam(ChannelAdverServiceImpl.java:145)
+2. channelAdverMapperMock.selectchannelAdverByParam(map1) -> []  .....  at com.ningpai.channel.service.impl.ChannelAdverServiceImpl.selectchannelAdverByParam(ChannelAdverServiceImpl.java:151)
+
+
+Detailed scenario:
+
+1. channelAdverMapperMock.selectchannelAdverCountByParam(map1) -> 0
+- map1 -> {"temp1"="1", "floorId"=1, "temp3"="0", "adverType"=1, "channelId"=1, "navId"=null, "atId"=1, "floorTagId"=1, "tempId"=1, "temp4"="1"}
+- Observed at com.ningpai.channel.service.impl.ChannelAdverServiceImpl.selectchannelAdverByParam(ChannelAdverServiceImpl.java:145)
+- No behavior defined, returned default value.
+
+2. channelAdverMapperMock.selectchannelAdverByParam(map1) -> []
+- map1 -> {"endRowNum"=15, "temp1"="1", "floorId"=1, "temp3"="0", "adverType"=1, "channelId"=1, "navId"=null, "atId"=1, "startRowNum"=0, "floorTagId"=1, "tempId"=1, "temp4"="1"}
+- Observed at com.ningpai.channel.service.impl.ChannelAdverServiceImpl.selectchannelAdverByParam(ChannelAdverServiceImpl.java:151)
+- No behavior defined, returned default value.
+
+
+16332 INFO  [2017-03-23 14:06:17]  
+
+Observed scenario:
+
+1. channelAdverMapperMock.selectchannelAdverByParamForSite(map1) -> []  .....  at com.ningpai.channel.service.impl.ChannelAdverServiceImpl.selectchannelAdverByParamForSite(ChannelAdverServiceImpl.java:209)
+
+
+Detailed scenario:
+
+1. channelAdverMapperMock.selectchannelAdverByParamForSite(map1) -> []
+- map1 -> {"temp1"="1", "floorId"=1, "temp3"="1", "adverType"=1, "channelId"=1, "navId"=null, "atId"=1, "floorTagId"=1, "tempId"=1, "temp5"="1", "temp4"="1"}
+- Observed at com.ningpai.channel.service.impl.ChannelAdverServiceImpl.selectchannelAdverByParamForSite(ChannelAdverServiceImpl.java:209)
+- No behavior defined, returned default value.
+
+
+16647 INFO  [2017-03-23 14:06:17]  
+
+Observed scenario:
+
+1. channelStoreyGoodsMapperMock.selectchannelStoreyGoodsCountByParam(map1) -> 0  .....  at com.ningpai.channel.service.impl.ChannelStoreyGoodsServiceImpl.selectchannelStoreyGoodsByParam(ChannelStoreyGoodsServiceImpl.java:112)
+2. channelStoreyGoodsMapperMock.selectchannelStoreyGoodsByParam(map1) -> []  .....  at com.ningpai.channel.service.impl.ChannelStoreyGoodsServiceImpl.selectchannelStoreyGoodsByParam(ChannelStoreyGoodsServiceImpl.java:115)
+
+
+Detailed scenario:
+
+1. channelStoreyGoodsMapperMock.selectchannelStoreyGoodsCountByParam(map1) -> 0
+- map1 -> {"isHot"="1", "navId"=null, "storeyTagId"=1, "storeyId"=1}
+- Observed at com.ningpai.channel.service.impl.ChannelStoreyGoodsServiceImpl.selectchannelStoreyGoodsByParam(ChannelStoreyGoodsServiceImpl.java:112)
+- No behavior defined, returned default value.
+
+2. channelStoreyGoodsMapperMock.selectchannelStoreyGoodsByParam(map1) -> []
+- map1 -> {"endRowNum"=15, "isHot"="1", "navId"=null, "startRowNum"=0, "storeyTagId"=1, "storeyId"=1}
+- Observed at com.ningpai.channel.service.impl.ChannelStoreyGoodsServiceImpl.selectchannelStoreyGoodsByParam(ChannelStoreyGoodsServiceImpl.java:115)
+- No behavior defined, returned default value.
+
+
+17097 INFO  [2017-03-23 14:06:17]  
+
+Observed scenario:
+
+1. mobCateBarMapperMock.selectByPrimaryKey(1) -> null  .....  at com.ningpai.mobile.service.impl.MobCateBarServiceImpl.updateMobCateBar(MobCateBarServiceImpl.java:161)
+
+
+Detailed scenario:
+
+1. mobCateBarMapperMock.selectByPrimaryKey(1) -> null
+- Observed at com.ningpai.mobile.service.impl.MobCateBarServiceImpl.updateMobCateBar(MobCateBarServiceImpl.java:161)
+- No behavior defined, returned default value.
+
+
+17249 DEBUG [2017-03-23 14:06:17]  -----------------------------------解析完毕----------------------------------------

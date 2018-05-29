@@ -1,0 +1,431 @@
+3567 INFO  [2018-04-02 15:07:36]  
+
+Observed scenario:
+
+1.  tempServiceMock.getCurrTemp() -> sysTemp1  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+2.  tempTokenServiceMock.selectTokenByType("1") -> tempToken1  .....  at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1158)
+3.  redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+4.  iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+5.  redisAdapterMock.put("SEO_KEY", serializable1) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+6.  basicSetServiceMock.findBasicSet() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+7.  redisAdapterMock.get("HELPCATELIST_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+8.  helpCateServiceMock.findAll() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+9.  redisAdapterMock.put("HELPCATELIST_KEY", []) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+10. helpCenterServiceMock.selectAllIsFoot() -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+11. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []  .....  at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+
+
+Detailed scenario:
+
+1. tempServiceMock.getCurrTemp() -> sysTemp1
+- sysTemp1 -> SysTemp<, tempId=20, tempName=null, tempUrl=null, tempPa=null, tempImageUrl=null, des=null, version=null, tempType=0, tempTypeValue=null, headArea=null, pageNav=null, goodClassifyArea=null, goodClassifyLevel=0, rollBigAdImage=null, rollSmallAdImage=null, newNotice=null, indexImage=null, trademark=null, floor=null, friendLink=null, pageBottomArea=null, standby1=null, standby2=null, standby3=null, standby4=null, standby5=null, usedStatus=null, expFleid1="1", expFleid2=null, expFleid3=null, expFleid4=null, expFleid5=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0, hotSearch=null, hotSale=null, pageLabel=null, activity=null, pageDesc=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createSysTemp(TopAndBottomServiceTest.java:586)
+
+2. tempTokenServiceMock.selectTokenByType("1") -> tempToken1
+- tempToken1 -> TempToken<, tokenId=null, token="1", createDate=null, updateDate=null, temp1=null, temp2=null, temp3=null, temp4=null, temp5=null>
+- Observed at com.ningpai.index.service.TopAndBottomService.checkToken(TopAndBottomService.java:1158)
+- Behavior defined at com.junit.test.index.service.TopAndBottomServiceTest.createGetTopAndBottomTokenOk(TopAndBottomServiceTest.java:574)
+
+3. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+4. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+5. redisAdapterMock.put("SEO_KEY", serializable1) -> false
+- serializable1 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+6. basicSetServiceMock.findBasicSet() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:337)
+- No behavior defined, returned default value.
+
+7. redisAdapterMock.get("HELPCATELIST_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2051)
+- No behavior defined, returned default value.
+
+8. helpCateServiceMock.findAll() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2062)
+- No behavior defined, returned default value.
+
+9. redisAdapterMock.put("HELPCATELIST_KEY", []) -> false
+- Observed at com.ningpai.index.service.TopAndBottomService.getHelpCateList(TopAndBottomService.java:2075)
+- No behavior defined, returned default value.
+
+10. helpCenterServiceMock.selectAllIsFoot() -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:341)
+- No behavior defined, returned default value.
+
+11. channelAdverServiceMock.selectchannelAdverByParamForSite(null, 20, null, null, 161, 151, null, "0", null, "0", null) -> []
+- Observed at com.ningpai.index.service.TopAndBottomService.getBottom(TopAndBottomService.java:343)
+- No behavior defined, returned default value.
+
+
+3646 INFO  [2018-04-02 15:07:36]  
+
+Observed scenario:
+
+1. tempServiceMock.getCurrTemp() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+2. basicSetServiceMock.findBasicSet() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSimpleTopAndBottom(TopAndBottomService.java:416)
+3. redisAdapterMock.get("SEO_KEY") -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+4. iSeoConfBizMock.querySeoByUsedStatus() -> null  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+5. redisAdapterMock.put("SEO_KEY", serializable1) -> false  .....  at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+
+
+Detailed scenario:
+
+1. tempServiceMock.getCurrTemp() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getIndexDefalutTemp(TopAndBottomService.java:2006)
+- No behavior defined, returned default value.
+
+2. basicSetServiceMock.findBasicSet() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSimpleTopAndBottom(TopAndBottomService.java:416)
+- No behavior defined, returned default value.
+
+3. redisAdapterMock.get("SEO_KEY") -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1978)
+- No behavior defined, returned default value.
+
+4. iSeoConfBizMock.querySeoByUsedStatus() -> null
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1987)
+- No behavior defined, returned default value.
+
+5. redisAdapterMock.put("SEO_KEY", serializable1) -> false
+- serializable1 -> SeoConf<seoId=0, seoTitle=null, seoCode=null, mete=null, meteKey="", usedStatus=null, belongPlate=null, type=null, meteDes="", expFleid1=null, url=null, expFleid2=null, insertId=0, insertDate=null, modifyId=0, modifyDate=null, deleteStatus=0>
+- Observed at com.ningpai.index.service.TopAndBottomService.getSeo(TopAndBottomService.java:1994)
+- No behavior defined, returned default value.
+
+
+3818 WARN  [2018-04-02 15:07:36]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$ad182d77. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+3968 INFO  [2018-04-02 15:07:36]  
+
+Observed scenario:
+
+1. customerFollowMapperMock.selectCustomerFollowCount(1) -> 1  .....  at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:69)
+2. customerFollowMapperMock.selectCustFollowByCustId(map1) -> list1  .....  at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:81)
+3. customerFollowMapperMock.queryCommentCountAndScoreByProductId(1) -> null  .....  at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:86)
+4. goodsProductServiceMock.queryProductByProductId(1) -> goodsProductVo1  .....  at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:89)
+
+
+Detailed scenario:
+
+1. customerFollowMapperMock.selectCustomerFollowCount(1) -> 1
+- Observed at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:69)
+- Behavior defined at com.junit.test.site.customer.service.CustomerFollowServiceTest.testSelectCustomerFollow(CustomerFollowServiceTest.java:80)
+
+2. customerFollowMapperMock.selectCustFollowByCustId(map1) -> list1
+- map1 -> {"endRowNum"=15, "startRowNum"=0, "customerId"=1}
+- list1 -> [CustomerFollow<followId=null, customerId=null, goodsId=1, followPrice=null, followTag=null, createTime=null, delFlag=null, good=GoodsBean<goodsId=null, goodsName=null, goodsPrice=null, goodsImg=null, goodsNum=null, goodsInfoSumPrice=null, goodsCouponPrice=null, returnMoney=null, integral=null, goodsMarketPrice=null, goodStock=null, commentCount=null, consultCount=null, evaluateFlag=null, backFlag=null, commentId=null, orderGoodsId=null, goodsNo=null, commentTag=null, goodsScore=null, specVo=null, orderId=null, imageList=null, shareFlag=null, goodsImageList=null, isPresent=null, countRush=null, orderGoodsStatus=null, oldGoodsPrice=null>, utilBean=null>]
+- Observed at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:81)
+- Behavior defined at com.junit.test.site.customer.service.CustomerFollowServiceTest.testSelectCustomerFollow(CustomerFollowServiceTest.java:83)
+
+3. customerFollowMapperMock.queryCommentCountAndScoreByProductId(1) -> null
+- Observed at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:86)
+- No behavior defined, returned default value.
+
+4. goodsProductServiceMock.queryProductByProductId(1) -> goodsProductVo1
+- goodsProductVo1 -> GoodsProductVo<goodsInfoId=null, goodsId=null, goodsInfoItemNo=null, productName=null, subtitle=null, goodsInfoAdded=null, goodsInfoAddedTime=null, goodsInfoStock=null, goodsInfoPreferPrice=null, goodsInfoCostPrice=null, goodsInfoMarketPrice=null, goodsInfoWeight=null, goodsInfoImgId=null, goodsInfoDelflag=null, specVo=null, goodsInfoCreateTime=null, imageList=null, goods=null, commentUtilBean=null, thirdId=null, thirdName=null, isThird=null, catId=null, brandId=null, isMailBay=null, showMobile=null, showList=null, isCustomerDiscount=null, marketingId=null, groupProductNum=null, productWares=null, unitPriceStr=null>
+- Observed at com.ningpai.site.customer.service.impl.CustomerFollowServiceImpl.selectCustomerFollow(CustomerFollowServiceImpl.java:89)
+- Behavior defined at com.junit.test.site.customer.service.CustomerFollowServiceTest.testSelectCustomerFollow(CustomerFollowServiceTest.java:85)
+
+
+4366 INFO  [2018-04-02 15:07:37]  
+
+Observed scenario:
+
+1. customerMapperMock.searchTotalCount(map1) -> 1  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:275)
+2. customerMapperMock.queryAllMyOrders(map1) -> list1  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:287)
+
+
+Detailed scenario:
+
+1. customerMapperMock.searchTotalCount(map1) -> 1
+- map1 -> {"startRowNum"=0, "endRowNum"=15}
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:275)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testQueryAllMyOrders(CustomerServiceInterfaceTest.java:245)
+
+2. customerMapperMock.queryAllMyOrders(map1) -> list1
+- map1 -> {"startRowNum"=0, "endRowNum"=15}
+- list1 -> [java.lang.Object@177bdd23]
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.queryAllMyOrders(CustomerServiceMapper.java:287)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testQueryAllMyOrders(CustomerServiceInterfaceTest.java:250)
+
+
+4774 INFO  [2018-04-02 15:07:37]  
+
+Observed scenario:
+
+1. customerMapperMock.cancelOrder(map1) -> 1  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.cancelOrder(CustomerServiceMapper.java:859)
+2. orderMapperMock.orderDetail(1) -> order1  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.cancelOrder(CustomerServiceMapper.java:861)
+
+
+Detailed scenario:
+
+1. customerMapperMock.cancelOrder(map1) -> 1
+- map1 -> {"orderId"=1, "reason"="A"}
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.cancelOrder(CustomerServiceMapper.java:859)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testCancelOrder(CustomerServiceInterfaceTest.java:547)
+
+2. orderMapperMock.orderDetail(1) -> order1
+- order1 -> Order<orderId=null, orderCode="1", orderPrice=1, orderPrePrice=null, orderPrePriceOrder=null, jfPrice=null, orderOldPrice=null, orderStatus=null, customerId=1, payTime=null, sendExpressTime=null, getGoodsTime=null, shoppingAddrId=null, shippingProvince=null, shippingCity=null, shippingCounty=null, shippingCountyId=null, shippingAddress=null, shippingPerson=null, shippingPhone=null, shippingMobile=null, invoiceTitle=null, invoiceContent=null, taxpayerNumber=null, delFlag=null, invoiceType=null, customerRemark=null, payId=1, orderIntegral=1, orderGetPoint=null, couponNo=null, couponName=null, expressPrice=null, orderMarketingList=null, orderGoodsList=null, orderExpress=null, orderContainerRelations=[], shippingPostcode=null, backPrice=null, businessId=0, storeName=null, wareName=null, wareId=null, dealerType=null, orderOldCode=null, createTime=null, startTime=null, endTime=null, orderCancelTime=null, orderExpressType=null, payTimeStart=null, payTimeEnd=null, alreadyPay=null, orderLinePay=null, orderNewStatus=null, customerUsername=null, pointLevelName=null, dayCount=null, dayMoney=null, startprice=null, endprice=null, orderGoodsInfos=null, orderCancelRemark=null, orderCargoStatus=null, orderMType=null, directType=null, modifyPrice=null, allGoodsNum=0, couponPrice=null, discountPrice=null, promotionsPrice=null, orderCatePrice=null, finishSturts=null, giftcardEmail=null, giftcardPrice=null, communityStoreId=null>
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.cancelOrder(CustomerServiceMapper.java:861)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testCancelOrder(CustomerServiceInterfaceTest.java:548)
+
+
+4789 INFO  [2018-04-02 15:07:37]  
+
+Observed scenario:
+
+1. customerMapperMock.selectByPrimaryKey(1) -> customerAllInfo  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.selectByPrimaryKey(CustomerServiceMapper.java:205)
+2. customerPointServiceMapperMock.getCustomerAllPoint("1") -> 0  .....  at com.ningpai.site.customer.service.impl.CustomerServiceMapper.selectByPrimaryKey(CustomerServiceMapper.java:208)
+
+
+Detailed scenario:
+
+1. customerMapperMock.selectByPrimaryKey(1) -> customerAllInfo
+- customerAllInfo -> CustomerAllInfo<customerUsername=null, customerPassword=null, infoEmail=null, infoMobile=null, infoAddress=null, infoCardid=null, infoRealname=null, infoGender=null, pointLevelId=null, pointLevelName=null, infoBirthday=null, infoRegip=null, infoProvince=null, infoCity=null, infoCounty=null, infoStreet=null, infoMarital=null, infoSalary=null, infoInterest=null, balanceSum=null, infoPointSum=null, infoType=null, infoRegisterTime=null, infoPhone=null, infoZip=null, orders=[], infoQQ=null, wangwangNo=null, addresses=[], freight=null, customerImg=null, pendingNum=null, commentNum=null, loginErrorCount=null, loginLockTime=null, customerAddressList=null, loginKey=null, orderNumber=null, orderMoney=null, startTime=null, endTime=null, pointLevelName=null, pointLevelId=null, levelCount=null, levelRate=null, countOrder=null, sumPrice=null, maxtime=null, customerId=null, customerUsername=null, customerPassword=null, customerNickname=null, isMobile=null, isEmail=null, isFlag=null, loginIp=null, loginTime=null, createTime=null, modifiedTime=null, delFlag=null, delTime=null, customerImg=null, captcha=null, aeadTime=null, thirdId=null, isSeller=null, pwdCaptcha=null, pwdAeadTime=null, isTempCust=null, isShare=null, isSiteManager=null, uniqueCode=null, toAuditImg=null, auditImgPerson=null, auditImgTime=null, saltVal=null>
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.selectByPrimaryKey(CustomerServiceMapper.java:205)
+- Behavior defined at com.junit.test.site.customer.service.CustomerServiceInterfaceTest.testSelectByPrimaryKey(CustomerServiceInterfaceTest.java:570)
+
+2. customerPointServiceMapperMock.getCustomerAllPoint("1") -> 0
+- Observed at com.ningpai.site.customer.service.impl.CustomerServiceMapper.selectByPrimaryKey(CustomerServiceMapper.java:208)
+- No behavior defined, returned default value.
+
+
+5469 INFO  [2018-04-02 15:07:38]  
+
+No invocations observed.
+
+5473 INFO  [2018-04-02 15:07:38]  
+
+Observed scenario:
+
+1. browserecordServiceMock.selectBrowserecord(1) -> []  .....  at com.ningpai.site.goods.service.impl.BrowerServiceImpl.loadBrowHist(BrowerServiceImpl.java:150)
+
+
+Detailed scenario:
+
+1. browserecordServiceMock.selectBrowserecord(1) -> []
+- Observed at com.ningpai.site.goods.service.impl.BrowerServiceImpl.loadBrowHist(BrowerServiceImpl.java:150)
+- No behavior defined, returned default value.
+
+
+6474 INFO  [2018-04-02 15:07:39]  load es index name fail use default index name 'qm-test-item' 
+7042 INFO  [2018-04-02 15:07:39]  
+
+Observed scenario:
+
+1. customerMapperMock.selectCustomerByCustNameAndType(map1) -> customer1  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:75)
+2. customerMapperMock.updateByPrimaryKeySelective(customer1) -> 0  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:106)
+3. customerAddressMapperMock.selectDefaultAddr(null) -> null  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:111)
+4. shoppingCartServiceMock.loadCoodeShopping(httpServletRequest1) -> 0  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:114)
+
+
+Detailed scenario:
+
+1. customerMapperMock.selectCustomerByCustNameAndType(map1) -> customer1
+- map1 -> {"username"="djk", "uType"="username"}
+- customer1 -> Customer<, loginErrorCount=null, loginLockTime=null, customerAddressList=null, loginKey=null, orderNumber=null, orderMoney=null, startTime=null, endTime=null, pointLevelName=null, pointLevelId=null, levelCount=null, levelRate=null, countOrder=null, sumPrice=null, maxtime=null, customerId=null, customerUsername=null, customerPassword="b93283a81cda5e1f5cb0f15797fd1f89", customerNickname=null, isMobile=null, isEmail=null, isFlag="0", loginIp=null, loginTime=Mon Apr 02 15:07:39 CST 2018, createTime=null, modifiedTime=null, delFlag=null, delTime=null, customerImg=null, captcha=null, aeadTime=null, thirdId=null, isSeller=null, pwdCaptcha=null, pwdAeadTime=null, isTempCust=null, isShare=null, isSiteManager=null, uniqueCode=null, toAuditImg=null, auditImgPerson=null, auditImgTime=null, saltVal=null>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:75)
+- Behavior defined at com.junit.test.site.login.service.LoginServiceTest.testCheckCustomerExists(LoginServiceTest.java:72)
+
+2. customerMapperMock.updateByPrimaryKeySelective(customer1) -> 0
+- customer1 -> Customer<, loginErrorCount=null, loginLockTime=null, customerAddressList=null, loginKey="00d86381-5a21-4697-b526-b9cd9a723b9f", orderNumber=null, orderMoney=null, startTime=null, endTime=null, pointLevelName=null, pointLevelId=null, levelCount=null, levelRate=null, countOrder=null, sumPrice=null, maxtime=null, customerId=null, customerUsername=null, customerPassword=null, customerNickname=null, isMobile=null, isEmail=null, isFlag="0", loginIp="127.0.0.1", loginTime=Mon Apr 02 15:07:39 CST 2018, createTime=null, modifiedTime=null, delFlag=null, delTime=null, customerImg=null, captcha=null, aeadTime=Sun Apr 01 15:07:39 CST 2018, thirdId=null, isSeller=null, pwdCaptcha=null, pwdAeadTime=null, isTempCust=null, isShare=null, isSiteManager=null, uniqueCode=null, toAuditImg=null, auditImgPerson=null, auditImgTime=null, saltVal=null>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:106)
+- No behavior defined, returned default value.
+
+3. customerAddressMapperMock.selectDefaultAddr(null) -> null
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:111)
+- No behavior defined, returned default value.
+
+4. shoppingCartServiceMock.loadCoodeShopping(httpServletRequest1) -> 0
+- httpServletRequest1 -> MockHttpServletRequest<, active=true, attributes={}, characterEncoding=null, content=null, contentType=null, parameters={}, protocol="http", scheme="http", serverName="localhost", serverPort=80, remoteAddr="127.0.0.1", remoteHost="localhost", locales=[Locale<>], secure=false, servletContext=MockServletContext<, logger=SLF4JLocationAwareLog<, name="org.springframework.mock.web.MockServletContext">, resourceLoader=DefaultResourceLoader<classLoader=Launcher.AppClassLoader<...>>, resourceBasePath="", contextPath="", majorVersion=2, minorVersion=5, effectiveMajorVersion=2, effectiveMinorVersion=5, contexts={}, initParameters={}, attributes={"javax.servlet.context.tempdir"=File<...>}, servletContextName="MockServletContext", declaredRoles=[]>, remotePort=80, localName="localhost", localAddr="127.0.0.1", localPort=80, authType=null, cookies=null, headers={}, method="", pathInfo=null, contextPath="", queryString=null, remoteUser=null, userRoles=[], userPrincipal=null, requestedSessionId=null, requestURI="", servletPath="", session=MockHttpSession<, id="50", creationTime=1522652859722, maxInactiveInterval=0, lastAccessedTime=1522652859722, servletContext=MockServletContext<, logger=SLF4JLocationAwareLog<...>, resourceLoader=DefaultResourceLoader<...>, resourceBasePath="", contextPath="", majorVersion=2, minorVersion=5, effectiveMajorVersion=2, effectiveMinorVersion=5, contexts={}, initParameters={}, attributes={"javax.servlet.context.tempdir"=File<...>}, servletContextName="MockServletContext", declaredRoles=[]>, attributes={"cust"=Customer<...>}, invalid=false, isNew=true>, requestedSessionIdValid=true, requestedSessionIdFromCookie=true, requestedSessionIdFromURL=false>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:114)
+- No behavior defined, returned default value.
+
+
+7181 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7199 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7218 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7238 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7258 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7290 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7313 INFO  [2018-04-02 15:07:39]  
+
+No invocations observed.
+
+7340 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7363 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7380 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7396 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7412 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7425 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7439 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7451 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7466 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7481 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7578 INFO  [2018-04-02 15:07:40]  退单成功，退单单号为：20180402474104
+7913 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+7973 WARN  [2018-04-02 15:07:40]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$ad182d77. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+7993 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+8040 WARN  [2018-04-02 15:07:40]  Could not create initialized instance of type BigDecimal$$EnhancerByCGLIB$$ad182d77. No no-arg constructor found. All fields in the instance will have the java default values. Add a default constructor (can be private) if the fields should be initialized. If this concerns an innerclass, make sure it is declared static. Partial mocking of non-static innerclasses is not supported.
+8051 INFO  [2018-04-02 15:07:40]  
+
+No invocations observed.
+
+8095 INFO  [2018-04-02 15:07:40]  
+
+Observed scenario:
+
+1. shoppingCartMapperMock.selectSumByCustomerId(1) -> 12  .....  at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2153)
+2. shoppingCartMapperMock.selectCountByReady(shoppingCart1) -> 0  .....  at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2161)
+3. goodsProductServiceMock.getGoodsProductVoWithGoods(1) -> goodsProductVo1  .....  at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2165)
+4. marketingServiceMock.selectSimpleMarketingByGoodsInfoId(1, null, 1) -> []  .....  at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2167)
+5. goodsProductServiceMock.getGoodsProductVoWithGoods(1) -> goodsProductVo1  .....  at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2222)
+6. marketingServiceMock.selectSimpleMarketingByGoodsInfoId(1, null, 1) -> []  .....  at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2223)
+
+
+Detailed scenario:
+
+1. shoppingCartMapperMock.selectSumByCustomerId(1) -> 12
+- Observed at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2153)
+- Behavior defined at com.junit.test.site.shoppingcart.service.ShoppingCartServiceTest.testAddShoppingCart(ShoppingCartServiceTest.java:637)
+
+2. shoppingCartMapperMock.selectCountByReady(shoppingCart1) -> 0
+- shoppingCart1 -> ShoppingCart<shoppingCartId=null, goodsInfoId=1, goodsPrePrice=null, goodsPrice=null, marketFlag=null, marketgoodsPrice=null, goodsNum=null, fitId=null, customerId=1, marketingId=null, shoppingCartTime=Mon Apr 02 15:07:40 CST 2018, delFlag="0", marketing=null, goodsDetailBean=null, marketingList=null, distinctId=null, marketingActivityId=null, orderMarketing=null, orderMarketingId=null, orderMarket=null, goodsGroupVo=null, shoppingStatus=null, limitMarket=null, isBaoyou=null, freightId=null, goodsInfoWeight=null, thirdId=null, codeType=null, isFlag=null, pointDiscount=null, isMarketing=null, presentScopeIds=null, goodsGroupId=null>
+- Observed at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2161)
+- Behavior defined at com.junit.test.site.shoppingcart.service.ShoppingCartServiceTest.testAddShoppingCart(ShoppingCartServiceTest.java:638)
+
+3. goodsProductServiceMock.getGoodsProductVoWithGoods(1) -> goodsProductVo1
+- goodsProductVo1 -> GoodsProductVo<goodsInfoId=null, goodsId=null, goodsInfoItemNo=null, productName=null, subtitle=null, goodsInfoAdded=null, goodsInfoAddedTime=null, goodsInfoStock=null, goodsInfoPreferPrice=null, goodsInfoCostPrice=null, goodsInfoMarketPrice=null, goodsInfoWeight=null, goodsInfoImgId=null, goodsInfoDelflag=null, specVo=null, goodsInfoCreateTime=null, imageList=null, goods=Goods<goodsId=null, catId=1, typeId=null, goodsName=null, goodsSubtitle=null, goodsNo=null, goodsKeywords=null, brandId=null, goodsBrief=null, goodsAdded=null, goodsUptime=null, goodsPrice=null, goodsRecom=null, goodsImg=null, goodsScore=null, goodsDeno=null, goodsSeoTitle=null, goodsSeoKeyword=null, goodsSeoDesc=null, goodsProm=null, goodsInfoInstocksell=null, goodsUsecoupon=null, goodsCreateName=null, goodsCreateTime=null, goodsModifiedName=null, goodsModifiedTime=null, goodsDelName=null, goodsDelTime=null, goodsDelflag=null, goodsDetailDesc=null, goodsSpecsificationDesc=null, goodsWarpDesc=null, goodsBrandDesc=null, goodsInfoItemNo=null, goodsBelo=null, goodsBeloName=null, isThird=null, thirdCateId=null, mobileDesc=null, isThirdAuditUsed=null, auditStatus=null, catName=null, brandName=null, storeValidTime=null, refuseReason=null, discountInfo=null, discountPrice=null, haveStock=null, sellType=null, unitPrice=null>, commentUtilBean=null, thirdId=null, thirdName=null, isThird=null, catId=null, brandId=null, isMailBay=null, showMobile=null, showList=null, isCustomerDiscount=null, marketingId=null, groupProductNum=null, productWares=null, unitPriceStr=null>
+- Observed at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2165)
+- Behavior defined at com.junit.test.site.shoppingcart.service.ShoppingCartServiceTest.testAddShoppingCart(ShoppingCartServiceTest.java:639)
+
+4. marketingServiceMock.selectSimpleMarketingByGoodsInfoId(1, null, 1) -> []
+- Observed at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2167)
+- No behavior defined, returned default value.
+
+5. goodsProductServiceMock.getGoodsProductVoWithGoods(1) -> goodsProductVo1
+- goodsProductVo1 -> GoodsProductVo<goodsInfoId=null, goodsId=null, goodsInfoItemNo=null, productName=null, subtitle=null, goodsInfoAdded=null, goodsInfoAddedTime=null, goodsInfoStock=null, goodsInfoPreferPrice=null, goodsInfoCostPrice=null, goodsInfoMarketPrice=null, goodsInfoWeight=null, goodsInfoImgId=null, goodsInfoDelflag=null, specVo=null, goodsInfoCreateTime=null, imageList=null, goods=Goods<goodsId=null, catId=1, typeId=null, goodsName=null, goodsSubtitle=null, goodsNo=null, goodsKeywords=null, brandId=null, goodsBrief=null, goodsAdded=null, goodsUptime=null, goodsPrice=null, goodsRecom=null, goodsImg=null, goodsScore=null, goodsDeno=null, goodsSeoTitle=null, goodsSeoKeyword=null, goodsSeoDesc=null, goodsProm=null, goodsInfoInstocksell=null, goodsUsecoupon=null, goodsCreateName=null, goodsCreateTime=null, goodsModifiedName=null, goodsModifiedTime=null, goodsDelName=null, goodsDelTime=null, goodsDelflag=null, goodsDetailDesc=null, goodsSpecsificationDesc=null, goodsWarpDesc=null, goodsBrandDesc=null, goodsInfoItemNo=null, goodsBelo=null, goodsBeloName=null, isThird=null, thirdCateId=null, mobileDesc=null, isThirdAuditUsed=null, auditStatus=null, catName=null, brandName=null, storeValidTime=null, refuseReason=null, discountInfo=null, discountPrice=null, haveStock=null, sellType=null, unitPrice=null>, commentUtilBean=null, thirdId=null, thirdName=null, isThird=null, catId=null, brandId=null, isMailBay=null, showMobile=null, showList=null, isCustomerDiscount=null, marketingId=null, groupProductNum=null, productWares=null, unitPriceStr=null>
+- Observed at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2222)
+- Behavior defined at com.junit.test.site.shoppingcart.service.ShoppingCartServiceTest.testAddShoppingCart(ShoppingCartServiceTest.java:639)
+
+6. marketingServiceMock.selectSimpleMarketingByGoodsInfoId(1, null, 1) -> []
+- Observed at com.ningpai.site.shoppingcart.service.impl.ShoppingCartServiceImpl.addShoppingCart(ShoppingCartServiceImpl.java:2223)
+- No behavior defined, returned default value.
+
+
+1    WARN  [2018-04-26 10:30:37]  No custom configuration file unitils.properties found.
+17   INFO  [2018-04-26 10:30:37]  No local configuration file unitils-local.properties found.
+111  DEBUG [2018-04-26 10:30:37]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+113  DEBUG [2018-04-26 10:30:37]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+137  DEBUG [2018-04-26 10:30:37]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+143  DEBUG [2018-04-26 10:30:37]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+147  DEBUG [2018-04-26 10:30:37]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+165  DEBUG [2018-04-26 10:30:37]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+173  DEBUG [2018-04-26 10:30:37]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+310  DEBUG [2018-04-26 10:30:37]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+0    WARN  [2018-04-26 10:31:09]  No custom configuration file unitils.properties found.
+3    INFO  [2018-04-26 10:31:09]  No local configuration file unitils-local.properties found.
+74   DEBUG [2018-04-26 10:31:09]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+76   DEBUG [2018-04-26 10:31:09]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+103  DEBUG [2018-04-26 10:31:09]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+110  DEBUG [2018-04-26 10:31:09]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+115  DEBUG [2018-04-26 10:31:09]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+140  DEBUG [2018-04-26 10:31:10]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+147  DEBUG [2018-04-26 10:31:10]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+217  DEBUG [2018-04-26 10:31:10]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+0    WARN  [2018-04-26 10:36:00]  No custom configuration file unitils.properties found.
+4    INFO  [2018-04-26 10:36:00]  No local configuration file unitils-local.properties found.
+69   DEBUG [2018-04-26 10:36:00]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+70   DEBUG [2018-04-26 10:36:00]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+98   DEBUG [2018-04-26 10:36:00]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+103  DEBUG [2018-04-26 10:36:00]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+108  DEBUG [2018-04-26 10:36:00]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+127  DEBUG [2018-04-26 10:36:00]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+133  DEBUG [2018-04-26 10:36:00]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+383  DEBUG [2018-04-26 10:36:00]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+0    WARN  [2018-05-04 11:47:18]  No custom configuration file unitils.properties found.
+4    INFO  [2018-05-04 11:47:18]  No local configuration file unitils-local.properties found.
+70   DEBUG [2018-05-04 11:47:18]  Skipping module easymock. Module class not found in classpath. Module class name: org.unitils.easymock.EasyMockModule
+71   DEBUG [2018-05-04 11:47:18]  Skipping module hibernate. Module class not found in classpath. Module class name: org.unitils.orm.hibernate.HibernateModule
+100  DEBUG [2018-05-04 11:47:18]  Creating instance of interface org.unitils.io.filecontent.FileContentReaderFactory. Implementation class org.unitils.io.filecontent.impl.DefaultFileContentReaderFactory
+106  DEBUG [2018-05-04 11:47:18]  Creating instance of interface org.unitils.io.reader.ReadingStrategyFactory. Implementation class org.unitils.io.reader.impl.FileReadingStrategyFactory
+112  DEBUG [2018-05-04 11:47:18]  Creating instance of interface org.unitils.io.reader.FileResolvingStrategyFactory. Implementation class org.unitils.io.reader.impl.DefaultFileResolvingStrategyFactory
+129  DEBUG [2018-05-04 11:47:18]  Creating instance of interface org.unitils.io.temp.TempServiceFactory. Implementation class org.unitils.io.temp.impl.DefaultTempServiceFactory
+137  DEBUG [2018-05-04 11:47:18]  Skipping module jpa. Module class not found in classpath. Module class name: org.unitils.orm.jpa.JpaModule
+242  DEBUG [2018-05-04 11:47:18]  Creating instance of interface org.unitils.database.transaction.UnitilsTransactionManager. Implementation class org.unitils.database.transaction.impl.DefaultUnitilsTransactionManager
+19315 INFO  [2018-05-04 11:47:37]  
+
+Observed scenario:
+
+1. customerMapperMock.selectCustomerByCustNameAndType(map1) -> customer1  .....  at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:84)
+
+
+Detailed scenario:
+
+1. customerMapperMock.selectCustomerByCustNameAndType(map1) -> customer1
+- map1 -> {"username"="djk", "uType"="username"}
+- customer1 -> Customer<, loginErrorCount=null, loginLockTime=null, customerAddressList=null, loginKey=null, orderNumber=null, orderMoney=null, startTime=null, endTime=null, pointLevelName=null, pointLevelId=null, levelCount=null, levelRate=null, countOrder=null, sumPrice=null, maxtime=null, customerId=null, customerUsername=null, customerPassword="b93283a81cda5e1f5cb0f15797fd1f89", customerNickname=null, isMobile=null, isEmail=null, isFlag="0", loginIp=null, loginTime=Fri May 04 11:47:19 CST 2018, createTime=null, modifiedTime=null, delFlag=null, delTime=null, customerImg=null, captcha=null, aeadTime=null, thirdId=null, isSeller=null, pwdCaptcha=null, pwdAeadTime=null, isTempCust=null, isShare=null, isSiteManager=null, uniqueCode=null, toAuditImg=null, auditImgPerson=null, auditImgTime=null, saltVal=null>
+- Observed at com.ningpai.site.login.service.impl.LoginServiceImpl.checkCustomerExists(LoginServiceImpl.java:84)
+- Behavior defined at com.junit.test.site.login.service.LoginServiceTest.testCheckCustomerExists(LoginServiceTest.java:72)
+
+

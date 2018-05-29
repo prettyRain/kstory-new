@@ -1,0 +1,131 @@
+/*
+ * 作者：shf
+ * 时间：2017-08-01
+ * 描述：H5改版2.0样式
+ *
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+
+.vheader span{
+    font-size: 16px!important;
+}
+.vheader #icon-option{
+    font-size: 14px;
+    color: #646464;
+    /*letter-spacing: -0.36px;*/
+}
+/*消息为空*/
+.no_tips {
+    padding: 3.3rem 1em 0;
+    background: url(/images/v2/icon_pic@2x.png) center top no-repeat;
+    background-size: 2.8rem;
+    margin-top: 2rem;
+}
+.no_tips p{
+    opacity: 0.58;
+    font-size: .3rem;
+    color: #030303;
+    letter-spacing: 1.07px;
+}
+
+.info .datetime{
+    height:19px;
+    width: 100%;
+    /*background: pink;*/
+    margin:14px 0;
+    line-height: 9px;
+}
+.info .datetime b{
+    display: block;
+    font-weight: normal;
+    height:.38rem;
+    width: 1.7rem;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: -0.24px;
+    background: #E3E3E3;
+    line-height:.38rem;
+    text-align: center;
+    /*padding: 0 .2rem;*/
+    border-radius: 10px;
+
+
+
+    margin:0 auto;
+}
+.info .detail{
+    background: #fff;
+    padding:.4rem .4rem .17rem .4rem;
+    margin: 0 .14rem;
+    border-radius: 5px;
+}
+.info .detail .title{
+    font-family: PingFangSC-Medium;
+    font-size: .3rem;
+    color: #000;
+    letter-spacing: 0.62px;
+    /*padding:0 0 .12rem 0;*/
+}
+.info .detail .digest{
+    display: inline-block;
+    /*opacity: 0.53;*/
+    font-size: .24rem;
+    color: #7f7f7f;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    padding:.12rem 0 .15rem 0;
+}
+.info .detail .moreinfo{
+    display: block;
+    width:100%;
+    border-top: 1px solid #eee;
+    padding-top:.18rem;
+
+}
+
+.info .detail .moreinfo span{
+    display: block;
+    background: url(/images/icon_v1.0/btn_more_right@2x.png) no-repeat right center;
+    -webkit-background-size:2%;
+    background-size: .44rem .44rem;
+    font-size: .24rem;
+    color: #7f7f7f;
+    letter-spacing: 0.5px;
+    line-height: .4rem;
+}
+.vheader{
+    position: fixed;
+}
+/*.info:first-of-type{*/
+    /*margin-top: 350px;*/
+    /*border:1px solid red;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

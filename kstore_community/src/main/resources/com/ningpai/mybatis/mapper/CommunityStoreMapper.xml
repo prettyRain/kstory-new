@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ningpai.mybatis.mapper.CommunityStoreMapper" >
+	<resultMap id="BaseResultMap" type="com.ningpai.community.bean.CommunityStore" >
+		<id column="community_store_id" property="communityStoreId" jdbcType="BIGINT" />
+		<result column="community_store_name" property="communityStoreName" jdbcType="VARCHAR" />
+		<result column="contact" property="contact" jdbcType="VARCHAR" />
+		<result column="contact_mobile" property="contactMobile" jdbcType="VARCHAR" />
+		<result column="community_store_address" property="communityStoreAddress" jdbcType="VARCHAR" />
+		<result column="province_id" property="provinceId" jdbcType="BIGINT" />
+		<result column="city_id" property="cityId" jdbcType="BIGINT" />
+		<result column="district_id" property="districtId" jdbcType="BIGINT" />
+		<result column="open_flag" property="openFlag" jdbcType="CHAR" />
+		<result column="del_flag" property="delFlag" jdbcType="CHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<resultMap id="VoResultMap" type="com.ningpai.community.bean.CommunityStore" extends="BaseResultMap">
+		<association property="province" column="province_id" select="com.ningpai.system.dao.ProvinceMapper.selectByPrimaryKey"></association>
+		<association property="city" column="city_id" select="com.ningpai.system.dao.CityMapper.selectByPrimaryKey"></association>
+		<association property="district" column="district_id" select="com.ningpai.system.dao.DistrictMapper.selectByPrimaryKey"></association>
+	</resultMap>
+
+	<sql id="Base_Column_List" >
+		community_store_id,community_store_name,contact,contact_mobile,community_store_address,
+		province_id,city_id,district_id,open_flag,del_flag,
+		create_time
+	</sql>
+
+	<select id="loadAllCommunityStores" resultMap="VoResultMap" parameterType="java.lang.Long" >
+		select
+		<include refid="Base_Column_List" />
+		from np_community_store
+		where del_flag='0' and open_flag='1'
+		<if test="districtId!=null">
+			and district_id=#{districtId,jdbcType=BIGINT}
+		</if>
+	</select>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+		select
+		<include refid="Base_Column_List" />
+		from np_community_store
+		where community_store_id = #{communityStoreId,jdbcType=BIGINT}
+	</select>
+
+	<select id="selectVo" resultMap="VoResultMap" parameterType="java.lang.Long" >
+		select
+		<include refid="Base_Column_List" />
+		from np_community_store
+		where community_store_id = #{communityStoreId,jdbcType=BIGINT}
+	</select>
+
+	<update id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+		update np_community_store set del_flag = '1'
+		where community_store_id = #{communityStoreId,jdbcType=BIGINT}
+	</update>
+
+	<insert id="insertSelective" parameterType="com.ningpai.community.bean.CommunityStore" useGeneratedKeys="true" keyProperty="communityStoreId" >
+		insert into np_community_store
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="communityStoreId != null" >
+				community_store_id,
+			</if>
+			<if test="communityStoreName != null" >
+				community_store_name,
+			</if>
+			<if test="contact != null" >
+				contact,
+			</if>
+			<if test="contactMobile != null" >
+				contact_mobile,
+			</if>
+			<if test="communityStoreAddress != null" >
+				community_store_address,
+			</if>
+			<if test="provinceId != null" >
+				province_id,
+			</if>
+			<if test="cityId != null" >
+				city_id,
+			</if>
+			<if test="districtId != null" >
+				district_id,
+			</if>
+			<if test="openFlag != null" >
+				open_flag,
+			</if>
+			<if test="delFlag != null" >
+				del_flag,
+			</if>
+			<if test="createTime != null" >
+				create_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides="," >
+			<if test="communityStoreId != null" >
+				#{communityStoreId,jdbcType=BIGINT},
+			</if>
+			<if test="communityStoreName != null" >
+				#{communityStoreName,jdbcType=VARCHAR},
+			</if>
+			<if test="contact != null" >
+				#{contact,jdbcType=VARCHAR},
+			</if>
+			<if test="contactMobile != null" >
+				#{contactMobile,jdbcType=VARCHAR},
+			</if>
+			<if test="communityStoreAddress != null" >
+				#{communityStoreAddress,jdbcType=VARCHAR},
+			</if>
+			<if test="provinceId != null" >
+				#{provinceId,jdbcType=BIGINT},
+			</if>
+			<if test="cityId != null" >
+				#{cityId,jdbcType=BIGINT},
+			</if>
+			<if test="districtId != null" >
+				#{districtId,jdbcType=BIGINT},
+			</if>
+			<if test="openFlag != null" >
+				#{openFlag,jdbcType=CHAR},
+			</if>
+			<if test="delFlag != null" >
+				#{delFlag,jdbcType=CHAR},
+			</if>
+			<if test="createTime != null" >
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective" parameterType="com.ningpai.community.bean.CommunityStore" >
+		update np_community_store
+		<set >
+			<if test="communityStoreName != null" >
+				community_store_name = #{communityStoreName,jdbcType=VARCHAR},
+			</if>
+			<if test="contact != null" >
+				contact = #{contact,jdbcType=VARCHAR},
+			</if>
+			<if test="contactMobile != null" >
+				contact_mobile = #{contactMobile,jdbcType=VARCHAR},
+			</if>
+			<if test="communityStoreAddress != null" >
+				community_store_address = #{communityStoreAddress,jdbcType=VARCHAR},
+			</if>
+			<if test="provinceId != null" >
+				province_id = #{provinceId,jdbcType=BIGINT},
+			</if>
+			<if test="cityId != null" >
+				city_id = #{cityId,jdbcType=BIGINT},
+			</if>
+			<if test="districtId != null" >
+				district_id = #{districtId,jdbcType=BIGINT},
+			</if>
+			<if test="openFlag != null" >
+				open_flag = #{openFlag,jdbcType=CHAR},
+			</if>
+			<if test="delFlag != null" >
+				del_flag = #{delFlag,jdbcType=CHAR},
+			</if>
+			<if test="createTime != null" >
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where community_store_id = #{communityStoreId,jdbcType=BIGINT}
+	</update>
+
+	<select id="selectList" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from np_community_store
+		where del_flag = '0'
+		<if test="pageBean.objectBean.communityStoreName != null and pageBean.objectBean.communityStoreName != ''">
+			and community_store_name like CONCAT('%',#{pageBean.objectBean.communityStoreName,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.contact != null and pageBean.objectBean.contact != ''">
+			and contact like CONCAT('%',#{pageBean.objectBean.contact,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.contactMobile != null and pageBean.objectBean.contactMobile != ''">
+			and contact_mobile like CONCAT('%',#{pageBean.objectBean.contactMobile,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.communityStoreAddress != null and pageBean.objectBean.communityStoreAddress != ''">
+			and community_store_address like CONCAT('%',#{pageBean.objectBean.communityStoreAddress,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.openFlag != null and pageBean.objectBean.openFlag != ''">
+			and open_flag = #{pageBean.objectBean.openFlag,jdbcType=CHAR}
+		</if>
+		<if test="pageBean.objectBean.delFlag != null and pageBean.objectBean.delFlag != ''">
+			and del_flag = #{pageBean.objectBean.delFlag,jdbcType=CHAR}
+		</if>
+		limit #{pageBean.startRowNum},#{pageBean.endRowNum}
+	</select>
+
+	<select id="selectListCount" parameterType="java.util.Map" resultType="java.lang.Integer">
+		select
+		count(1)
+		from np_community_store
+		where del_flag = '0'
+		<if test="pageBean.objectBean.communityStoreName != null and pageBean.objectBean.communityStoreName != ''">
+			and community_store_name like CONCAT('%',#{pageBean.objectBean.communityStoreName,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.contact != null and pageBean.objectBean.contact != ''">
+			and contact like CONCAT('%',#{pageBean.objectBean.contact,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.contactMobile != null and pageBean.objectBean.contactMobile != ''">
+			and contact_mobile like CONCAT('%',#{pageBean.objectBean.contactMobile,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.communityStoreAddress != null and pageBean.objectBean.communityStoreAddress != ''">
+			and community_store_address like CONCAT('%',#{pageBean.objectBean.communityStoreAddress,jdbcType=VARCHAR},'%')
+		</if>
+		<if test="pageBean.objectBean.openFlag != null and pageBean.objectBean.openFlag != ''">
+			and open_flag = #{pageBean.objectBean.openFlag,jdbcType=CHAR}
+		</if>
+		<if test="pageBean.objectBean.delFlag != null and pageBean.objectBean.delFlag != ''">
+			and del_flag = #{pageBean.objectBean.delFlag,jdbcType=CHAR}
+		</if>
+	</select>
+
+	<update id="deleteMuilti" parameterType="java.lang.Long">
+		update np_community_store
+		set del_flag = '1'
+		where community_store_id in 
+		<foreach collection="array" item="communityStoreId" open="(" separator="," close=")">
+		#{communityStoreId,jdbcType=BIGINT}
+		</foreach>
+	</update>
+</mapper>

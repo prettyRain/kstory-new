@@ -1,0 +1,108 @@
+/*
+ * 作者：shf
+ * 时间：2017-07-31
+ * 描述：H5改版2.0样式,分类页面
+ *
+ */
+@charset "utf-8";
+/*body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}*/
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+/*ul,ol,menu{padding:0}*/
+/*ul,ol{list-style:none}*/
+/*address,cite,dfn,em,var{font-style:normal}*/
+/*a{text-decoration:none}*/
+/*a:hover{}*/
+/*img{border:none}*/
+/*input,textarea{outline:none}*/
+/*.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}*/
+
+
+.content .prolist.list-line .list-item + .list-item{
+    padding-top: 24px;
+}
+.content .prolist.list-line .list-item {
+    width: auto;
+    padding: 24px 0 16px 82px;
+    border-bottom:1px solid #ebebeb;
+    margin:0 15px;
+}
+.content .prolist.list-line .list-item .prodesc .title{
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 1.17px;
+    height: 39px;
+    line-height: 20px;
+    padding-bottom: 0;
+}
+.content .prolist.list-line .list-item .prodesc {
+    height: auto;
+    min-height: 67px;
+}
+.content .prolist.list-line .list-item:not(:last-child) .prodesc, .content-home .class-menu {
+    border:none;
+}
+.content .prolist.list-line .list-item .prodesc .price{
+    position: static;
+    font-size: 14px;
+    color: #199301;
+    letter-spacing: 0.58px;
+    margin-top: 1px;
+}
+.ion-ios-trash:before {
+    content: " 删除";
+    font-size: 12px;
+    color: #8F8F8F;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+.pro-item .del-btn i {
+    right: 0;
+    bottom: 0;
+}
+.content .prolist.list-line .list-item .propic {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 68px;
+    height: 68px;
+    line-height: normal;
+}
+.content .prolist.list-line .list-item .propic img {
+    width: 68px;
+    height: 68px;
+}
+.pro-item .del-btn {
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+}
+.content{
+    background: #fff;
+}
+.content .prolist {
+     margin-bottom: 0;
+}
+
+
+body, html {
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

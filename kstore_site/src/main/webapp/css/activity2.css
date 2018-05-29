@@ -1,0 +1,179 @@
+.hd_banner{
+	background: #9b0505;
+}
+.bg_color2{
+	background: #9b0505;
+}
+.bg_color3{
+	background: #9b0505;
+}
+.hd_banner #banner_one{
+	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+.hd_banner #banner_one img{
+	width: 100%;
+	display: block;
+}
+#main1 {
+ 	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+#main1 img{
+	width: 100%;
+	display: block;
+}
+*{
+	margin: 0;
+	padding:0;
+}
+#main{
+	width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    background: url(../images/activity/2/datupian1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+#main .img1{
+	background: url(../images/activity/2/img1.jpg) no-repeat;
+    display: block;
+    height: 582px;
+    margin: 0 auto;
+    width: 1200px;
+}
+#main .img2{
+	background: url(../images/activity/2/img2.jpg) no-repeat;
+    display: block;
+    height: 1228px;
+    margin: 0 auto;
+    width: 1200px;
+}
+#main .img2 .div1{
+	background: url(../images/activity/2/div1.jpg) no-repeat;
+	margin-top: 45px;
+}
+#main .img2 .div2{
+	background: url(../images/activity/2/div2.jpg) no-repeat;
+	margin-top:45px;
+}
+#main .img2 .div3{
+	background: url(../images/activity/2/div3.jpg) no-repeat;
+	margin-top:22px;
+}
+#main .img2 .div4{
+	background: url(../images/activity/2/div4.jpg) no-repeat;
+	margin-top: 22px;
+}
+#main .img2 .div1,#main .img2 .div2,#main .img2 .div3,#main .img2 .div4{
+	float: left;
+	width: 564px;
+	height: 556px;
+	margin-left: 22px;
+	position: relative;
+}
+#main .img2 .div1 a,#main .img2 .div2 a,#main .img2 .div3 a,#main .img2 .div4 a{
+position: absolute;
+    right: 45px;
+    bottom: 66px;
+    width: 185px;
+    height: 63px;
+}
+#main .img3{
+	background: url(../images/activity/2/xkimg1.jpg) no-repeat;
+    display: block;
+    height: 476px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+#main .img3 a{
+	position: absolute;
+    right: 241px;
+    bottom: 53px;
+    width: 169px;
+    height: 57px;
+}
+#main .img4{
+	background: url(../images/activity/2/xkimg2.jpg) no-repeat;
+    display: block;
+    height: 409px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+#main .img4 a{
+	position: absolute;
+    left: 290px;
+    bottom: 46px;
+    width: 169px;
+    height: 57px;
+}
+#main .img5{
+	background: url(../images/activity/2/xkimg3.jpg) no-repeat;
+    display: block;
+    height: 408px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+#main .img5 a{
+	position: absolute;
+    right: 241px;
+    bottom: 89px;
+
+    width: 169px;
+    height: 57px;
+}
+#main .img6{
+	background: url(../images/activity/2/xkimg4.jpg) no-repeat;
+    display: block;
+    height: 402px;
+    margin: 0 auto;
+    width: 1200px;
+    padding-bottom: 372px;
+    position: relative;
+}
+#main .img6 a{
+	position: absolute;
+    left: 290px;
+    top: 300px;
+    width: 169px;
+    height: 57px;
+}
+
+body{
+	overflow:-Scroll;overflow-x:hidden
+}
+@media screen and (max-width: 1680px){
+	  	.hd_banner #banner_one {
+	        width: 1680px;
+	    }
+		#main,#main1{
+	    	width: 1680px;
+	    }
+}
+@media screen and (max-width: 1442px){
+	  	.hd_banner #banner_one {
+	        width: 1430px;
+	    }
+		#main,#main1{
+	    	width:1430px;
+	    }
+
+
+}
+@media screen and (max-width: 1366px){
+	  	.hd_banner #banner_one {
+	        width: 1350px;
+	    }
+		#main,#main1{
+	    	width:1350px;
+	    }
+
+
+}
+
+
+

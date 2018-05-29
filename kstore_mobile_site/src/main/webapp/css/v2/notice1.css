@@ -1,0 +1,136 @@
+/*
+ * 作者：shf
+ * 时间：2017-08-01
+ * 描述：H5改版2.0样式
+ *
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+
+.vheader span{
+    font-size: 16px!important;
+}
+.vheader #icon-option{
+    font-size: 14px;
+    color: #646464;
+    /*letter-spacing: -0.36px;*/
+}
+.col-12 {
+    width: 100%;
+}
+
+
+.common_tabs .col-12 a{
+    height: 1.4rem;
+    padding:0;
+
+}
+.common_tabs .col-12 .left{
+    position: relative;
+    float: left;
+    width:.9rem;
+    height:.9rem;
+    margin: .2rem .24rem 0 .28rem;
+    /*background: red;*/
+}
+.common_tabs .col-12 .right{
+    float: left;
+    position: relative;
+    /*background: pink;*/
+    width: 6.08rem;
+    margin-top: .28rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: .29rem;
+}
+.common_tabs .col-12 .right p{
+    text-align: left;
+    font-size: .3rem;
+    color: #000;
+    line-height:.4rem;
+    /*font-weight: bold;*/
+}
+.common_tabs .col-12 .right span{
+    display: block;
+    text-align: left;
+    font-size: .24rem;
+    color: #7f7f7f;
+    letter-spacing: 0.5px;
+    line-height:.4rem;
+}
+.common_tabs .col-12 .right b {
+    font-weight: normal;
+    position: absolute;
+    top:1px;
+    right:15px;
+    font-size: .24rem;
+    color: #7f7f7f;
+    letter-spacing: -0.27px;
+
+}
+.common_tabs .col-12 .left img{
+    width:.9rem;
+    height:.9rem;
+}
+.common_tabs .col-12 .left i{
+    position: absolute;
+    top: -.01rem;
+    right: -0.001rem;
+    width:.22rem;
+    height:.22rem;
+    background: red;
+    border-radius: 50%;
+}
+
+.no_tips {
+    padding: 3.3rem 1em 0;
+    background: url(/images/v2/icon_pic@2x.png) center top no-repeat;
+    background-size: 2.8rem;
+    margin-top: 2rem;
+}
+.no_tips p{
+    opacity: 0.58;
+    font-size: .3rem;
+    color: #030303;
+    letter-spacing: 1.07px;
+    background-color: #f7f7f7;
+}
+.member_box{
+    background-color: #f7f7f7;
+}
+.col-12{
+    background: #fff;
+}
+/*头部*/
+.vheader span {
+    display: block!important;
+    width:100%;
+    text-align: center;
+ /*   margin-right: 0!important;*/
+}
+.vheader{
+  /*  padding:5px!important;*/
+    position: relative;
+}
+
+/*.vheader .back{
+    position: absolute;
+    top: 5px;
+    left:0;
+    display: block!important;
+    z-index: 999;
+}*/
+.vheader #icon-option{
+    position: absolute;
+    top: 5px;
+    right:9px;
+    z-index: 999;
+}

@@ -1,0 +1,237 @@
+.hunting_moment{
+    width: 1200px;
+    background: #ffffff;
+    margin:28px auto;
+    margin-bottom: 0px;
+    box-shadow:0px 14px 19px 0 rgba(0,0,0,0.16);
+    height: 100px;
+}
+.hunting_moment .hunting_images{
+    margin-top: 19px;
+    margin-left: 20px;
+    width: 86px;
+    height: 62px;
+    float: left;
+}
+.hunting_moment ul li{
+   /* width: 71px;*/
+    height: 100px;
+    margin-left: 216px;
+    float: left;
+    text-align: center;
+}
+.hunting_moment ul li:first-of-type{
+    margin-left: 170px;
+}
+.hunting_moment ul li:last-of-type{
+    margin-left: 177px;
+}
+.hunting_moment ul li h3{
+    font-size: 28px;
+    margin-top: 26px;
+    font-weight: normal;
+
+}
+.hunting_moment ul li span{
+    font-size: 16px;
+    display: block;
+    margin-top: 6px;
+}
+/*已结束*/
+.color_end{
+    color: #9d9ca2;
+}
+/*即将开场红色*/
+.color_start{
+    color: #ff0000;
+}
+/*即将开场黑色*/
+.color_upcoming{
+    color: #000000;
+}
+.panic_buying{
+    width: 1200px;
+    margin: 48px auto;
+    margin-bottom: 0px;
+    background: url("../images/panic_buying_bg.png") no-repeat;
+    height: 376px;
+    position: relative;
+}
+.panic_buying ul{
+    width: 1140px;
+    height: 220px;
+    margin: 141px 30px 0px 30px;
+    background: rgba(255,255,255,0.9);
+    overflow: hidden;
+    float: left;
+}
+.panic_buying ul li{
+    width: 190px;
+    height: 220px;
+    float: left;
+}
+.panic_buying ul li .hunting_images1{
+    width: 110px;
+    height: 110px;
+    display: block;
+    margin: 10px 40px 8px 40px;
+}
+.panic_buying ul li .marign_hunting{
+    margin-left: 26px;
+    margin-right: 26px;
+}
+.panic_buying ul li .marign_hunting .li_a{
+    font-size: 14px;
+    color: #555555;
+    height: 34px;
+    line-height: 18px;
+    overflow: hidden;
+    display: block;
+}
+.panic_buying ul li .marign_hunting .li_a:hover{
+    color: #37ab40;
+}
+.panic_buying ul li .marign_hunting span:first-of-type{
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 8px;
+    display: inline-block;
+}
+.panic_buying ul li .marign_hunting span:last-of-type{
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 8px;
+    display: inline-block;
+}
+.panic_buying ul li .marign_hunting i:first-of-type{
+    font-size: 12px;
+    color: #808080;
+    font-style: normal;
+    text-decoration: line-through;
+    margin-top: 8px;
+    display: inline-block;
+}
+.panic_buying ul li .marign_hunting i:last-of-type{
+    font-size: 14px;
+    color: #808080;
+    font-style: normal;
+    text-decoration: line-through;
+    margin-top: 8px;
+    display: inline-block;
+}
+.panic_buying ul li .hunting_span {
+
+}
+.panic_buying ul li .hunting_span .span_span{
+    height: 8px;
+    width: 77px;
+    background: #b3b3b3;
+    margin-left: 4px;
+    margin-top: 5px;
+    display: inline-block;
+}
+.panic_buying ul li .hunting_span em{
+    font-size: 12px;
+    color: #808080;
+}
+.panic_buying ul li .hunting_span .span_span span{
+    background: #ff0000;
+    display: inline-block;
+    height: 8px;
+    margin-top: 0px;
+}
+.panic_buying .purchase_more{
+    position: absolute;
+    left: 122px;
+    top:58px;
+}
+.panic_buying .purchase_more img{
+    width: 153px;
+    height: 44px;
+}
+
+.panic_list{
+    width: 1200px;
+    margin: 24px auto;
+    margin-bottom: 0px;
+}
+.panic_list table{
+    border: 2px solid #f4f4f4;
+}
+.panic_list table tr td{
+    width: 298px;
+    height: 320px;
+    border: 2px solid #f4f4f4;
+}
+.panic_list table tr td .hunting_images2{
+    width: 160px;
+    height: 160px;
+    display: block;
+    margin: 23px 66px 8px 66px;
+}
+.panic_list table tr td  .td_a{
+    height: 53px;
+    width: 260px;
+    border-bottom: 1px solid #e8e5e5;
+    font-size: 14px;
+    color: #555555;
+    display: block;
+    margin-left: 23px;
+    line-height: 22px;
+}
+.panic_list table tr td  .td_a:hover{
+    color: #37ab40;
+}
+
+.panic_list table tr td  .td_div{
+    height: 68px;
+    width: 259px;
+    margin-left: 23px;
+}
+.panic_list table tr td  .td_div .price_vip{
+    width: 60px;
+    height: 68px;
+    float: left;
+}
+.panic_list table tr td  .td_div .price_vip img{
+    margin-top: 12px;
+    display: block;
+    width: 55px;
+    height: 18px;
+}
+.panic_list table tr td  .td_div .price_vip p{
+    font-size: 12px;
+    color: #a9a8a8;
+    text-decoration: line-through;
+}
+.panic_list table tr td  .td_div  span:first-of-type{
+    font-size: 14px;
+    color: #ff0000;
+    float: left;
+    font-weight: bold;
+    margin-top: 29px;
+}
+.panic_list table tr td  .td_div  span:last-of-type{
+    font-size: 18px;
+    color: #ff0000;
+    float: left;
+    font-weight: bold;
+    margin-top: 28px;
+}
+.panic_list table tr td  .td_div a{
+    margin: 20px 0 0px 0px;
+    float: right;
+}
+.panic_list table tr td  .td_div a img{
+    width: 80px;
+    height: 26px;
+}
+.panic_list table tr td:hover{
+    box-shadow: 0 0px 19px 0 rgba(0,0,0,0.16);
+}
+.panic_buying ul li:hover{
+    box-shadow: 0 5px 19px 0 rgba(0,0,0,0.16);
+}
+

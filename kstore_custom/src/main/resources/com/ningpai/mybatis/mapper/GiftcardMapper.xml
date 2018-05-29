@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ningpai.customer.dao.GiftcardMapper">
+    <!-- 礼品卡映射-->
+    <resultMap type="com.ningpai.customer.bean.Giftcard" id="BaseResultMap">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="giftcard_no" property="giftcardNo" jdbcType="VARCHAR"/>
+        <result column="giftcard_pwd" property="giftcardPwd" jdbcType="VARCHAR"/>
+        <result column="giftcard_price" property="giftcardPrice" jdbcType="DECIMAL"/>
+        <result column="giftcard_type" property="giftcardType" jdbcType="CHAR"/>
+        <result column="active_flag" property="activeFlag" jdbcType="CHAR"/>
+        <result column="active_time" property="activeTime" jdbcType="TIMESTAMP"/>
+        <result column="active_name" property="activeName" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="order_code" property="orderCode" jdbcType="VARCHAR"/>
+        <result column="customer_id" property="customerId" jdbcType="BIGINT"/>
+        <result column="segment_id" property="segmentId" jdbcType="BIGINT"/>
+    </resultMap>
+    <!-- 卡段映射-->
+    <resultMap type="com.ningpai.customer.bean.GiftcardSegment" id="SegmentMap">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="card_prefix" property="cardPrefix" jdbcType="VARCHAR"/>
+        <result column="card_mid" property="cardMid" jdbcType="VARCHAR"/>
+        <result column="card_suffix" property="cardSuffix" jdbcType="VARCHAR"/>
+        <result column="card_price" property="cardPrice" jdbcType="DECIMAL"/>
+        <result column="card_num" property="cardNum" jdbcType="BIGINT"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="create_name" property="createName" jdbcType="VARCHAR"/>
+        <collection property="giftcardList" column="id" ofType="com.ningpai.customer.bean.Giftcard" javaType="ArrayList" select="selectGiftcardById"></collection>
+    </resultMap>
+
+    <resultMap type="com.ningpai.customer.vo.GiftcardVo" id="GiftcardVoMap" extends="BaseResultMap">
+        <result column="customer_username" jdbcType="VARCHAR" property="customerUsername"/>
+        <result column="customer_img" jdbcType="VARCHAR" property="customerImg"/>
+        <result column="total_deposit" property="totalDeposit" jdbcType="DECIMAL"/>
+        <result column="is_flag" jdbcType="CHAR" property="isFlag"/>
+        <association property="depositInfo" column="giftcard_no" select="selectDepositInfoByNo2"></association>
+    </resultMap>
+
+    <resultMap type="com.ningpai.customer.vo.GiftcardVo" id="GiftcardVoMapForQuery" extends="BaseResultMap">
+        <result column="customer_username" jdbcType="VARCHAR" property="customerUsername"/>
+        <result column="customer_img" jdbcType="VARCHAR" property="customerImg"/>
+        <result column="total_deposit" property="totalDeposit" jdbcType="DECIMAL"/>
+        <result column="is_flag" jdbcType="CHAR" property="isFlag"/>
+        <result column="pre_deposit" property="preDeposit" jdbcType="DECIMAL"/>
+        <result column="freeze_pre_deposit" property="freezePreDeposit" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <!--根据卡段ID获取所属礼品卡集合-->
+    <select id="selectGiftcardById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+      SELECT
+      id,
+      giftcard_no,
+      giftcard_pwd,
+      giftcard_price,
+      giftcard_type,
+      active_flag,
+      active_time,
+      active_name,
+      create_time,
+      order_code,
+      customer_id,
+      segment_id
+       FROM np_giftcard WHERE segment_id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <resultMap id="depositInfoMap" type="com.ningpai.customer.bean.DepositInfo">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="customer_id" property="customerId" jdbcType="BIGINT"/>
+        <result column="pre_deposit" property="preDeposit" jdbcType="DECIMAL"/>
+        <result column="freeze_pre_deposit" property="freezePreDeposit" jdbcType="DECIMAL"/>
+        <result column="pay_password" property="payPassword" jdbcType="VARCHAR"/>
+        <result column="password_error_count" property="passwordErrorCount" jdbcType="INTEGER"/>
+        <result column="password_time" property="passwordTime" jdbcType="TIMESTAMP"/>
+        <result column="giftcard_no" property="giftcardNo" jdbcType="VARCHAR"/>
+        <result column="customer_username" property="customerUsername" jdbcType="VARCHAR"/>
+        <result column="total_deposit" property="totalDeposit" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <!--根据礼品卡号查找对应的用户账户信息-->
+    <select id="selectDepositInfoByNo" parameterType="java.util.Map" resultMap="depositInfoMap">
+      select
+            d.id,
+            d.customer_id,
+            d.pre_deposit,
+            d.freeze_pre_deposit,
+            d.pay_password,
+            d.password_error_count,
+            d.password_time,
+            d.giftcard_no,
+            c.customer_username,
+            (d.pre_deposit+d.freeze_pre_deposit) as total_deposit
+        from np_deposit_info d
+        left join np_customer c on d.customer_id = c.customer_id
+        WHERE c.is_flag = '0'
+        <if test="giftcardNo != null and giftcardNo != ''">
+            and d.giftcard_no = #{giftcardNo,jdbcType=VARCHAR}
+        </if>
+        <if test="customerUsername != null and customerUsername != ''">
+            and c.customer_username like CONCAT(CONCAT('%', #{customerUsername,jdbcType=VARCHAR}),'%')
+        </if>
+    </select>
+
+    <select id="selectDepositInfoByNo2" parameterType="java.lang.String" resultMap="depositInfoMap">
+        select
+        d.id,
+        d.customer_id,
+        d.pre_deposit,
+        d.freeze_pre_deposit,
+        d.pay_password,
+        d.password_error_count,
+        d.password_time,
+        d.giftcard_no
+        from np_deposit_info d
+        left join np_customer c on d.customer_id = c.customer_id
+        WHERE d.giftcard_no = #{giftcardNo,jdbcType=VARCHAR} AND c.is_flag = '0'
+    </select>
+
+    <!--根据密码获取礼品卡详细信息-->
+    <select id="getGiftcard" parameterType="com.ningpai.customer.bean.Giftcard" resultMap="GiftcardVoMap">
+      SELECT g.id,
+              g.giftcard_no,
+              g.giftcard_pwd,
+              g.giftcard_price,
+              g.giftcard_type,
+              g.active_flag,
+              g.active_time,
+              g.active_name,
+              g.create_time,
+              g.order_code,
+              g.customer_id
+       FROM np_giftcard g
+        where 1 = 1
+        <if test="giftcardNo != null">
+            and g.giftcard_no = #{giftcardNo,jdbcType=VARCHAR}
+        </if>
+        <if test="giftcardPwd != null">
+            and g.giftcard_pwd = #{giftcardPwd,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!--修改礼品卡信息-->
+    <update id="updateGiftcard" parameterType="com.ningpai.customer.bean.Giftcard">
+        update np_giftcard as gc
+        <set>
+            <if test="giftcardPrice != null">
+                gc.giftcard_price = #{giftcardPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="giftcardType != null and giftcardType != ''">
+                gc.giftcard_type = #{giftcardType,jdbcType=CHAR},
+            </if>
+            <if test="activeFlag != null and activeFlag!=''">
+                gc.active_flag = #{activeFlag,jdbcType=CHAR},
+            </if>
+            <if test="activeTime != null and activeTime!=''">
+                gc.active_time = #{activeTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="activeName != null and activeName!=''">
+                gc.active_name = #{activeName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null and createTime!=''">
+                gc.create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="orderCode != null and orderCode!=''">
+                gc.order_code = #{orderCode,jdbcType=VARCHAR},
+            </if>
+            <if test="customerId != null and customerId!=''">
+                gc.customer_id = #{customerId,jdbcType=BIGINT}
+            </if>
+        </set>
+        where 1 = 1
+        <if test="giftcardNo != null">
+            and gc.giftcard_no = #{giftcardNo,jdbcType=VARCHAR}
+        </if>
+        <if test="giftcardPwd != null">
+            and gc.giftcard_pwd = #{giftcardPwd,jdbcType=VARCHAR}
+        </if>
+        <if test="id != null">
+            and gc.id = #{id,jdbcType=BIGINT}
+        </if>
+        <if test="orderCode != null">
+            and gc.order_code = #{orderCode,jdbcType=BIGINT}
+        </if>
+    </update>
+
+    <!-- 查询礼品卡资金信息列表总条数，用于分页 -->
+    <select id="selectTotalGiftcardInfo" resultType="java.lang.Long" parameterType="com.ningpai.customer.vo.GiftcardVo">
+        select
+        count(g.giftcard_no)
+        from np_giftcard g
+        where 1=1
+        <if test="giftcardNo != null and giftcardNo != ''">
+            and g.giftcard_no like CONCAT(CONCAT('%', #{giftcardNo,jdbcType=VARCHAR}),'%')
+        </if>
+        <if test="activeFlag != null and activeFlag != ''">
+            and g.active_flag = #{activeFlag,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <!-- 高级搜索 礼品卡资金初始化及查询语句 -->
+    <select id="selectGiftcardInfoList" resultMap="GiftcardVoMapForQuery" parameterType="com.ningpai.customer.vo.GiftcardVo">
+        select
+        g.id,
+        g.giftcard_no,
+        g.giftcard_pwd,
+        g.giftcard_price,
+        g.giftcard_type,
+        g.active_flag,
+        g.active_time,
+        g.active_name
+        from np_giftcard g
+        where 1=1
+        <if test="giftcardNo != null and giftcardNo != ''">
+            and g.giftcard_no like CONCAT(CONCAT('%', #{giftcardNo,jdbcType=VARCHAR}),'%')
+        </if>
+        <if test="activeFlag != null and activeFlag != ''">
+            and g.active_flag = #{activeFlag,jdbcType=VARCHAR}
+        </if>
+        order by g.create_time desc
+        limit #{startRowNum},#{endRowNum}
+    </select>
+
+    <!-- 查询卡段信息列表总条数，用于分页 -->
+    <select id="selectTotalSegmentInfo" resultType="java.lang.Long" parameterType="com.ningpai.customer.bean.GiftcardSegment">
+        select count(1)
+        from np_giftcard_segment
+    </select>
+
+    <!-- 高级搜索 卡段初始化及查询语句 -->
+    <select id="selectSegmentInfoList" resultMap="SegmentMap" parameterType="com.ningpai.customer.bean.GiftcardSegment">
+        select *
+        from np_giftcard_segment
+        order by create_time desc
+        limit #{startRowNum},#{endRowNum}
+    </select>
+
+    <insert id="addSegment" parameterType="com.ningpai.customer.bean.GiftcardSegment" useGeneratedKeys="true" keyProperty="id">
+        insert into np_giftcard_segment
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="cardPrefix != null" >
+                card_prefix,
+            </if>
+            <if test="cardMid != null" >
+                card_mid,
+            </if>
+            <if test="cardSuffix != null" >
+                card_suffix,
+            </if>
+            <if test="cardPrice != null" >
+                card_price,
+            </if>
+            <if test="cardNum != null" >
+                card_num,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="createName != null" >
+                create_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="cardPrefix != null" >
+                #{cardPrefix,jdbcType=VARCHAR},
+            </if>
+            <if test="cardMid != null" >
+                #{cardMid,jdbcType=VARCHAR},
+            </if>
+            <if test="cardSuffix != null" >
+                #{cardSuffix,jdbcType=VARCHAR},
+            </if>
+            <if test="cardPrice != null" >
+                #{cardPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="cardNum != null" >
+                #{cardNum,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createName != null" >
+                #{createName,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--批量添加礼品卡-->
+    <insert id="addGiftcardBatch" useGeneratedKeys="true" parameterType="java.util.List">
+        <selectKey resultType="long" keyProperty="id" order="AFTER">
+            SELECT
+            LAST_INSERT_ID()
+        </selectKey>
+        insert into np_giftcard (giftcard_no, giftcard_pwd, giftcard_price, giftcard_type, active_flag, create_time, segment_id)
+        values
+        <foreach collection="list" item="item" index="index" separator="," >
+            (#{item.giftcardNo},#{item.giftcardPwd},#{item.giftcardPrice},#{item.giftcardType},#{item.activeFlag},#{item.createTime},#{item.segmentId})
+        </foreach>
+    </insert>
+
+    <!--查询卡段-->
+    <select id="selectSegment" parameterType="java.lang.Long" resultMap="SegmentMap">
+      select * from np_giftcard_segment WHERE id = #{id}
+    </select>
+
+    <!-- 添加礼品卡 -->
+    <insert id="insertGiftCard" parameterType="com.ningpai.customer.bean.Giftcard">
+        insert into np_giftcard
+        (giftcard_no,giftcard_pwd,giftcard_price,giftcard_type,active_flag,active_time,active_name,create_time,order_code,customer_id)
+        values
+        (#{giftcardNo,jdbcType=BIGINT},
+        #{giftcardPwd},
+        #{giftcardPrice},
+        #{giftcardType},
+        #{activeFlag},
+        #{activeTime},
+        #{activeName},
+        #{createTime},
+        #{orderCode},#{customerId})
+    </insert>
+
+
+    <!--获取最新的电子卡卡号-->
+    <select id="getECardNewNo" resultType="java.lang.String">
+        select giftcard_no from np_giftcard where giftcard_type='0' ORDER BY id DESC LIMIT 0,1
+    </select>
+
+    <!--根据订单查询电子礼品卡集合-->
+    <select id="selectGiftcardByOrderCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+        id,
+        giftcard_no,
+        giftcard_pwd,
+        giftcard_price,
+        giftcard_type,
+        active_flag,
+        active_time,
+        active_name,
+        create_time,
+        order_code,
+        customer_id,
+        segment_id
+        FROM np_giftcard WHERE order_code = #{orderCode}
+    </select>
+
+    <select id="selectAllGiftcardNo" resultType="java.lang.String">
+        SELECT giftcard_no FROM np_giftcard
+    </select>
+</mapper>

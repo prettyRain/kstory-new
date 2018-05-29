@@ -1,0 +1,164 @@
+/*
+ * 作者：shf
+ * 时间：2017-10-31
+ * 描述：H5改版2.0样式
+ *
+ */
+@charset "utf-8";
+/*body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}*/
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+/*ul,ol,menu{padding:0}*/
+/*ul,ol{list-style:none}*/
+/*address,cite,dfn,em,var{font-style:normal}*/
+/*a{text-decoration:none}*/
+/*a:hover{}*/
+/*img{border:none}*/
+/*input,textarea{outline:none}*/
+/*.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}*/
+
+.vheader{
+    height: 48px!important;
+    color: #fff;;
+    background:red url(../../images/v2/head1.png) no-repeat left center;
+    background-size: 100% 100%;
+    border-bottom: none!important;
+    padding: 5px 5px 5px 5px!important;
+}
+.vheader span{
+    margin: 0!important;
+}
+.vheader  a{
+    display: inline-block;
+    width: 17px;
+    height:15px;
+}
+.member_box.my_balance {
+    float: left;
+    height: 144px;
+    width:100%;
+    background: url(../../images/v2/head2.png) no-repeat left center;
+    background-size: 100% 100%;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.my_balance .cover{
+    text-align: center;
+    background:none!important;
+    height: auto;
+    width: 100%;
+}
+.my_balance .cover p {
+    font-size: 10px;
+    padding-top: 0;
+    margin:0 auto;
+}
+.my_balance .cover p i{
+    display: inline-block;
+    background: #fff;
+    height:1px;
+    width:48px;
+    vertical-align: middle;
+}
+.my_balance .cover h2 {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 50px;
+    margin-top: 15px;
+}
+.income_details{
+    margin-top: 144px;
+    position: relative;
+    padding-top: 35px;
+}
+.income_details .tabs{
+    position: absolute;
+    top:-30px;
+    left:2.5%;
+    background: #fff;
+    width: 95%;
+    height: 60px;
+    border-radius: 2px;
+    overflow: hidden;
+    -moz-box-shadow:0px 3px 6px #E1E1E1;
+    -webkit-box-shadow:0px 3px 6px #E1E1E1;
+    box-shadow:0px 3px 6px #E1E1E1;
+}
+.income_details .tabs a{
+    padding:0;
+    height: 60px;
+    line-height: 60px;
+    color: #7f7f7f;
+}
+.income_details .tabs a.active{
+    border-bottom:none;
+    color: #000;
+    font-weight: 600;
+    background: #f7f7f7;
+    border-radius: 2px;
+}
+.member_box {
+    border-bottom: none;
+    margin-bottom: 0;
+    background:transparent;
+}
+.income_details .content-slide .income_list .income_info{
+    background: #fff;
+    padding:0 5.5%;
+    margin: 5px 2.5%;
+    height:60px;
+}
+.income_details .content-slide .income_list .income_info p{
+    float: left;
+    height:60px;
+    line-height: 65px;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+.income_details .content-slide .income_list .income_info p:nth-of-type(2){
+    float: right;
+    width: 60px;
+    text-align: right;
+    color: #FF3B2F;
+    font-size: 15px;
+    font-family: "黑体",Arial;
+
+}
+.income_details .content-slide .income_list .income_info p:nth-of-type(3){
+    float: right;
+    color: #7f7f7f;
+    font-weight: normal;
+    font-size: 12px;
+}
+@media screen and (max-width: 330px) and (min-width: 310px) {
+    .income_details .content-slide .income_list .income_info p{
+        font-size: 12px;
+    }
+    .income_details .content-slide .income_list .income_info p:nth-of-type(2){
+        font-size: 10px;
+        width: 50px;
+    }
+    .income_details .content-slide .income_list .income_info p:nth-of-type(3){
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 410px) {
+    .income_details .content-slide .income_list .income_info p{
+        font-size: 14px;
+    }
+    .income_details .content-slide .income_list .income_info p:nth-of-type(2){
+        font-size: 14px;
+        width: 70px;
+    }
+    .income_details .content-slide .income_list .income_info p:nth-of-type(3){
+        font-size: 12px;
+    }
+}
+
+
+.vheader img{
+    width: 10px!important;
+    height: 16px!important;
+}

@@ -1,0 +1,73 @@
+.zhuangti8 ul.ul-s.ul-8-s li .right{
+    width:66.67%;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right-box2 .right img{
+    float: right;
+}
+.left img{
+    height: 2rem;
+}
+.zhuanti-list ul.ul-s a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.zhuangti8  .right-box1 a{
+    font-size: .245rem;
+    line-height: .35rem;
+}
+.right .right-box2 .origCost{
+    color: #949494;
+    text-decoration: line-through;
+    padding-top: 5px;
+    display: block;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right-box2 .left span{
+    display: block;
+}
+.right-box3 .seckill{
+    width: 100% !important;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right-box2 .left{
+    width:100%;
+}
+.zhuangti8  .right-box2{
+    position: relative;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right-box2 .sellBtn{
+    position: absolute;
+    right:0;
+    bottom:.2rem;
+}
+/*　马上抢样式*/
+.right-box2 .sellBtn{
+    height: .5rem;
+    line-height: .5rem;
+    background: #ef4f05;
+    border-radius: .4rem;
+    padding: 0 .18rem;
+    text-align: center;
+    font-size: .2rem;
+}
+/*抢购结束样式*/
+.right-box2 .sellBtnOver{
+    background-color: #dadada;
+}
+.right-box2 .sellBtn a{
+    color:#fff;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right-box2 .left span{
+    font-size: .32rem;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right{
+    font-size: .18rem;
+}
+.zhuangti8 ul.ul-s.ul-8-s li .right span{
+    font-size: .18rem;
+}
+.activities{
+    float: right;
+}

@@ -1,0 +1,146 @@
+.cast_about{
+    width: 826px;
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 999;
+    background: #FFFFFF;
+    display: none;
+}
+.cast_about .cast_top{
+    height:19px;
+    width: 826px;
+    margin: 18px 0 18px 0;
+}
+.cast_about .cast_top img{
+    margin-left: 18px;
+    display: inline-block;
+    float: left;
+}
+.cast_about .cast_top p{
+    opacity: 0.65;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 2px;
+    float: left;
+    margin-left: 3px;
+    margin-top: -1px;
+}
+.cast_about .cast_content{
+    width: 826px;
+    min-height:59px;
+    background: #F2F2F2;
+    overflow: hidden;
+    padding-bottom: 25px;
+
+}
+
+.cast_about .cast_content ul li{
+    width:118px;
+    height: 35px;
+    float: left;
+    margin-top: 25px;
+    margin-left:7px;
+}
+.cast_about .cast_content ul li p{
+    width:117px;
+    height: 20px;
+    border-right: 1px solid #d6d6d6;
+    text-align: center;
+    letter-spacing: 1.88px;
+    display: inline-block;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+   /* padding-left: 37px;
+    padding-right: 29px;*/
+}
+.cast_about .cast_content ul li p img{
+    margin-left: 3px;
+}
+.cast_about .cast_content ul li span{
+    width:108px;
+    height: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+    /*letter-spacing: 1.5px;*/
+    opacity: 0.44;
+    display: block;
+}
+.cast_about .cast_bottom{
+    width: 715px;
+    /*height: 59px;*/
+
+    float: left;
+}
+.cast_about .cast_bottom img{
+    margin-left: 31px;
+    width: 75px;
+}
+.cast_about .cast_bottom1{
+    height: 59px;
+
+    width: 111px;
+    float: left;
+}
+.cast_about .cast_bottom1 p{
+    opacity: 0.65;
+
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 1.71px;
+    margin: 10px 0px 0px 15px;
+}
+.cast_about .cast_bottom1 p img{
+    margin-left: 3px;
+}
+.cast_about1{
+    width: 826px;
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 888;
+    background: #FFFFFF;
+    display: none;
+    height: 55px;
+}
+.cast_about1 p{
+    margin: 18px 0 18px 38px;
+    letter-spacing: 1.17px;
+    font-size: 14px;
+    color: #000000;
+    opacity: 0.8;
+}
+
+.bgPop{ display: none;position:absolute;z-index: 97;left: 0;    top: 218px;width: 100%;height: 100%;background: rgba(0,0,0,.61);  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.searchdiv form{
+    border-bottom: 1px solid #FFFFFF;
+}
+.searchdiv {
+    float: right;
+    margin-top: 8px;
+    display: none;
+    position: relative;
+}

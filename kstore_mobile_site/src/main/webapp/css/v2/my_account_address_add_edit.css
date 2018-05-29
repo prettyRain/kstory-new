@@ -1,0 +1,220 @@
+/*原来页面就有的*/
+.select{background: url(../../images/commonbg.png) -5px -65px no-repeat #50C896!important;-webkit-background-size: 230px 245px!important;}
+
+/*
+ * 作者：shf
+ * 时间：2017-07-20
+ * 描述：H5我的-地址管理改版2.0样式
+ *
+ */
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+ul,ol,menu{padding:0}
+ul,ol{list-style:none}
+address,cite,dfn,em,var{font-style:normal}
+a{text-decoration:none}
+a:hover{}
+img{border:none}
+input,textarea{outline:none}
+.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}
+body, html {
+    background-color: #f7f7f7!important;
+}
+
+
+.member_form dl dt{
+    color: #000;
+    font-size: 15px;
+}
+
+.member_form dl dd a span,.member_form dl dd ::-webkit-input-placeholder {
+    color: #7f7f7f;
+    font-size: 15px;
+    /*text-indent: 5px;*/
+}
+.member_form dl dd input.text, .member_form dl dd textarea.text{
+    color: #7f7f7f;
+    font-size: 15px!important;
+
+    /*text-indent: 5px;*/
+}
+.member_form dl dd a span,.member_form dl dd a{
+    padding-left:5px;
+    font-size: 15px;
+}
+/*.member_form dl:first-of-type,.member_form .check_item {*/
+    /*padding: 11px 0 11px 101px;*/
+/*}*/
+.member_form .check_item {
+    padding: 13px 0 13px 101px;
+}
+.member_form .check_item dd{
+    height:28px;
+}
+/*.member_form dl:first-of-type dd,.member_form dl:last-of-type dd{*/
+    /*height:28px;*/
+/*}*/
+.member_form dl {
+    padding: 17px 0 17px 80px;
+    margin-left: 15px;
+    border-bottom:1px solid #eee;
+}
+.member_form dl:last-of-type{
+    border-bottom: none;
+}
+.member_form dl dt {
+    position: absolute;
+    left: 0;
+    top: 17px;
+    line-height: 20px;
+}
+
+.p10{
+    /*position: fixed;*/
+    /*bottom:15px;*/
+    width: 100%;
+    padding:0;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.btn-full {
+    border-radius: 25px;
+    width: 80%;
+    margin: 0 auto;
+}
+#communityStoreDl select{
+    color: #7f7f7f;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    font-family: 微软雅黑,Microsoft yahei;
+    font-size: 15px;
+    /*padding-left: 5px;*/
+    height:20px;
+    line-height: 20px;
+}
+.member_form{
+    margin: 0 0 10px 0;
+}
+a.choose_area{
+    color: #a6a6a6;
+}
+.pl15 {
+    padding-left: 0px;
+ }
+.member_form dl dd{
+    height:20px;
+}
+.member_form dl dd input,.member_form dl dd textarea{
+    height:20px;
+    line-height:20px!important;
+}
+.member_form dl dd textarea{
+    overflow:hidden;
+}
+
+.member_form dl dd input span{
+    height:20px;
+    line-height:20px;
+    display: block;
+}
+a.choose_area{
+    height:20px;
+    line-height:20px;
+}
+a.choose_area span{
+    display: inline-block;
+    height:20px;
+    line-height:20px;
+}
+.member_form dl dd a i{
+    margin-top: 0;
+    margin-right: 0;
+    margin-left:0;
+    width: 22px;
+    height: 22px;
+}
+.ion-ios-arrow-right:before{
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 15px;*/
+    content:"";
+    display: block;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    background: url(../../images/icon_v1.0/btn_more_right@2x.png) left center no-repeat;
+    -webkit-background-size: 22px 22px;
+    background-size: 22px 22px;
+    cursor: pointer;
+}
+
+.vheader span {
+    display: block!important;
+    width:100%;
+    text-align: center;
+/*    margin-right: 0!important;*/
+}
+.vheader{
+   /* padding:5px!important;*/
+    position: relative;
+}
+
+/*.vheader .back{
+    position: absolute;
+    top: 5px;
+    left:0;
+    display: block!important;
+    z-index: 999;
+}*/
+.vheader #icon-option{
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    display: block!important;
+    z-index: 999;
+    color: #333;
+    font-size: 14px;
+}
+
+
+.btn-full {
+    border-radius: 4px;
+    width:100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px;
+    /*background: linear-gradient(left , rgb(85, 204, 0) , rgb(25,147,1) 100%);*/
+    /*background: -o-linear-gradient(left , rgb(85, 204, 0) , rgb(25,147,1) 100%);*/
+    /*background: -ms-linear-gradient(left , rgb(85, 204, 0) , rgb(25,147,1) 100%);*/
+    /*background: -moz-linear-gradient(left , rgb(85, 204, 0) , rgb(25,147,1) 100%);*/
+    /*background: -webkit-linear-gradient(left , rgb(85, 204, 0) , rgb(25,147,1) 100%);*/
+    color: #ff3b2f!important;
+    border: none;
+    line-height: 24px;
+}
+.member_form dl dd input.text, .member_form dl dd textarea.text{
+    width: 93%;
+}
+
+.member_form dl dd a {
+    display: block;
+    padding-right: 7px;
+    overflow: hidden;
+}
+.member_form dl dd input.text, .member_form dl dd textarea.text {
+    color: #7f7f7f;
+    font-size: 15px;
+    text-indent: 0;
+
+}
+.member_form dl dd a span, .member_form dl dd a{
+    padding-left: 0px;
+}
+.member_form dl {
+    padding: 17px 0 17px 85px;
+}

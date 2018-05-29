@@ -1,0 +1,276 @@
+/*
+ * 作者：shf
+ * 时间：2017-07-31
+ * 描述：H5改版2.0样式,退款售后相关
+ *
+ */
+@charset "utf-8";
+/*body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,figure,dl,dt,dd,ul,ol,li,fieldset,lengend,button,input,textarea,th,td,pre{margin:0;padding:0;box-sizing:border-box}*/
+body{font-family:微软雅黑,Microsoft yahei;font-size:12px;box-sizing:border-box}
+/*ul,ol,menu{padding:0}*/
+/*ul,ol{list-style:none}*/
+/*address,cite,dfn,em,var{font-style:normal}*/
+/*a{text-decoration:none}*/
+/*a:hover{}*/
+/*img{border:none}*/
+/*input,textarea{outline:none}*/
+/*.clearfixed:after{content:".";clear:both;display:block;height:0px;visibility:hidden}*/
+
+/*以前放在style中的部分样式开始*/
+.vheader {
+    top: 0;
+    height: 50px;
+    line-height: 40px;
+    width: 100%;
+    padding: 5px;
+    z-index: 9999;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.vheader  a{
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.vheader span {
+    text-align: center;
+    margin: 0;
+    font-size: 17px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-flex-shrink: 10;
+    -ms-flex: 0 10 auto;
+    flex-shrink: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.vheader img {  vertical-align:middle;margin-left: 10px;text-align: inherit  }
+/*.order .order-info .pro-item .prodesc .price {*/
+    /*padding-bottom: 0 !important;*/
+    /*height:auto!important;*/
+/*}*/
+/*shf调整展示样式，与待发货展示样式一致*/
+/*.list-body-line .list-item{*/
+    /*background-color: #fafafa;*/
+    /*border-bottom: none;*/
+/*}*/
+/*.order-number>.list-item{*/
+    /*border-bottom: none;*/
+/*}*/
+/*.btn{*/
+    /*border-radius: 4px;*/
+/*}*/
+/*.order.content-order-all .order-bottom .pay-money{*/
+    /*color: #fb6b14!important;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.text-them{*/
+    /*color: #fb6b14!important;*/
+/*}*/
+/*以前放在style中的部分样式结束*/
+
+/*新的样式开始*/
+
+body, html {  background: #f7f7f7;  }
+.order.content-order-all .order-item{
+    /*margin: 5px 0 0 0;*/
+    /*-moz-box-shadow:0 1px 0 #b0b0b0; -webkit-box-shadow:0 1px 0 #b0b0b0; box-shadow:0 1px 0 #b0b0b0;*/
+    /*border-radius: 3px;*/
+    overflow: hidden;
+}
+.order.content-order-all .order-item + .order-item {
+    /*margin-top: 5px;*/
+    border:none;
+}
+
+.list-item .item-head{
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.list-item .item-head .curValue {
+    float: right;
+    font-size: 12px;
+    line-height: 27px;
+    font-weight: bold;
+    color:#0072BC !important
+}
+.list-item .item-head label {
+    color: #333;
+    font-size: 12px;
+}
+.list-item .item-head span {
+    color: #000;
+    font-size: 14px;
+}
+.order.content-order-all .order-number .list-item {
+    padding: 8px 15px 8px 15px;
+}
+
+.list-item {
+    padding: 10px 15px 10px 15px;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.pro-item .propic {
+    width: 80px;
+    height: 80px;
+    line-height: normal;
+    border: none;
+}
+.pro-item .propic img {
+
+    vertical-align: top;
+}
+.order .order-info .pro-item .prodesc {
+    padding-right: 0;
+    height: auto;
+    min-height: 70px;
+}
+
+.pro-item .prodesc .title{
+    line-height: 17px;
+    height: 40px;
+    margin-bottom: 1px;
+    color: #000;
+    font-size: 14px;
+    padding-bottom: 0;
+    overflow: hidden;
+    text-overflow: clip;
+    /*display: box;*/
+    display: block;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding-top: 5px;
+}
+.pro-num {
+     position: static;
+    display: inline-block!important;
+}
+.order .order-info .pro-item .prodesc .price{
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top;
+    color: #000;
+}
+.order .order-info .pro-item .prodesc .pro-num {
+    font-size: 12px;
+    /*margin-left: 6px;*/
+    color: #7f7f7f;
+}
+.order.content-order-all .order-bottom .too-btn a{
+    color: #199301!important;
+    font-size: 12px;
+    padding: 0;
+    width: 74px;
+    height: 28px;
+    line-height: 27px;
+    border: 0.5px solid #199301;
+}
+
+.order.content-order-all .order-bottom .list-item {
+    padding: 6px 15px 6px 15px;
+}
+
+.order .list-body-box .box-body ul li {
+    width: 69px;
+    height: 69px;
+    border: none;
+    line-height: inherit;
+}
+.order .list-body-box .box-body {
+    height: 69px;
+}
+
+.text-them {
+    color: #000 !important;
+}
+.order .list-body-line .list-item{
+    background: #f7f7f7;
+    margin:0 0 10px 0;
+}
+
+.order .order-info .pro-item .prodesc>div{
+    height:17px;
+}
+.pro-item {
+    padding-left: 95px;
+    min-height: 80px;
+}
+
+.list-item .item-head>label{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+}
+.list-item .item-head span {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.list-item .item-head .pay-money i{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0!important;
+    margin:0!important;
+}
+
+
+.order.content-order-all .order-item .order_info{
+    border:1px solid red;
+    margin-bottom: 2px;
+}
+.pro-item .prodesc .price .num{
+    vertical-align: bottom;
+}
+
+/*.list-item .item-head .pay-money i {*/
+    /*float: left;*/
+    /*height: 24px;*/
+    /*line-height: 24px;}*/
+
+
+.order-info .list-body-line:last-of-type a:last-of-type .list-item{
+    margin:0;
+}

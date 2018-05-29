@@ -1,0 +1,110 @@
+.success_tips i.successIcon {
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin: 24px auto;
+    background: url(../images/success@2x.png) no-repeat;
+    background-size: 100% 100%;
+}
+.success_tips {
+    width: 348px;
+    margin:65px auto;
+}
+.success_tips .p {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0.54px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+.success_tips .p1{
+    font-size: 12px;
+    color: #626262;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+.success_tips .register_coupon{
+    width: 348px;
+    height: 106px;
+    background: url(../images/register_coupon.png) no-repeat;
+    background-size: 100% 100%;
+}
+.success_tips .register_coupon .coupon_div{
+    width: 87px;
+    height:110px;
+}
+.success_tips .register_coupon .coupon_div .span_one{
+    font-size: 14px;
+    color: #FE6C4F;
+    letter-spacing: 0.47px;
+    margin-left: 14px;
+}
+.success_tips .register_coupon .coupon_div .span_two{
+    font-size: 32px;
+    color: #FE6C4F;
+    letter-spacing: 0.53px;
+    margin-top:40px;
+    display: inline-block;
+    font-weight: bold;
+}
+.success_tips .register_coupon .coupon_div1,.success_tips .register_coupon .coupon_div2,.success_tips .register_coupon .coupon_div{
+    float: left;
+}
+.success_tips .register_coupon .coupon_div1{
+    width: 146px;
+    height:110px;
+}
+.success_tips .register_coupon .coupon_div2{
+    width: 115px;
+    height:110px;
+
+}
+.success_tips .register_coupon .coupon_div2 a{
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+    border-radius: 100px;
+    width: 68px;
+    height: 32px;
+    display: block;
+    text-align: center;
+    line-height: 32px;
+    margin-top: 35px;
+    margin-left: 23px;
+    font-size: 10px;
+    color: #000000;
+    letter-spacing: 0.42px;
+}
+.success_tips .register_coupon .coupon_div1 span:first-of-type{
+    font-size: 15px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    display: block;
+    margin-top: 32px;
+    margin-left: 33px;
+}
+.success_tips .register_coupon .coupon_div1 span:last-of-type{
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    margin-left: 33px;
+}
+.success_tips a.btn {
+    display: block;
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.46px;
+    background: #8ACF58;
+    border-radius: 100px;
+    border: 1px solid #8ACF58;
+    margin-top: 25px!important;
+}
+.success_tips a.btn:hover {
+    background: #8ACF58;
+}

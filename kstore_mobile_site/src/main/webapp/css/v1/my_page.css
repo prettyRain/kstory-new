@@ -1,0 +1,19 @@
+.common_line .item-link .item-content .item-inner h2 {
+    font-size: 1.0rem;
+    display: inline-block;
+}
+.order_area .top p .icon span{
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+.member_box .item-content h4 {
+    font-size: 1.0rem;
+}
+.like_good {
+    width: 120px;
+    padding-left: 15px;
+}
+.slide_goods .swiper-container {
+    width: 100%;
+    height: 237px;
+}

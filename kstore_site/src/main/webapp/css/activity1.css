@@ -1,0 +1,121 @@
+.hd_banner{
+	background: #6c0808;
+}
+.bg_color2{
+	background: #6c0808;
+}
+.bg_color3{
+	background: #6c0808;
+}
+.hd_banner #banner_one{
+	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+.hd_banner #banner_one img{
+	width: 100%;
+	display: block;
+}
+#main1 {
+ 	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+#main1 img{
+	width: 100%;
+	display: block;
+}
+*{
+	margin: 0;
+	padding:0;
+}
+#main{
+	width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    background: url(../images/activity/1/datupian1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+#main .img1{
+	background: url(../images/activity/1/img1.jpg) no-repeat;
+    display: block;
+    height: 594px;
+    margin: 0 auto;
+    width: 1200px;
+}
+#main .img2{
+	background: url(../images/activity/1/img2.jpg) no-repeat;
+    display: block;
+    height: 691px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+#main .img2 a{
+	position: absolute;
+	right: 96px;
+    bottom: 74px;
+	width: 129px;
+	height: 47px;
+}
+#main .img3{
+	background: url(../images/activity/1/img3.jpg) no-repeat;
+    display: block;
+    height: 695px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+#main .img3 a{
+	position: absolute;
+	right: 93px;
+    bottom: 83px;
+	width: 129px;
+	height: 47px;
+}
+#main .img4{
+	background: url(../images/activity/1/img4.jpg) no-repeat;
+    display: block;
+    height: 973px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+#main .img4 a{
+	position: absolute;
+	    right: 94px;
+    bottom: 351px;
+	width: 129px;
+	height: 47px;
+}
+ body{
+	overflow:-Scroll;overflow-x:hidden
+}
+@media screen and (max-width: 1680px){
+	  	.hd_banner #banner_one {
+	        width: 1680px;
+	    }
+		#main,#main1{
+	    	width: 1680px;
+	    }
+}
+@media screen and (max-width: 1442px){
+	  	.hd_banner #banner_one {
+	        width: 1430px;
+	    }
+		#main,#main1{
+	    	width:1430px;
+	    }
+
+
+}
+@media screen and (max-width: 1366px){
+	  	.hd_banner #banner_one {
+	        width: 1350px;
+	    }
+		#main,#main1{
+	    	width:1350px;
+	    }
+
+
+}

@@ -1,0 +1,33 @@
+ .address_table table tr th{
+     line-height:30px;
+     text-align:center;
+     padding:5px 10px;
+     font-weight:normal;
+     background-color:#F1F1F1;
+     vertical-align:middle;
+ }
+ .address_table table tr td{
+     line-height:30px;
+     text-align:center;
+     padding:5px 10px;
+     font-weight:normal;
+     background-color: #f6f6f6;
+     vertical-align:middle;
+ }
+ .address_table table tr td.tdbtn {
+     color:#5bc0de;
+ }
+ .address_table .tdbtn span {
+     cursor:pointer;
+ }
+ .address_table {
+     width:100%;
+     padding-bottom:33px;
+     background-color: #F1F1F1;
+     border:1px solid rgba(204, 204, 221, 0.25);
+     margin-bottom:25px;
+ }
+ .address_table table {
+     width:100%;
+     background-color: #dadada;
+ }

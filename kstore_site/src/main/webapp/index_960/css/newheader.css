@@ -1,0 +1,84 @@
+/*头部样式*/
+body{
+  background-color: #fff!important;
+}
+.mainnavz {
+  height: 48px;
+  position: relative;
+  background: #555;
+  margin-bottom: 50px;
+}
+
+.navLinks {
+  padding-left: 200px;
+  height: 48px;
+  width: 480px;
+  float: left;
+}
+.navLinks ul {
+  *zoom: 1;
+  height: 48px;
+}
+.navLinks ul:before, .navLinks ul:after {
+  display: table;
+  content: "";
+}
+.navLinks ul:after {
+  clear: both;
+}
+.navLinks ul li {
+  float: left;
+  margin: 0;
+  height: 48px;
+}
+.navLinks ul a {
+  display: block;
+  padding: 0 30px;
+  font-size: 16px;
+  line-height: 48px;
+  color: #fff;
+}
+.navLinks ul a.on {
+  background: #333;
+  color: #ccc;
+}
+.navLinks ul a:hover {
+  color: #ccc;
+  background: #333;
+}
+
+.showlist {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 999;
+}
+.showlist .btnnav {
+  height: 48px;
+  font-weight: 500;
+}
+.showlist .btnnav a {
+  display: block;
+  font-size: 16px;
+  line-height: 48px;
+  color: #fff;
+  position: relative;
+  text-indent: 50px;
+  background: url(../images/index2_03.png) no-repeat left center;
+}
+.showlist .btnnav .caret {
+  font-size: 16px;
+  line-height: 45px;
+  color: #ffdede;
+}
+.showlist .btnnav .all {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  font-size: 16px;
+}
+

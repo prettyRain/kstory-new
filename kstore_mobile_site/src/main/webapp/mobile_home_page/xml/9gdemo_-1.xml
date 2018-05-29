@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ip_cont>
+<roll_adv id="1">
+<roll_a href="http://testm.ge960.com/item/7754.html">
+<img height="155px" heightB="50%" src="http://testboss.ge960.com:80/upload/20180425/1524641895227.jpg" width="100%" widthB="100%"/>
+</roll_a>
+<roll_a href="http://testm.ge960.com/item/7760.html">
+<img height="155px" heightB="50%" src="http://testboss.ge960.com:80/upload/20180428/1524880868131.jpg" width="100%" widthB="100%"/>
+</roll_a>
+<roll_a href="http://testm.ge960.com/list/6013">
+<img height="155px" heightB="50%" src="http://testboss.ge960.com:80/upload/20180428/1524887674819.jpg" width="100%" widthB="100%"/>
+</roll_a>
+<roll_a href="https://www.baidu.com">
+<img height="155px" heightB="50%" src="http://testboss.ge960.com:80/upload/20180428/1524887362509.jpg" width="100%" widthB="100%"/>
+</roll_a>
+<roll_a href="">
+<img height="155px" heightB="50%" src="http://testboss.ge960.com:80/upload/20180502/1525253680946.jpg" width="100%" widthB="100%"/>
+</roll_a>
+</roll_adv>
+<img_adv id="10" tag="10">
+<a href="panicbuyinglist.html">
+<img src="http://testboss.ge960.com:80/upload/20180427/1524793219667.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<imagenav id="5">
+<img_nav_a data-chs="lk-02" data-chs2="lk_goods" data-img="http://testboss.ge960.com:80/upload/20180503/1525343250125.jpg" data-name="展览馆" data-tag="" href="http://testm.ge960.com/intoPage.htm?pageName=main/subjectZLG">
+<img src="http://testboss.ge960.com:80/upload/20180503/1525343250125.jpg"/>
+</img_nav_a>
+<img_nav_a data-chs="lk-02" data-chs2="lk_goods" data-img="http://testboss.ge960.com:80/upload/20180426/1524712552634.jpg" data-name="茶馆" data-tag="" href="http://testm.ge960.com/intoPage.htm?pageName=main/subjectCG">
+<img src="http://testboss.ge960.com:80/upload/20180426/1524712552634.jpg"/>
+</img_nav_a>
+<img_nav_a data-chs="lk-02" data-chs2="lk_goods" data-img="http://testboss.ge960.com:80/upload/20180426/1524712564655.jpg" data-name="老字号" data-tag="" href="http://testm.ge960.com/intoPage.htm?pageName=main/subjectLZH">
+<img src="http://testboss.ge960.com:80/upload/20180426/1524712564655.jpg"/>
+</img_nav_a>
+</imagenav>
+<blankbox height="30px;pxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpx" id="3"/>
+<img_adv id="8" tag="8">
+<a href="listByCateBar/5777">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513912095103.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="2" tag="8">
+<li>
+<goods_a href="item/7123.html" name="北京特产 天福号酱鸭500g彩袋装 零售" price="￥55.00">
+<img src="http://boss.ge960.com:80/upload/20170329/1490764503448!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7125.html" name="北京特产 天福号酱鸡550g彩袋装 零售" price="￥38.00">
+<img src="http://boss.ge960.com:80/upload/20170329/1490764466649!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7131.html" name="北京特产 天福号苏式熏鱼200g自立袋 零售" price="￥28.50">
+<img src="http://boss.ge960.com:80/upload/20170329/1490764255160!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7133.html" name="北京特产 天福号酱猪蹄200g自立袋 零售" price="￥55.00">
+<img src="http://boss.ge960.com:80/upload/20170329/1490758137874!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7135.html" name="天福号农庄 西班牙火腿(切片)75g 零售" price="￥68.25">
+<img src="http://boss.ge960.com:80/upload/20170329/1490758083109!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7111.html" name="胶州大白菜每棵5斤 零售" price="￥24.90">
+<img src="http://zboss.ge960.com:80/upload/20170329/1490757244606!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<blankbox height=" 30px;pxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpx" id="2"/>
+<img_adv id="7" tag="7">
+<a href="">
+<img src="http://testboss.ge960.com:80/upload/20171214/1513232898598.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="1" tag="7">
+<li>
+<goods_a href="item/7381.html" name="冬草莓约350g/15粒装 奶油牛奶巧克力草莓 新鲜水果" price="￥45.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1489997000135!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7431.html" name="百事美特 水果黄桃罐头 400g*12罐/箱" price="￥50.00">
+<img src="http://boss.ge960.com:80/upload/20170321/1490079112560!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7575.html" name="福事多蜂蜜柠檬茶600g 韩国风味蜜炼酱水果茶冲饮品" price="￥32.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490088195043!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7595.html" name="新鲜水果 新鲜香蕉5斤" price="￥29.00">
+<img src="http://boss.ge960.com:80/upload/20170322/1490151242743!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7613.html" name="新鲜水果百香果 酸甜可口 约1KG" price="￥69.90">
+<img src="http://boss.ge960.com:80/upload/20170322/1490152842826!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<blankbox height="30px;pxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpxpx" id="4"/>
+<img_adv id="6" tag="6">
+<a href="listByCateBar/5803">
+<img src="http://testboss.ge960.com:80/upload/20171213/1513157876780.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="3" tag="6">
+<li>
+<goods_a href="item/7361.html" name="小油菜 500g 净菜 青菜 新鲜蔬菜 叶菜 蔬菜" price="￥6.50">
+<img src="http://boss.ge960.com:80/upload/20170320/1489994388678!352.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7363.html" name="穿心莲250g新鲜蔬菜 金香草 苦胆草" price="￥32.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1489994475213!352.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7581.html" name="新鲜蔬菜 白萝卜 15kg/箱" price="￥450.00">
+<img src="http://boss.ge960.com:80/upload/20170321/1490089038790!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7589.html" name="蔬菜 尖椒/青椒 15kg/箱" price="￥350.00">
+<img src="http://boss.ge960.com:80/upload/20170321/1490089622026!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7591.html" name="蔬菜 大葱 15kg/箱" price="￥200.00">
+<img src="http://boss.ge960.com:80/upload/20170321/1490089735821!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<img_adv id="11" tag="11">
+<a href="">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513919346773.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="4" tag="11">
+<li>
+<goods_a href="item/7137.html" name="灵山云雾红茶礼盒100g  零售 华坛五羊雾红茶" price="￥850.00">
+<img src="http://boss.ge960.com:80/upload/20170329/1490758014757!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7315.html" name="正山堂茶业 武夷山正山小种红茶野茶100克" price="￥638.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1489989164735!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7317.html" name="卢正浩 洞庭碧螺春绿茶 明前一级150克春茶" price="￥98.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1489989311297!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7321.html" name="文新信阳毛尖毛峰茶叶绿茶土灶茶春茶250g" price="￥99.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1489989777364!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7137.html" name="灵山云雾红茶礼盒100g  零售 华坛五羊雾红茶" price="￥850.00">
+<img src="http://boss.ge960.com:80/upload/20170329/1490758014757!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<img_adv id="12" tag="12">
+<a href="">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513919440642.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="5" tag="12">
+<li>
+<goods_a href="item/7437.html" name="法式小面包香奶味400g" price="￥13.50">
+<img src="http://boss.ge960.com:80/upload/20170321/1490079356832!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7441.html" name="舒可曼可可粉 烘焙原料 咖啡冲饮蛋糕面包调色调味 100克" price="￥15.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490079716580!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7457.html" name="新良面包粉 烘焙原料 优质面包小麦粉 500g" price="￥15.00">
+<img src="http://boss.ge960.com:80/upload/20170321/1490081179800!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7441.html" name="舒可曼可可粉 烘焙原料 咖啡冲饮蛋糕面包调色调味 100克" price="￥15.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490079716580!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7457.html" name="新良面包粉 烘焙原料 优质面包小麦粉 500g" price="￥15.00">
+<img src="http://boss.ge960.com:80/upload/20170321/1490081179800!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<img_adv id="13" tag="13">
+<a href="javascript:;">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513919614264.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="6" tag="13">
+<li>
+<goods_a href="item/7139.html" name="张裕贵馥晚采甜白葡萄酒750ml/瓶（零售买一送一）" price="￥245.00">
+<img src="http://boss.ge960.com:80/upload/20170330/1490841514433!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7141.html" name="张裕贵馥晚采甜白葡萄酒750ml*6瓶（批发）" price="￥1058.00">
+<img src="http://boss.ge960.com:80/upload/20170330/1490841956588!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7143.html" name="张裕贵馥晚采甜红葡萄酒750ml/瓶（零售买一送一）" price="￥50.00">
+<img src="http://boss.ge960.com:80/upload/20170330/1490844495380!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7149.html" name="张裕酒城葡园蛇龙珠干红葡萄酒750ml*6瓶（批发）" price="￥2338.00">
+<img src="http://boss.ge960.com:80/upload/20170330/1490841994344!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7151.html" name="张裕卡斯特庄主珍藏蛇龙珠干红葡萄酒750ml/瓶（零售买一送一）" price="￥1086.00">
+<img src="http://boss.ge960.com:80/upload/20170330/1490842065568!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7153.html" name="张裕卡斯特庄主珍藏蛇龙珠干红葡萄酒750ml*6瓶（批发）" price="￥2932.20">
+<img src="http://boss.ge960.com:80/upload/20170330/1490842049530!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<img_adv id="14" tag="14">
+<a href="">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513919665568.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="7" tag="14">
+<li>
+<goods_a href="item/7625.html" name="大连冷冻鲍鱼 500g 海鲜水产" price="￥88.00">
+<img src="http://boss.ge960.com:80/upload/20170322/1490163962995!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7627.html" name="大西洋冰鲜三文鱼 500g 刺身中段 海鲜生鱼片" price="￥88.00">
+<img src="http://boss.ge960.com:80/upload/20170322/1490164217912!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7637.html" name="法国冷冻银鳕鱼中段 进口海鲜 500g" price="￥172.00">
+<img src="http://boss.ge960.com:80/upload/20170322/1490164894677!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7259.html" name="元之源 羔羊后腿包肉18kg 草原精品纯天然 批发" price="￥1407.60">
+<img src="http://boss.ge960.com:80/upload/20170329/1490766795815!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<img_adv id="15" tag="15">
+<a href="">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513919860484.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="8" tag="15">
+<li>
+<goods_a href="item/7405.html" name="新鲜散养柴鸡蛋10枚单盒 土鸡蛋 草鸡蛋 鲜鸡蛋" price="￥13.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1490000036524!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7407.html" name="乌鸡蛋 10枚装 绿壳蛋 土鸡蛋" price="￥18.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1490000125674!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7409.html" name="熟咸鸭蛋 10枚 鸭蛋 咸鸭蛋" price="￥22.00">
+<img src="http://boss.ge960.com:80/upload/20170320/1490000198976!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7471.html" name="新美香 蔬菜速食汤 方便即食 紫菜蛋花汤 8g*5袋/盒" price="￥9.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490081814467!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7479.html" name="速冻水饺 素水饺 韭菜鸡蛋 450g" price="￥12.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490082463285!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+<img_adv id="16" tag="16">
+<a href="">
+<img src="http://testboss.ge960.com:80/upload/20171222/1513920048710.jpg" width="100%" widthB="100%"/>
+</a>
+</img_adv>
+<goodsmod class="gd-04" id="9" tag="16">
+<li>
+<goods_a href="item/7475.html" name="良品铺子 小米锅巴 麻辣味膨化零食 休闲小吃90g" price="￥10.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490081962588!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7477.html" name="奶油味爆米花150g桶装 膨化休闲零食" price="￥13.80">
+<img src="http://boss.ge960.com:80/upload/20170321/1490082033049!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7497.html" name="三只松鼠 坚果炒货 零食奶油味 夏威夷果265g/袋" price="￥25.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490083297159!160.jpg"/>
+</goods_a>
+</li>
+<li>
+<goods_a href="item/7543.html" name="百草味 水果干 芒果干120g/袋  蜜饯零食小吃" price="￥11.90">
+<img src="http://boss.ge960.com:80/upload/20170321/1490085999733!160.jpg"/>
+</goods_a>
+</li>
+</goodsmod>
+</ip_cont>

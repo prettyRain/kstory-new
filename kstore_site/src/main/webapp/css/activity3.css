@@ -1,0 +1,170 @@
+.hd_banner{
+	background: #ffefcd;
+}
+.bg_color2{
+	background: #ffefcd;
+}
+.bg_color3{
+	background: #ffefcd;
+}
+.hd_banner #banner_one{
+	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+.hd_banner #banner_one img{
+	width: 100%;
+	display: block;
+}
+#main1 {
+ 	width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+#main1 img{
+	width: 100%;
+	display: block;
+}
+*{
+	margin: 0;
+	padding:0;
+}
+#main{
+	width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    background: url(../images/activity/images3/datupian1.jpg) no-repeat;
+  /*   background-size: 100% 100%; */
+}
+#main .img1{
+    display: block;
+    height:800px;
+    margin: 0 auto;
+    width: 1202px;
+}
+#main .img1 ul li{
+	width: 387px;
+	height: 390px;
+	float: left;
+	list-style: none;
+	margin-left: 20.5px;
+}
+#main .img1 ul li:first-of-type{
+	margin-left: 0px;
+}
+#main .img1 .a_a{
+	width: 591px;
+	height: 390px;
+	display: inline-block;
+	margin-top: 20px;
+}
+#main .img1 .a_a:last-of-type{
+	margin-left: 15px;
+}
+#main .img2{
+    display: block;
+    height:739px;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    width: 1202px;
+}
+#main .img2 .vertical{
+	vertical-align: top;
+}
+#main .img2 ul{
+	margin-top: 10px;
+}
+#main .img2 ul li{
+	float: left;
+	list-style: none;
+	margin-left: 10px;
+	position: relative;
+	width: 293px;
+	height: 429px;
+}
+#main .img2 ul li .loaction{
+	position: absolute;
+	width: 154px;
+	height: 35px;
+	left:69px;
+	bottom: 28px;
+}
+#main .img2 ul li:first-of-type{
+	margin-left: 0px;
+}
+#main .img3{
+    display: block;
+    height:1617px;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    padding-bottom: 266px;
+    width: 1202px;
+}
+#main .img3 .vertical{
+	vertical-align: top;
+}
+#main .img3 ul{
+	margin-top: 10px;
+}
+#main .img3 ul li{
+	float: left;
+	list-style: none;
+	margin-left: 10px;
+	position: relative;
+	width: 293px;
+	height: 429px;
+	margin-bottom: 10px;
+}
+#main .img3 ul li:nth-child(1){
+	margin-left: 0px;
+}
+#main .img3 ul li:nth-child(5){
+	margin-left: 0px;
+}
+#main .img3 ul li:nth-child(9){
+	margin-left: 0px;
+}
+#main .img3 ul li .loaction{
+	position: absolute;
+	width: 154px;
+	height: 35px;
+	left:69px;
+	bottom: 28px;
+}
+/* #main .img3 ul li:nth-child(odd){
+	margin-left: 0px;
+} */
+body{
+	overflow:-Scroll;overflow-x:hidden
+}
+@media screen and (max-width: 1680px){
+	  	.hd_banner #banner_one {
+	        width: 1680px;
+	    }
+		#main,#main1{
+	    	width: 1680px;
+	    }
+}
+@media screen and (max-width: 1442px){
+	  	.hd_banner #banner_one {
+	        width: 1430px;
+	    }
+		#main,#main1{
+	    	width:1430px;
+	    }
+
+
+}
+@media screen and (max-width: 1366px){
+	  	.hd_banner #banner_one {
+	        width: 1350px;
+	    }
+		#main,#main1{
+	    	width:1350px;
+	    }
+
+
+}
+
+
+

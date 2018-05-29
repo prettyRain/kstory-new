@@ -1,0 +1,290 @@
+/*第一部分*/
+#content_one {
+    width: 1200px;
+    margin:0 auto;
+    height:525px;
+}
+#content_one .one_top{
+    height: 90px;
+    line-height: 90px;
+    position: relative;
+}
+#content_one .one_top img{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top:38%;
+}
+#content_one .one_top p{
+    display: inline-block;
+    font-size: 24px;
+    color: #000000;
+    margin-left: 32px;
+    cursor: default;
+    font-weight: bold;
+}
+#content_one .one_top a{
+    float: right;
+    font-size: 14px;
+    color: #666666;
+    width: 42px;
+    background: url(../../images/new_channel_Jiantou.png) right center no-repeat;
+
+}
+#content_one .one_bottom img{
+    display: inline-block;
+}
+#content_one .one_bottom  .flash_sale{
+    width: 766px;
+    height: 435px;
+    float: right;
+    padding: 0 47px 0 47px;
+    background: #f6f6f6;
+}
+#content_one .one_bottom  .flash_sale  .bottom_border{
+    border-bottom: 2px solid #e8e5e5;
+    height: 90px;
+}
+#content_one .one_bottom  .flash_sale  .bottom_border img{
+    margin-top: 40px;
+}
+#content_one .one_bottom  .flash_sale   ul{
+    margin-top: 25px;
+}
+#content_one .one_bottom  .flash_sale ul li{
+    width: 210px;
+    height: 290px;
+    border: 2px solid #e8e5e5;
+    margin-right: 62px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    background: #ffffff;
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+#content_one .one_bottom  .flash_sale ul li:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+}
+#content_one .one_bottom  .flash_sale ul li .new_li_div{
+    width: 162px;
+    margin: 0px 24px 0px 24px;
+}
+#content_one .one_bottom  .flash_sale ul li  .new_li_div p{
+    font-size: 14px;
+    color: #555555;
+    height: 40px;
+    overflow: hidden;
+    text-align: left;
+}
+#content_one .one_bottom  .flash_sale ul li  .new_li_div div{
+    margin-top: 12px;
+    text-align: left;
+}
+#content_one .one_bottom  .flash_sale ul li  .new_li_div div span:first-of-type{
+    font-size: 14px;
+    color: #f9892a;
+    font-weight: bold;
+}
+#content_one .one_bottom  .flash_sale ul li  .new_li_div div span:last-of-type{
+    font-size: 14px;
+    color: #666666;
+    margin-left: 20px;
+    text-decoration: line-through;
+}
+#content_one .one_bottom  .flash_sale ul li  .new_li_div div .new_span{
+    font-size: 18px;
+    color: #f9892a;
+    font-weight: bold;
+}
+#content_one .one_bottom  .flash_sale ul li img{
+    width: 166px;
+    height: 166px;
+    margin: 23px 20px 12px 20px;
+}
+/*#content_one .one_bottom  .flash_sale ul li:last-of-type{
+    margin-right: 0px;
+}*/
+.show-box{
+    margin-bottom: 0px!important;
+}
+/*第二部分*/
+#content_two{
+    width: 1200px;
+    margin:30px auto;
+    margin-bottom: 0px;
+    height:512px;
+    border-bottom: 2px solid #e8e5e5;
+}
+#content_two .two_left{
+    width: 1019px;
+    height: 478px;
+    background: url(../../images/new_two_image.png) no-repeat;
+    float: left;
+}
+#content_two .two_left .new_left_ct{
+    width: 990px;
+    height: 286px;
+    background: #ffffff;
+    margin: 180px 14px 14px 14px ;
+}
+#content_two .two_left .new_left_ct ul{
+    margin: 0px 27px 0px 27px;
+    padding-top: 26px;
+}
+#content_two .two_left .new_left_ct ul li{
+    float: left;
+    list-style: none;
+    width: 136px;
+    height: 224px;
+    margin-right: 24px;
+}
+/*#content_two .two_left .new_left_ct ul li:last-of-type{
+    margin-right: 0px;
+}*/
+#content_two .two_right{
+    width: 175px;
+    height: 478px;
+    margin-left: 6px;
+    float: left;
+}
+#content_two .two_right a:last-of-type img{
+    margin-top: 8px;
+}
+#content_two .two_left .new_left_ct ul li a .ct_div{
+   width: 124px;
+    margin: 0px 6px 0px 6px;
+}
+#content_two .two_left .new_left_ct ul li a .ct_div p:first-of-type{
+    font-size: 14px;
+    color: #555555;
+}
+#content_two .two_left .new_left_ct ul li a .ct_div p:last-of-type{
+    font-size: 12px;
+    color: #757474;
+    height:40px;
+    overflow: hidden;
+}
+#content_two .two_left .new_left_ct ul li a .ct_div div{
+    margin-top: 14px;
+}
+#content_two .two_left .new_left_ct ul li a .ct_div div span:first-of-type{
+    color: #f9892a;
+    font-size: 14px;
+    font-weight: bold;
+}
+#content_two .two_left .new_left_ct ul li a .ct_div div span:last-of-type{
+    color: #f9892a;
+    font-size: 18px;
+    font-weight: bold;
+}
+#content_two .two_left .new_left_ct ul li:hover{
+    box-shadow: 0 5px 19px 0 rgba(0,0,0,0.16);
+}
+#content_two .two_left .new_left_ct ul li a img{
+    width: 126px;
+    height: 126px;
+    margin: 6px 5px 6px 5px;
+}
+/*第三部分*/
+#content_three {
+    width: 1200px;
+    margin:0 auto;
+    /*height:1289px;*/
+    padding-bottom:40px;
+    border-bottom: 2px solid #e8e5e5;
+}
+#content_three .three_top{
+    height: 90px;
+    line-height: 90px;
+    position: relative;
+}
+#content_three .three_top img{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top:38%;
+}
+#content_three .three_top p{
+    display: inline-block;
+    font-size: 24px;
+    color: #000000;
+    margin-left: 32px;
+    cursor: default;
+    font-weight: bold;
+}
+#content_three .three_top a{
+    float: right;
+    font-size: 14px;
+    color: #666666;
+    width: 42px;
+    background: url(../../images/new_channel_Jiantou.png) right center no-repeat;
+
+}
+#content_three .three_top span{
+    font-size: 16px;
+    margin-left: 18px;
+    color: #000000;
+    font-weight: bold;
+}
+#content_three .three_banner{
+    width: 1200px;
+    height: 334px;
+    margin-bottom: 28px;
+}
+#content_three table{
+    border: 2px solid #e8e5e5;
+   /* width: 1200px;
+    height: 524px;*/
+}
+#content_three table tr td{
+    width: 297px;
+    height: 262px;
+    border: 2px solid #e8e5e5;
+/*     text-align: center; */
+}
+#content_three table tr td img{
+    width: 166px;
+    height: 166px;
+    margin: 6px 66px 6px 66px;
+}
+#content_three table tr td p{
+
+      font-size: 14px;
+    text-align: left;
+    color: #555555;
+    height: 40px;
+    overflow: hidden;
+    margin: 0 66px 0 66px;
+    width: 158px;
+}
+#content_three table tr td span{
+    color: #f9892a;
+    font-weight: bold;
+}
+#content_three table tr td span:first-of-type{
+      font-size: 14px;
+    margin-left: 66px;
+    margin-top: 12px;
+    display: inline-block;
+}
+#content_three table tr td span:last-of-type{
+    font-size: 18px;
+}
+#content_three table tr td i{
+    height:13px;
+    display: block;
+    width: 100%;
+}
+#content_three table tr td:hover{
+box-shadow: 0 0px 19px 0 rgba(0,0,0,0.16);
+}
+#content_three .three_banner2{
+    margin-top: 20px;
+}
